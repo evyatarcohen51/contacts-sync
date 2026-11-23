@@ -101,9 +101,21 @@ included) has a different key, so Android will ask you to uninstall the old one 
 `.github/workflows/build.yml` workflow builds an *unsigned* `ContactSyncSender-unsigned.ipa`
 on a macOS runner, then runs the app in the iOS Simulator (see Testing). Download the
 `.ipa` from the run's Artifacts, or from the `ci-results` branch, where each run also
-leaves its build log and simulator screenshots. Install it with
-[Sideloadly](https://sideloadly.io) or AltStore, which sign it with your Apple ID.
-A free Apple ID's signature lasts 7 days, then you re-sideload; a paid developer account lasts a year.
+leaves its build log and simulator screenshots.
+
+Apple only lets a *signed* app run on an iPhone, so the `.ipa` has to be signed with your
+Apple ID as it is installed:
+
+- From a **Windows PC or a Mac**: [Sideloadly](https://sideloadly.io) or AltStore. Plug the
+  iPhone in, drop the `.ipa` on the window, sign in with your Apple ID.
+- From **Linux**: there is no official tool. The community ones are
+  [Sideloader](https://github.com/Dadoum/Sideloader) and AltServer-Linux; neither was tried here.
+- The first time, the iPhone asks you to turn on **Developer Mode** (Settings → Privacy &
+  Security) and to trust your Apple ID (Settings → General → VPN & Device Management).
+
+With a free Apple ID the signature lasts **7 days**, then the app stops opening until you
+install it again (your pairing is kept). A paid Apple developer account ($99/year) makes it
+last a year.
 
 **Option B: a Mac with Xcode.**
 
