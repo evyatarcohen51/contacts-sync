@@ -99,7 +99,9 @@ included) has a different key, so Android will ask you to uninstall the old one 
 
 **Option A: GitHub Actions (no Mac needed).** Push this repo to GitHub. The
 `.github/workflows/build.yml` workflow builds an *unsigned* `ContactSyncSender-unsigned.ipa`
-on a macOS runner (download it from the run's Artifacts). Install it with
+on a macOS runner, then runs the app in the iOS Simulator (see Testing). Download the
+`.ipa` from the run's Artifacts, or from the `ci-results` branch, where each run also
+leaves its build log and simulator screenshots. Install it with
 [Sideloadly](https://sideloadly.io) or AltStore, which sign it with your Apple ID.
 A free Apple ID's signature lasts 7 days, then you re-sideload; a paid developer account lasts a year.
 
@@ -137,6 +139,18 @@ contact export, and the whole pair-and-sync routine against a real Android recei
 cd ios/linux-check
 ./run.sh                      # needs a Swift 6 toolchain (swift.org/install)
 adb forward tcp:18765 tcp:8765 && ./run.sh 127.0.0.1:18765   # also pair + sync with a phone/emulator
+```
+
+**The iPhone app in the iOS Simulator** (on a Mac, or automatically on GitHub Actions).
+`ios/simulator-check.sh` builds the app, launches it in the simulator, pairs it with
+`tools/fake-samsung.js` (a stand-in for the Samsung app that follows the same rules but
+keeps contacts in memory), adds a contact, switches the "Samsung" off, and saves
+screenshots and logs to `ios/ContactSyncSender/sim-results/`. A simulator cannot show
+Tailscale, real background behaviour, or your actual Samsung; only a real iPhone can.
+
+```bash
+ios/simulator-check.sh
+node tools/fake-samsung.js --pairing-open --auto-accept    # or run the stand-in by hand
 ```
 
 ## Protocol & security

@@ -8,6 +8,7 @@
 //     --code <code>          start already paired with this code (for manual pairing)
 //     --pairing-open         accept same-Wi-Fi pairing requests at any time
 //     --auto-accept          answer "Accept" to every pairing request by itself
+//     --accept-after <s>     ...but only after this many seconds (default 0)
 //     --advertise-host <h>   the address it tells the iPhone to use afterwards (default 127.0.0.1)
 //     --dump <file>          after each upload, write what was received to this JSON file
 //                            (photos are replaced by their size)
@@ -89,9 +90,13 @@ function pairStart(res, body) {
     secret: P.ecdh(k.privateKey, iphonePub),
     device: String(body.device || 'iPhone').slice(0, 60),
     createdAt: Date.now(),
-    decision: flag('--auto-accept') ? true : null,
+    decision: null,
     sealed: null,
   });
+  if (flag('--auto-accept')) {
+    const session = sessions.get(id);
+    setTimeout(() => { session.decision = true; }, Number(opt('--accept-after', 0)) * 1000);
+  }
   log(`pairing request from ${body.device}; number ${P.comparisonNumber(iphonePub, k.pubDer)}`);
   send(res, 200, { session: id, pub: k.pubDer.toString('base64'), device: 'Fake Samsung' });
 }

@@ -14,7 +14,8 @@ targets:
     type: application
     platform: iOS
     sources: [Sources]
-    scheme: {}
+    scheme:
+      testTargets: [ContactSyncSenderUITests]
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.dvirchi.contactsync.sender
@@ -45,3 +46,16 @@ targets:
           # Do not add NSAllowsLocalNetworking here: iOS then ignores NSAllowsArbitraryLoads,
           # and a Tailscale name such as phone.tailnet.ts.net would be blocked.
           NSAllowsArbitraryLoads: true
+
+  # Taps through the app in the iOS Simulator (see ios/simulator-check.sh).
+  ContactSyncSenderUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [UITests]
+    dependencies:
+      - target: ContactSyncSender
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.dvirchi.contactsync.sender.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: ContactSyncSender

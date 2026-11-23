@@ -111,6 +111,28 @@ launch
 shot 4-samsung-unreachable 12
 if running; then note "4. Samsung switched off: app still running (see screenshot for the red status)"; else fail "the app stopped running when the Samsung was unreachable"; fi
 
+# ---- 5. tap through the app like a person: find the Samsung on the network, pair, sync --
+# The stand-in Samsung waits a few seconds before "tapping Accept", and is announced over
+# Bonjour under the name the real Samsung app uses.
+node ../../tools/fake-samsung.js --code "$CODE" --pairing-open --auto-accept --accept-after 5 \
+  --dump "$OUT/received-ui.json" > "$OUT/fake-samsung-ui.log" 2>&1 &
+SAMSUNG=$!
+dns-sd -R "ContactSync Test" _contactsync._tcp local 8765 > /dev/null 2>&1 &
+BONJOUR=$!
+sleep 2
+rm -rf /tmp/contactsync-ui
+if xcodebuild test -project ContactSyncSender.xcodeproj -scheme ContactSyncSender \
+      -destination "platform=iOS Simulator,id=$UDID" -derivedDataPath "$PWD/build/sim" \
+      -only-testing:ContactSyncSenderUITests > "$OUT/ui-test.log" 2>&1; then
+  note "5. Tapping through the app (find Samsung on the network, pair, sync, Sync now): passed"
+else
+  fail "the tap-through test reported problems:"
+  grep -E "error:|XCTAssert|failed -" "$OUT/ui-test.log" | sed 's/^.*UITests.swift/  line/' | sort -u | head -n 20 | tee -a "$OUT/summary.txt"
+fi
+cp /tmp/contactsync-ui/*.png "$OUT/" 2> /dev/null || note "(the tap-through test left no screenshots)"
+grep -E "pairing request|paired with|upload:" "$OUT/fake-samsung-ui.log" | sed 's/^[0-9:]* /   Samsung: /' | head -n 6 | tee -a "$OUT/summary.txt"
+kill "$SAMSUNG" "$BONJOUR" 2> /dev/null; wait "$SAMSUNG" "$BONJOUR" 2> /dev/null
+
 # ---- logs -----------------------------------------------------------------------------
 xcrun simctl spawn "$UDID" log show --last 5m --style compact --predicate "process == \"ContactSyncSender\"" 2> /dev/null \
   | tail -n 300 > "$OUT/app-log.txt" || true

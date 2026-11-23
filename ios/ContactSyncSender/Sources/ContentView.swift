@@ -28,7 +28,10 @@ struct ContentView: View {
                     LabeledContent("Last sync attempt") {
                         if let at = sync.lastAttemptAt {
                             VStack(alignment: .trailing, spacing: 2) {
-                                Text(at.formatted(date: .abbreviated, time: .standard))
+                                // Today: just the time. Older: the date too.
+                                Text(Calendar.current.isDateInToday(at)
+                                     ? at.formatted(date: .omitted, time: .standard)
+                                     : at.formatted(date: .abbreviated, time: .shortened))
                                 (Text(at, style: .relative) + Text(" ago"))
                                     .font(.footnote)
                                     .foregroundStyle(.secondary)
@@ -38,9 +41,11 @@ struct ContentView: View {
                         }
                     }
                     LabeledContent("Result") { resultLabel }
-                    Text(sync.message)
-                        .font(.footnote)
-                        .foregroundStyle(sync.outcome == .failed ? Color.red : Color.secondary)
+                    if sync.isPaired {
+                        Text(sync.message)
+                            .font(.footnote)
+                            .foregroundStyle(sync.outcome == .failed ? Color.red : Color.secondary)
+                    }
                     row("Contacts", "\(sync.lastCount)")
                     row("Last change sent", relative(sync.lastPushAt))
                     if !sync.connectedVia.isEmpty { row("Connected via", sync.connectedVia) }
