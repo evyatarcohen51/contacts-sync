@@ -1,0 +1,110 @@
+name: Build apps
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ios:
+    runs-on: macos-15
+    permissions:
+      contents: write # publishes logs, screenshots and the .ipa to the ci-results branch
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Xcode project
+        working-directory: ios/ContactSyncSender
+        run: |
+          xcodebuild -version
+          brew install xcodegen
+          xcodegen generate
+      - name: Build for iPhone (unsigned)
+        id: build
+        working-directory: ios/ContactSyncSender
+        run: |
+          if ! xcodebuild -project ContactSyncSender.xcodeproj -target ContactSyncSender \
+              -configuration Release -sdk iphoneos \
+              CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+              SYMROOT="$PWD/build" build > build.log 2>&1; then
+            echo "Build failed. Errors:"
+            grep -nE "error:|fatal error" build.log || tail -n 80 build.log
+            exit 1
+          fi
+          grep -E "warning:" build.log | sort -u | head -n 40 || true
+          tail -n 3 build.log
+      - name: Package .ipa
+        id: package
+        working-directory: ios/ContactSyncSender
+        run: |
+          mkdir -p Payload
+          cp -R build/Release-iphoneos/ContactSyncSender.app Payload/
+          zip -qry ContactSyncSender-unsigned.ipa Payload
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ContactSyncSender-ios-unsigned
+          path: ios/ContactSyncSender/ContactSyncSender-unsigned.ipa
+      - name: Run in the iOS Simulator
+        id: simulator
+        if: always() && steps.build.outcome != 'skipped'
+        run: ios/simulator-check.sh
+      - name: Publish results to the ci-results branch
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p results
+          cd results
+          {
+            echo "# Results for ${GITHUB_SHA}"
+            echo
+            echo "- iPhone build: ${{ steps.build.outcome }}"
+            echo "- .ipa: ${{ steps.package.outcome }}"
+            echo "- Simulator run: ${{ steps.simulator.outcome }}"
+            echo "- Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          } > README.md
+          cp ../ios/ContactSyncSender/build.log . 2>/dev/null || true
+          grep -nE "error:|fatal error" build.log > build-errors.txt 2>/dev/null || true
+          cp ../ios/ContactSyncSender/ContactSyncSender-unsigned.ipa . 2>/dev/null || true
+          cp -R ../ios/ContactSyncSender/sim-results . 2>/dev/null || true
+          git init -q -b ci-results
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -qm "Results for ${GITHUB_SHA}"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ci-results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ios-logs-and-screenshots
+          path: |
+            ios/ContactSyncSender/build.log
+            ios/ContactSyncSender/sim-results
+
+  # The iPhone app's logic (protocol, export, URL handling) compiled and tested on Linux.
+  ios-logic:
+    runs-on: ubuntu-latest
+    container: swift:6.1
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        working-directory: ios/linux-check
+        run: ./run.sh
+
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Build APK
+        working-directory: android
+        run: ./gradlew testDebugUnitTest assembleRelease --no-daemon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ContactSyncReceiver-android
+          path: android/app/build/outputs/apk/release/app-release.apk

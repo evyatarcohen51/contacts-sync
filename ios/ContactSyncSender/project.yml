@@ -1,0 +1,47 @@
+# Generate the Xcode project with XcodeGen:   brew install xcodegen && xcodegen generate
+name: ContactSyncSender
+options:
+  bundleIdPrefix: com.dvirchi
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  ContactSyncSender:
+    type: application
+    platform: iOS
+    sources: [Sources]
+    scheme: {}
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.dvirchi.contactsync.sender
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        # Set your Apple team here, or pick it in Xcode → Signing & Capabilities.
+        DEVELOPMENT_TEAM: ""
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: Contact Sync
+        LSRequiresIPhoneOS: true
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        NSContactsUsageDescription: Your contacts are sent, encrypted, to your own Samsung phone.
+        NSLocalNetworkUsageDescription: Used to find and pair with your Samsung phone on the same Wi-Fi.
+        NSBonjourServices: [_contactsync._tcp]
+        NSLocationWhenInUseUsageDescription: Optional. Keeps the app awake in the background so contacts sync on schedule. Your location is never stored or sent.
+        NSLocationAlwaysAndWhenInUseUsageDescription: Optional. Keeps the app awake in the background so contacts sync on schedule. Your location is never stored or sent.
+        UIBackgroundModes: [fetch, location]
+        BGTaskSchedulerPermittedIdentifiers: [com.dvirchi.contactsync.sender.refresh]
+        NSAppTransportSecurity:
+          # Traffic goes to the Samsung over plain HTTP inside Tailscale / the home Wi-Fi.
+          # The contacts themselves are end-to-end encrypted (AES-256-GCM) before sending.
+          # Do not add NSAllowsLocalNetworking here: iOS then ignores NSAllowsArbitraryLoads,
+          # and a Tailscale name such as phone.tailnet.ts.net would be blocked.
+          NSAllowsArbitraryLoads: true

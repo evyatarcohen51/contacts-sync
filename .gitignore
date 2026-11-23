@@ -1,0 +1,10 @@
+ios/ContactSyncSender/ContactSyncSender.xcodeproj/
+ios/ContactSyncSender/build/
+ios/ContactSyncSender/build.log
+ios/ContactSyncSender/Payload/
+ios/ContactSyncSender/Sources/Info.plist
+ios/linux-check/.build/
+ios/linux-check/Package.resolved
+*.ipa
+.DS_Store
+ios/ContactSyncSender/sim-results/
