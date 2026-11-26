@@ -187,7 +187,8 @@ final class PairingFlow: ObservableObject {
                     let info = try JSONDecoder().decode(ReceiverClient.PairInfo.self,
                                                         from: Proto.open(blob, key: key))
                     sync.savePairing(code: info.code, device: info.device, port: info.port,
-                                     tailscale: info.tailscale, lan: info.lan ?? host)
+                                     tailscale: info.tailscale, lan: info.lan ?? host,
+                                     reachedAt: port == info.port ? host : "\(host):\(port)")
                     show(.done(info.device), id)
                     Task { await sync.syncNow(force: true) } // not tied to this view's lifetime
                     return

@@ -8,3 +8,4 @@ ios/linux-check/Package.resolved
 *.ipa
 .DS_Store
 ios/ContactSyncSender/sim-results/
+ios/ContactSyncSender/both-results/

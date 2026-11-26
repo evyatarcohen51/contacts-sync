@@ -83,6 +83,69 @@ jobs:
             ios/ContactSyncSender/build.log
             ios/ContactSyncSender/sim-results
 
+  # The two real apps against each other: the iPhone app in the iOS Simulator and the Samsung
+  # app in an Android emulator, on one Mac. Needs GitHub's Intel Mac: its Apple-chip Macs
+  # cannot run an Android emulator.
+  both-apps:
+    runs-on: macos-15-intel
+    timeout-minutes: 100
+    permissions:
+      contents: write # publishes logs and screenshots to the ci-results-both branch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Start an Android emulator (it boots while the app builds)
+        run: |
+          SDK="$ANDROID_HOME/cmdline-tools/latest/bin"
+          IMAGE="system-images;android-34;google_apis;x86_64"
+          yes | "$SDK/sdkmanager" --install emulator platform-tools "$IMAGE" > /dev/null || true
+          echo no | "$SDK/avdmanager" create avd -n contactsync -k "$IMAGE" -d pixel_6 --force
+          nohup "$ANDROID_HOME/emulator/emulator" -avd contactsync -no-window -no-audio -no-boot-anim \
+            -gpu swiftshader_indirect -no-snapshot > emulator.log 2>&1 &
+      - name: Build the Samsung app
+        working-directory: android
+        run: ./gradlew assembleRelease --no-daemon
+      - name: Wait for Android to finish starting
+        run: |
+          ADB="$ANDROID_HOME/platform-tools/adb"
+          for i in $(seq 300); do
+            [ "$("$ADB" shell getprop sys.boot_completed 2> /dev/null | tr -d '\r')" = 1 ] && break
+            sleep 5
+          done
+          "$ADB" shell getprop ro.build.version.release || { tail -n 40 emulator.log; exit 1; }
+      - name: Run both apps against each other
+        id: both
+        run: |
+          brew install xcodegen
+          ios/both-apps-check.sh
+      - name: Publish results to the ci-results-both branch
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p results
+          cd results
+          {
+            echo "# Both real apps, for ${GITHUB_SHA}"
+            echo
+            echo "- Result: ${{ steps.both.outcome }}"
+            echo "- Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            echo
+            echo '```'
+            cat ../ios/ContactSyncSender/both-results/summary.txt 2> /dev/null
+            echo '```'
+          } > README.md
+          cp -R ../ios/ContactSyncSender/both-results . 2> /dev/null || true
+          cp ../emulator.log . 2> /dev/null || true
+          git init -q -b ci-results-both
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -qm "Both real apps, for ${GITHUB_SHA}"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ci-results-both
+
   # The iPhone app's logic (protocol, export, URL handling) compiled and tested on Linux.
   ios-logic:
     runs-on: ubuntu-latest

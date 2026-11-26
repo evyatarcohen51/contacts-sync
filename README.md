@@ -165,6 +165,21 @@ ios/simulator-check.sh
 node tools/fake-samsung.js --pairing-open --auto-accept    # or run the stand-in by hand
 ```
 
+**Both real apps against each other** (on an Intel Mac, or automatically on GitHub Actions).
+`ios/both-apps-check.sh` runs the iPhone app in the iOS Simulator and the Samsung app in an
+Android emulator on the same Mac. It pairs them by tapping through both apps and comparing
+the number, then adds, edits and deletes contacts on the "iPhone" (with a small helper app,
+`ios/ContactSyncSender/Fixture`) and looks in Android's contact list for the result. It also
+syncs 1,000 contacts with photos, stops the Samsung app and starts it again, unpairs, pairs
+again with the typed code at a Tailscale-style address, and leaves the iPhone app in the
+background with "Keep running in background" on. Results go to
+`ios/ContactSyncSender/both-results/`, and on GitHub to the `ci-results-both` branch.
+
+The emulator sits behind its own little network, so `adb forward`, `tools/tcp-relay.js` and
+`dns-sd` stand in for the shared Wi-Fi, and an extra address on the Mac stands in for
+Tailscale. Real Wi-Fi discovery between two phones and real Tailscale are still only seen
+on the phones themselves.
+
 ## Protocol & security
 
 See `tools/protocol.js` (reference implementation; the Android unit tests check against it).
@@ -188,6 +203,8 @@ See `tools/protocol.js` (reference implementation; the Android unit tests check 
 android/                 Samsung receiver (Kotlin, Jetpack Compose)
 ios/ContactSyncSender/   iPhone sender (SwiftUI; XcodeGen project.yml)
 ios/linux-check/         compiles and tests the iPhone sources on Linux
-tools/                   protocol reference + fake iPhone for testing
+ios/simulator-check.sh   runs the iPhone app in the iOS Simulator against a stand-in Samsung
+ios/both-apps-check.sh   runs the iPhone app and the Samsung app against each other
+tools/                   protocol reference, fake iPhone and fake Samsung for testing
 dist/                    built Android APK
 ```

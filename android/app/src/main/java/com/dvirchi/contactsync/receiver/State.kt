@@ -91,6 +91,8 @@ object AppState {
             .putLong("attemptAt", s.attemptAt)
             .putString("attemptState", s.attemptState)
             .putString("attemptDetail", s.attemptDetail)
-            .apply()
+            // commit(), not apply(): apply() writes about 100 ms later, and a pairing code or sync
+            // result must survive the app being killed right after it was set.
+            .commit()
     }
 }

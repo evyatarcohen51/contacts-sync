@@ -63,7 +63,8 @@ final class SyncManager: ObservableObject {
     private var forceAgain = false
 
     private init() {
-        intervalMinutes = defaults.object(forKey: "intervalMinutes") as? Int ?? 5
+        let minutes = defaults.integer(forKey: "intervalMinutes")
+        intervalMinutes = [1, 5, 10].contains(minutes) ? minutes : 5
         includePhotos = defaults.object(forKey: "includePhotos") as? Bool ?? true
         keepAlive = defaults.bool(forKey: "keepAlive")
         tailscaleHost = defaults.string(forKey: "tailscaleHost") ?? ""
@@ -184,7 +185,10 @@ final class SyncManager: ObservableObject {
 
     // MARK: Pairing
 
-    func savePairing(code: String, device: String, port: Int, tailscale: String?, lan: String?) {
+    /// `reachedAt` is the address the pairing conversation just used, if there was one.
+    /// The first sync tries it first: it is known to work, whatever the Samsung says its own address is.
+    func savePairing(code: String, device: String, port: Int, tailscale: String?, lan: String?,
+                     reachedAt: String? = nil) {
         Keychain.set(Proto.normalize(code), for: "pairCode")
         self.code = Proto.normalize(code)
         receiverName = device
@@ -194,7 +198,7 @@ final class SyncManager: ObservableObject {
         if let tailscale, !tailscale.isEmpty { tailscaleHost = tailscale }
         lanHost = lan ?? ""
         defaults.set(lanHost, forKey: "lanHost")
-        defaults.removeObject(forKey: "lastGoodHost")
+        defaults.set(reachedAt, forKey: "lastGoodHost") // nil removes it
         setStatus(.notRun, "Paired with \(device)")
         applyKeepAlive()
         scheduleRefresh()

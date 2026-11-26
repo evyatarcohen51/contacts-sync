@@ -59,3 +59,21 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.dvirchi.contactsync.sender.uitests
         GENERATE_INFOPLIST_FILE: YES
         TEST_TARGET_NAME: ContactSyncSender
+
+  # Simulator-only helper that adds, edits and deletes contacts for the automated checks.
+  # It is its own app; nothing from it goes into ContactSyncSender.
+  ContactsFixture:
+    type: application
+    platform: iOS
+    sources: [Fixture]
+    scheme:
+      gatherCoverageData: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.dvirchi.contactsync.fixture
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Contacts Fixture
+        INFOPLIST_KEY_NSContactsUsageDescription: Test helper. Changes the contacts of this simulator.
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
