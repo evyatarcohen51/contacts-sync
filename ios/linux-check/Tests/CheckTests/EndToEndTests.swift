@@ -93,10 +93,13 @@ final class EndToEndTests: XCTestCase {
         XCTAssertEqual(sync.port, 8765)
         XCTAssertEqual(Keychain.get("pairCode"), sync.code)
 
-        // The Samsung reported its own Wi-Fi address, which this machine cannot reach
-        // (it is inside the emulator). So the sync that follows pairing fails, in red.
+        // The Samsung reported its own Wi-Fi address, which this machine cannot reach (it is
+        // inside the emulator). The app first tries the address the pairing conversation
+        // itself just used, so the sync that follows pairing still gets through.
         try await settle(sync)
-        XCTAssertEqual(sync.outcome, .failed)
+        XCTAssertEqual(sync.outcome, .success, sync.message)
+        XCTAssertEqual(sync.connectedVia, target)
+        XCTAssertEqual(sync.lastCount, 3)
         XCTAssertNotNil(sync.lastAttemptAt)
 
         // ---- Reach it "over Tailscale": an address typed by hand, with a port ----
