@@ -375,9 +375,18 @@ activate
 shot iphone-12-after-background 4
 
 # ---- the Samsung app's own status, and logs ---------------------------------------------
-samsung_open; sleep 2; samsung_top
+samsung_open; sleep 2
+# A slow emulator may have put "System UI isn't responding" over the app: that swallows the
+# swipes to the top of the screen. Reading the screen answers it with "Wait"; then try again.
+SCREEN=
+for attempt in 1 2 3 4; do
+  $TAP texts > /dev/null 2>&1
+  samsung_top
+  SCREEN=$($TAP texts 2> /dev/null)
+  [ "$(grep -c '^✓ Success$' <<< "$SCREEN")" != 0 ] && break
+  sleep 5
+done
 samsung_shot "$OUT/samsung-13-status.png"
-SCREEN=$($TAP texts 2> /dev/null)
 if grep -q '^✓ Success$' <<< "$SCREEN"; then
   note "13. The Samsung app shows ✓ Success: $(echo "$SCREEN" | grep -A 1 '^✓ Success$' | tail -n 1)"
 else
