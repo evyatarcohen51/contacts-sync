@@ -1,0 +1,26 @@
+Simulator: iPhone_Air (iOS_26.2), Xcode 16.4 Build version 16F6 
+Simulator build: ok
+Android emulator: started in 333 s
+Samsung app: installed on an Android 8.0.0 emulator and listening
+1. Pairing: both apps showed the same number (711 864)
+   Tapping through the iPhone app (find the Samsung, pair, first sync, "Sync now"): passed
+2. First sync: all 6 iPhone contacts are in Android's contact list
+3. Added on the iPhone -> appeared on Android (when the app was opened)
+4. Edited on the iPhone -> number changed on Android (by itself, in the background)
+5. Deleted on the iPhone -> removed from Android (when the app was opened)
+6. Nothing changed -> the iPhone only checks in ("Up to date · 6 contacts")
+7. 300 more contacts (ok added 300, 75 with a photo) -> all on Android 34 s later (when the app was opened); Android holds 75 photos
+   The upload: 894.9 KB sent
+   Deleted them again on the iPhone -> gone from Android 30 s later
+8. Samsung app stopped -> the iPhone shows Failed: "Can't reach the Samsung. Check Tailscale is on on both phones. (The request timed out.)"
+   Samsung app started again -> the iPhone is back to Success: "Up to date · 6 contacts"
+9. Unpaired on the Samsung -> the contacts that came from the iPhone were removed
+   The iPhone now shows Failed: "Samsung is not paired"
+10. Typed the Samsung's code and the address 100.101.102.103 into the iPhone app: paired and synced
+11. Reached the Samsung by name (samsung.contactsync-test.ts.net): "Up to date · 6 contacts"
+12. Turned on "Keep running in background" and the 1-minute cycle by tapping the app
+   App in the background for 150 s, 1-minute cycle: last sync attempt 41 s ago with background mode on, 166 s ago with it off
+   -> with background mode on the cycle kept running; without it iOS paused the app
+   A contact added while the app was in the background reached Android without opening the app
+13. The Samsung app shows ✓ Success: Up to date · 7 contacts
+RESULT: all checks with both real apps passed

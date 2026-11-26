@@ -1,0 +1,400 @@
+2026-11-26 12:58:09.274 Df ContactSyncSender[22464:48db1] [com.apple.CFNetwork:Default] Connection 3: connected successfully
+2026-11-26 12:58:09.274 Df ContactSyncSender[22464:48db1] [com.apple.CFNetwork:Default] Connection 3: ready C(N) E(N)
+2026-11-26 12:58:09.274 Df ContactSyncSender[22464:48db1] [com.apple.CFNetwork:Default] Task <5BECD733-1B13-4356-8B04-6F214F5803BC>.<3> now using Connection 3
+2026-11-26 12:58:09.274 Df ContactSyncSender[22464:48db1] [com.apple.CFNetwork:Default] Task <5BECD733-1B13-4356-8B04-6F214F5803BC>.<3> sent request, body N 0
+2026-11-26 12:58:09.328 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <5BECD733-1B13-4356-8B04-6F214F5803BC>.<3> received response, status 200 content K
+2026-11-26 12:58:09.329 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Connection 3: cleaning up
+2026-11-26 12:58:09.329 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C3 67979017-755F-43EE-9CE1-F8D1DB831A8D Hostname#973bc487:8765 tcp, url hash: ec452614, definite, attribution: developer] cancel
+2026-11-26 12:58:09.329 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C3 67979017-755F-43EE-9CE1-F8D1DB831A8D Hostname#973bc487:8765 tcp, url hash: ec452614, definite, attribution: developer] cancelled
+	[C3.1.1 E3D3858D-F2F7-4248-9E3D-E708F05513C1 100.101.102.103:55378<->IPv4#1341bb67:8765]
+	Connected Path: satisfied (Path is satisfied), interface: lo0
+	Privacy Stance: Not Eligible
+	Duration: 0.076s, DNS @0.006s took 0.004s, TCP @0.014s took 0.002s
+	bytes in/out: 252/431, packets in/out: 1/1, rtt: 0.001s, retransmitted bytes: 0, out-of-order bytes: 0
+	ecn packets sent/acked/marked/lost: 0/0/0/0
+2026-11-26 12:58:09.330 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C3] reporting state cancelled
+2026-11-26 12:58:09.330 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <5BECD733-1B13-4356-8B04-6F214F5803BC>.<3> response ended
+2026-11-26 12:58:09.331 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <5BECD733-1B13-4356-8B04-6F214F5803BC>.<3> done using Connection 3
+2026-11-26 12:58:09.331 Df ContactSyncSender[22464:48db1] [com.apple.CFNetwork:Summary] Task <5BECD733-1B13-4356-8B04-6F214F5803BC>.<3> summary for task success {transaction_duration_ms=80, response_status=200, connection=3, protocol="http/1.1", domain_lookup_duration_ms=4, connect_duration_ms=6, secure_connection_duration_ms=0, private_relay=false, request_start_ms=22, request_duration_ms=0, response_start_ms=77, response_duration_ms=3, request_bytes=431, request_throughput_kbps=34148, response_bytes=252, response_throughput_kbps=668, cache_hit=false}
+2026-11-26 12:58:09.332 Df ContactSyncSender[22464:48db1] [com.apple.CFNetwork:Default] Task <5BECD733-1B13-4356-8B04-6F214F5803BC>.<3> finished successfully
+2026-11-26 12:58:09.333 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Ending background task with UIBackgroundTaskIdentifier: 8
+2026-11-26 12:58:09.333 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Ending task with identifier 8 and description: <_UIBackgroundTaskInfo: 0x600001738ec0>: taskID = 8, taskName = contact-sync, creationTime = 3873 (elapsed = 1), _expireHandler: (null)
+2026-11-26 12:58:09.334 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Decrementing reference count for assertion <BKSProcessAssertion: 0x6000021d0140> (used by background task with identifier 8: <_UIBackgroundTaskInfo: 0x600001738ec0>: taskID = 8, taskName = contact-sync, creationTime = 3873 (elapsed = 1))
+2026-11-26 12:58:09.334 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Will invalidate assertion: <BKSProcessAssertion: 0x6000021d0140> for task identifier: 8
+2026-11-26 12:58:54.066 A  ContactSyncSender[22464:473a7] (Contacts) PostingContactsNotification
+2026-11-26 12:58:57.223 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Will add backgroundTask with taskName: contact-sync, expirationHandler: (null)
+2026-11-26 12:58:57.223 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Creating new assertion because there is no existing background assertion.
+2026-11-26 12:58:57.223 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Creating new background assertion
+2026-11-26 12:58:57.223 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Created new background assertion <BKSProcessAssertion: 0x6000021f2490>
+2026-11-26 12:58:57.224 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x6000021f2490>
+2026-11-26 12:58:57.224 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x600001725e80>: taskID = 9, taskName = contact-sync, creationTime = 3921 (elapsed = 0).
+2026-11-26 12:58:57.224 A  ContactSyncSender[22464:473a7] (TCC) TCCAccessRequest() IPC
+2026-11-26 12:58:57.228 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 BEGIN: Will execute fetch for request: <CNContactFetchRequest: 0x60000264c840: predicate=(nil), keysToFetch=(
+    givenName,
+    familyName,
+    middleName,
+    namePrefix,
+    nameSuffix,
+    nickname,
+    phoneticGivenName,
+    phoneticFamilyName,
+    organizationName,
+    departmentName,
+    jobTitle,
+    phoneNumbers,
+    emailAddresses,
+    postalAddresses,
+    urlAddresses,
+    birthday,
+    thumbnailImageData
+), unifyResults=1, sortOrder=0, serialNumber=9, alwaysUnifyLabeledValues=YES>
+2026-11-26 12:58:57.228 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 Entry point: enumerateContactsWithFetchRequest:error:usingBlock:
+2026-11-26 12:58:57.228 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 Predicate: (null) (null)
+2026-11-26 12:58:57.228 A  ContactSyncSender[22464:4aab2] (Contacts) FetchingContacts
+2026-11-26 12:58:57.239 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:avatar-decorator] decoratedContacts called with 7 contacts
+2026-11-26 12:58:57.239 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:avatar-decorator] Validating keys for 17 descriptors
+2026-11-26 12:58:57.239 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:avatar-decorator] Final keysToFetchVector: <CNMutableContactKeyVector: 0x60000029ec40: keys=namePrefix, givenName, middleName, familyName, nameSuffix, nickname, phoneticGivenName, phoneticFamilyName, organizationName, departmentName, jobTitle, birthday, thumbnailImageData, phoneNumbers, emailAddresses, urlAddresses, postalAddresses>
+2026-11-26 12:58:57.239 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:avatar-decorator] Contains wallpaper key: 0
+2026-11-26 12:58:57.239 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:avatar-decorator] Skipping: required keys missing
+2026-11-26 12:58:57.240 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 Contact: 177C371E-701D-42F8-A03B-C61CA31627F6
+2026-11-26 12:58:57.240 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 Contact: AB211C5F-9EC9-429F-9466-B9382FF61035
+2026-11-26 12:58:57.240 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 Contact: 410FE041-5C4E-48DA-B4DE-04C15EA3DBAC
+2026-11-26 12:58:57.240 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 Contact: F57C8277-585D-4327-88A6-B5689FF69DFE
+2026-11-26 12:58:57.241 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 Contact: 2E73EE73-C03F-4D5F-B1E8-44E85A70F170
+2026-11-26 12:58:57.241 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 Contact: E94CD15C-7964-4A9B-8AC4-10D7CFB791FD
+2026-11-26 12:58:57.241 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 Contact: F63CF867-CB05-40F9-9DC0-A0F880F4759B:ABPerson
+2026-11-26 12:58:57.241 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 All results have been returned to the client
+2026-11-26 12:58:57.241 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 Time spent in client code: 1105 µs
+2026-11-26 12:58:57.241 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 0009 FINISH (12.4 ms)
+2026-11-26 12:58:57.241 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:_UIVisualStyleRegistry] Note: no default visual style class registered as fallback for stylable class UIActivityIndicatorView
+2026-11-26 12:58:57.242 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:_UIVisualStyleRegistry] Note: no default visual style class registered as fallback for stylable class UIActivityIndicatorView
+2026-11-26 12:58:57.267 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <4F80BD19-B0F2-492F-A6DC-41E69900C401>.<4> resuming, timeouts(6.0, 604800.0) qos(0x19) voucher(<OS_voucher: 0x6000021f25d0>) activity(00000000-0000-0000-0000-000000000000)
+2026-11-26 12:58:57.268 A  ContactSyncSender[22464:49b08] (Security) SecTrustReportNetworkingAnalytics
+2026-11-26 12:58:57.268 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Connection 4: starting, TC(0x0)
+2026-11-26 12:58:57.268 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4 9C3ADAF0-AC03-48F9-8B0F-F14C7B9D2C1D Hostname#973bc487:8765 tcp, url hash: ec452614, definite, attribution: developer, context: com.apple.CFNetwork.NSURLSession.{146804ED-8610-4806-9BCC-91CAB262DA56}{(null)}{Y}{3}{0x0} (sensitive), proc: BE1BC6D9-7907-348C-9C71-97CD1A24BC5C, delegated upid: 0] start
+2026-11-26 12:58:57.268 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4 Hostname#973bc487:8765 initial parent-flow ((null))] event: path:start @0.000s
+2026-11-26 12:58:57.268 Df ContactSyncSender[22464:49b08] [com.apple.securityd:SecError] SecTrustReportNetworkingAnalytics failed with error: -4
+2026-11-26 12:58:57.269 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4 Hostname#973bc487:8765 waiting parent-flow (satisfied (Path is satisfied), interface: en0)] event: path:satisfied @0.000s, uuid: 0478B87F-F651-4830-AD52-D7B9539B54AD
+2026-11-26 12:58:57.269 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4 Hostname#973bc487:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:start_connect @0.000s
+2026-11-26 12:58:57.269 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C4] reporting state preparing
+2026-11-26 12:58:57.271 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4 Hostname#973bc487:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:start_child @0.002s
+2026-11-26 12:58:57.271 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4.1 Hostname#973bc487:8765 initial path ((null))] event: path:start @0.003s
+2026-11-26 12:58:57.272 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4.1 Hostname#973bc487:8765 waiting path (satisfied (Path is satisfied), interface: en0)] event: path:satisfied @0.004s, uuid: 0478B87F-F651-4830-AD52-D7B9539B54AD
+2026-11-26 12:58:57.274 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] event: resolver:start_dns @0.005s
+2026-11-26 12:58:57.275 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <4F80BD19-B0F2-492F-A6DC-41E69900C401>.<4> setting up Connection 4
+2026-11-26 12:58:57.277 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_endpoint_resolver_update [C4.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] Adding endpoint handler for IPv4#1341bb67:8765
+2026-11-26 12:58:57.278 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] event: resolver:receive_dns @0.009s
+2026-11-26 12:58:57.280 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4.1.1 IPv4#1341bb67:8765 initial path ((null))] event: path:start @0.011s
+2026-11-26 12:58:57.281 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4.1.1 IPv4#1341bb67:8765 waiting path (satisfied (Path is satisfied), interface: lo0)] event: path:satisfied @0.012s, uuid: 8B4F95E0-B73B-4ADC-AC4A-99A14B74DF13
+2026-11-26 12:58:57.283 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:start_connect @0.014s
+2026-11-26 12:58:57.284 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_socket_handle_socket_event [C4.1.1:2] Socket received CONNECTED event
+2026-11-26 12:58:57.285 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_flow_connected [C4.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] Transport protocol connected (socket)
+2026-11-26 12:58:57.285 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:finish_transport @0.016s
+2026-11-26 12:58:57.286 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_flow_connected [C4.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] Output protocol connected (CFNetworkConnection-3329441061)
+2026-11-26 12:58:57.288 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4.1.1 IPv4#1341bb67:8765 ready socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:child_finish_connect @0.019s
+2026-11-26 12:58:57.288 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4.1 Hostname#973bc487:8765 ready resolver (satisfied (Path is satisfied), interface: en0)] event: flow:child_finish_connect @0.020s
+2026-11-26 12:58:57.289 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_flow_connected [C4 IPv4#1341bb67:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] Output protocol connected (endpoint_flow)
+2026-11-26 12:58:57.290 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C4 IPv4#1341bb67:8765 ready parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:finish_connect @0.022s
+2026-11-26 12:58:57.292 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C4] reporting state ready
+2026-11-26 12:58:57.292 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Connection 4: connected successfully
+2026-11-26 12:58:57.293 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Connection 4: ready C(N) E(N)
+2026-11-26 12:58:57.294 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <4F80BD19-B0F2-492F-A6DC-41E69900C401>.<4> now using Connection 4
+2026-11-26 12:58:57.294 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <4F80BD19-B0F2-492F-A6DC-41E69900C401>.<4> sent request, body N 0
+2026-11-26 12:58:57.357 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <4F80BD19-B0F2-492F-A6DC-41E69900C401>.<4> received response, status 200 content K
+2026-11-26 12:58:57.417 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Connection 4: cleaning up
+2026-11-26 12:58:57.417 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C4 9C3ADAF0-AC03-48F9-8B0F-F14C7B9D2C1D Hostname#973bc487:8765 tcp, url hash: ec452614, definite, attribution: developer] cancel
+2026-11-26 12:58:57.417 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C4 9C3ADAF0-AC03-48F9-8B0F-F14C7B9D2C1D Hostname#973bc487:8765 tcp, url hash: ec452614, definite, attribution: developer] cancelled
+	[C4.1.1 8B4F95E0-B73B-4ADC-AC4A-99A14B74DF13 100.101.102.103:55628<->IPv4#1341bb67:8765]
+	Connected Path: satisfied (Path is satisfied), interface: lo0
+	Privacy Stance: Not Eligible
+	Duration: 0.149s, DNS @0.005s took 0.004s, TCP @0.014s took 0.002s
+	bytes in/out: 252/431, packets in/out: 3/1, rtt: 0.001s, retransmitted bytes: 0, out-of-order bytes: 0
+	ecn packets sent/acked/marked/lost: 0/0/0/0
+2026-11-26 12:58:57.418 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C4] reporting state cancelled
+2026-11-26 12:58:57.418 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <4F80BD19-B0F2-492F-A6DC-41E69900C401>.<4> response ended
+2026-11-26 12:58:57.418 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <4F80BD19-B0F2-492F-A6DC-41E69900C401>.<4> done using Connection 4
+2026-11-26 12:58:57.418 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Summary] Task <4F80BD19-B0F2-492F-A6DC-41E69900C401>.<4> summary for task success {transaction_duration_ms=150, response_status=200, connection=4, protocol="http/1.1", domain_lookup_duration_ms=4, connect_duration_ms=8, secure_connection_duration_ms=0, private_relay=false, request_start_ms=26, request_duration_ms=0, response_start_ms=89, response_duration_ms=60, request_bytes=431, request_throughput_kbps=27811, response_bytes=252, response_throughput_kbps=33, cache_hit=false}
+2026-11-26 12:58:57.418 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <4F80BD19-B0F2-492F-A6DC-41E69900C401>.<4> finished successfully
+2026-11-26 12:58:57.426 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <6CDBF3C1-773A-468E-9678-7FE897CBD70B>.<1> resuming, timeouts(300.0, 604800.0) qos(0x19) voucher(<OS_voucher: 0x6000021f25d0>) activity(00000000-0000-0000-0000-000000000000)
+2026-11-26 12:58:57.427 A  ContactSyncSender[22464:4bcf8] (Security) SecTrustReportNetworkingAnalytics
+2026-11-26 12:58:57.428 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Connection 5: starting, TC(0x0)
+2026-11-26 12:58:57.428 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5 6949DE1D-8861-4041-B7F1-D477BE57E4F7 Hostname#973bc487:8765 tcp, url hash: 477369ed, definite, attribution: developer, context: com.apple.CFNetwork.NSURLSession.{F9175157-6364-4A51-A668-96BCFF7739F8}{(null)}{Y}{3}{0x0} (sensitive), proc: BE1BC6D9-7907-348C-9C71-97CD1A24BC5C, delegated upid: 0] start
+2026-11-26 12:58:57.428 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5 Hostname#973bc487:8765 initial parent-flow ((null))] event: path:start @0.000s
+2026-11-26 12:58:57.428 Df ContactSyncSender[22464:4bcf8] [com.apple.securityd:SecError] SecTrustReportNetworkingAnalytics failed with error: -4
+2026-11-26 12:58:57.428 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5 Hostname#973bc487:8765 waiting parent-flow (satisfied (Path is satisfied), interface: en0)] event: path:satisfied @0.000s, uuid: BD21EE36-9F32-4F49-8597-D395B515C642
+2026-11-26 12:58:57.429 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5 Hostname#973bc487:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:start_connect @0.000s
+2026-11-26 12:58:57.429 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C5] reporting state preparing
+2026-11-26 12:58:57.430 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5 Hostname#973bc487:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:start_child @0.001s
+2026-11-26 12:58:57.430 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5.1 Hostname#973bc487:8765 initial path ((null))] event: path:start @0.001s
+2026-11-26 12:58:57.430 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5.1 Hostname#973bc487:8765 waiting path (satisfied (Path is satisfied), interface: en0)] event: path:satisfied @0.002s, uuid: BD21EE36-9F32-4F49-8597-D395B515C642
+2026-11-26 12:58:57.430 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] event: resolver:start_dns @0.002s
+2026-11-26 12:58:57.431 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <6CDBF3C1-773A-468E-9678-7FE897CBD70B>.<1> setting up Connection 5
+2026-11-26 12:58:57.431 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] nw_endpoint_resolver_update [C5.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] Adding endpoint handler for IPv4#1341bb67:8765
+2026-11-26 12:58:57.431 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] event: resolver:receive_dns @0.003s
+2026-11-26 12:58:57.432 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5.1.1 IPv4#1341bb67:8765 initial path ((null))] event: path:start @0.004s
+2026-11-26 12:58:57.433 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5.1.1 IPv4#1341bb67:8765 waiting path (satisfied (Path is satisfied), interface: lo0)] event: path:satisfied @0.004s, uuid: 0C1E8C2E-061B-456E-8FF9-FB07EEA21FCB
+2026-11-26 12:58:57.433 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:start_connect @0.005s
+2026-11-26 12:58:57.434 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] nw_socket_handle_socket_event [C5.1.1:2] Socket received CONNECTED event
+2026-11-26 12:58:57.434 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] nw_flow_connected [C5.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] Transport protocol connected (socket)
+2026-11-26 12:58:57.434 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:finish_transport @0.006s
+2026-11-26 12:58:57.434 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] nw_flow_connected [C5.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] Output protocol connected (CFNetworkConnection-3329441061)
+2026-11-26 12:58:57.434 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5.1.1 IPv4#1341bb67:8765 ready socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:child_finish_connect @0.006s
+2026-11-26 12:58:57.435 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5.1 Hostname#973bc487:8765 ready resolver (satisfied (Path is satisfied), interface: en0)] event: flow:child_finish_connect @0.006s
+2026-11-26 12:58:57.435 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] nw_flow_connected [C5 IPv4#1341bb67:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] Output protocol connected (endpoint_flow)
+2026-11-26 12:58:57.435 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C5 IPv4#1341bb67:8765 ready parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:finish_connect @0.007s
+2026-11-26 12:58:57.435 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C5] reporting state ready
+2026-11-26 12:58:57.436 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Connection 5: connected successfully
+2026-11-26 12:58:57.436 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Connection 5: ready C(N) E(N)
+2026-11-26 12:58:57.436 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <6CDBF3C1-773A-468E-9678-7FE897CBD70B>.<1> now using Connection 5
+2026-11-26 12:58:57.437 Df ContactSyncSender[22464:4bcf8] [com.apple.CFNetwork:Default] Task <6CDBF3C1-773A-468E-9678-7FE897CBD70B>.<1> sent request, body S 1223
+2026-11-26 12:58:58.039 Df ContactSyncSender[22464:4bcf8] [com.apple.CFNetwork:Default] Task <6CDBF3C1-773A-468E-9678-7FE897CBD70B>.<1> received response, status 200 content K
+2026-11-26 12:58:58.039 Df ContactSyncSender[22464:4bcf8] [com.apple.CFNetwork:Default] Connection 5: cleaning up
+2026-11-26 12:58:58.039 Df ContactSyncSender[22464:4bcf8] [com.apple.network:connection] [C5 6949DE1D-8861-4041-B7F1-D477BE57E4F7 Hostname#973bc487:8765 tcp, url hash: 477369ed, definite, attribution: developer] cancel
+2026-11-26 12:58:58.039 Df ContactSyncSender[22464:4bcf8] [com.apple.network:connection] [C5 6949DE1D-8861-4041-B7F1-D477BE57E4F7 Hostname#973bc487:8765 tcp, url hash: 477369ed, definite, attribution: developer] cancelled
+	[C5.1.1 0C1E8C2E-061B-456E-8FF9-FB07EEA21FCB 100.101.102.103:55631<->IPv4#1341bb67:8765]
+	Connected Path: satisfied (Path is satisfied), interface: lo0
+	Privacy Stance: Not Eligible
+	Duration: 0.611s, DNS @0.002s took 0.001s, TCP @0.005s took 0.001s
+	bytes in/out: 171/1700, packets in/out: 2/2, rtt: 0.001s, retransmitted bytes: 0, out-of-order bytes: 0
+	ecn packets sent/acked/marked/lost: 0/0/0/0
+2026-11-26 12:58:58.040 Df ContactSyncSender[22464:4bcf8] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C5] reporting state cancelled
+2026-11-26 12:58:58.040 Df ContactSyncSender[22464:4bcf8] [com.apple.CFNetwork:Default] Task <6CDBF3C1-773A-468E-9678-7FE897CBD70B>.<1> response ended
+2026-11-26 12:58:58.040 Df ContactSyncSender[22464:4bcf8] [com.apple.CFNetwork:Default] Task <6CDBF3C1-773A-468E-9678-7FE897CBD70B>.<1> done using Connection 5
+2026-11-26 12:58:58.040 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Summary] Task <6CDBF3C1-773A-468E-9678-7FE897CBD70B>.<1> summary for task success {transaction_duration_ms=613, response_status=200, connection=5, protocol="http/1.1", domain_lookup_duration_ms=1, connect_duration_ms=2, secure_connection_duration_ms=0, private_relay=false, request_start_ms=9, request_duration_ms=0, response_start_ms=611, response_duration_ms=1, request_bytes=1700, request_throughput_kbps=17215, response_bytes=171, response_throughput_kbps=846, cache_hit=false}
+2026-11-26 12:58:58.041 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <6CDBF3C1-773A-468E-9678-7FE897CBD70B>.<1> finished successfully
+2026-11-26 12:58:58.045 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Ending background task with UIBackgroundTaskIdentifier: 9
+2026-11-26 12:58:58.045 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Ending task with identifier 9 and description: <_UIBackgroundTaskInfo: 0x600001725e80>: taskID = 9, taskName = contact-sync, creationTime = 3921 (elapsed = 1), _expireHandler: (null)
+2026-11-26 12:58:58.045 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Decrementing reference count for assertion <BKSProcessAssertion: 0x6000021f2490> (used by background task with identifier 9: <_UIBackgroundTaskInfo: 0x600001725e80>: taskID = 9, taskName = contact-sync, creationTime = 3921 (elapsed = 1))
+2026-11-26 12:58:58.045 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Will invalidate assertion: <BKSProcessAssertion: 0x6000021f2490> for task identifier: 9
+2026-11-26 12:59:02.509 A  ContactSyncSender[22464:4bcf8] (RunningBoardServices) didChangeInheritances
+2026-11-26 12:59:02.515 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.dvirchi.contactsync.sender-default  persistentID: D9A22EE6-F1B5-4126-A7CB-315A9F47396C
+2026-11-26 12:59:02.515 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:Application] Deactivation reason added: 5; deactivation reasons: 6144 -> 6176; animating application lifecycle event: 1
+2026-11-26 12:59:02.516 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:Application] Ignoring already applied deactivation reason: 12; deactivation reasons: 6176
+2026-11-26 12:59:02.516 A  ContactSyncSender[22464:473a7] (CoreLocation) CL: CLLocationManager
+2026-11-26 12:59:02.516 Df ContactSyncSender[22464:473a7] [com.apple.locationd.Core:Client] {"msg":"CLLocationManager", "event":activity, "_cmd":onWillEnterForeground:, "self":"0x6000000040b0", "notification":NSConcreteNotification 0x6000002b7680 {name = UIApplicationWillEnterForegroundNotification; object = <_TtC7SwiftUIP33_ACC2C5639A7D76F611E170E831FCA49118SwiftUIApplication: 0x1063065b0>}}
+2026-11-26 12:59:02.517 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:Application] Deactivation reason removed: 11; deactivation reasons: 6176 -> 4128; animating application lifecycle event: 1
+2026-11-26 12:59:02.518 Df ContactSyncSender[22464:49b08] [com.apple.UIIntelligenceSupport:xpc] establishing connection to agent
+2026-11-26 12:59:02.518 Df ContactSyncSender[22464:49b08] [com.apple.xpc:session] [0x6000021ba670] Session created.
+2026-11-26 12:59:02.518 Df ContactSyncSender[22464:49b08] [com.apple.xpc:session] [0x6000021ba670] Session created from connection [0x106106370]
+2026-11-26 12:59:02.518 Df ContactSyncSender[22464:49b08] [com.apple.xpc:connection] [0x106106370] activating connection: mach=true listener=false peer=false name=com.apple.uiintelligencesupport.agent
+2026-11-26 12:59:02.519 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:EventDeferring] [0x600002918e70] [keyboardFocus] Recreation of event deferring records requested: removing recreation reason: detachedContext; for reason: _UIEventDeferringManager: 0x600002918e70: recreating keyboardFocus: context attached for window: 0x10600fc40; contextID: 0x14AFED3E
+2026-11-26 12:59:02.519 Df ContactSyncSender[22464:49b08] [com.apple.xpc:session] [0x6000021ba670] Session activated
+2026-11-26 12:59:02.585 Df ContactSyncSender[22464:4bcf8] [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x60000260ee20; token: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.dvirchi.contactsync.sender-default; status: ancestor> was:none
+2026-11-26 12:59:02.594 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:KeyWindow] Scene target of keyboard event deferring environment did change: 1; scene: UIWindowScene: 0x106311440; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.dvirchi.contactsync.sender-default
+2026-11-26 12:59:02.594 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:EventDeferring] [0x600002918e70] Scene target of event deferring environments did update: scene: 0x106311440; current systemShellManagesKeyboardFocus: 1; systemShellManagesKeyboardFocusForScene: 1; eligibleForRecordRemoval: 1;
+2026-11-26 12:59:02.594 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x106311440; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.dvirchi.contactsync.sender-default
+2026-11-26 12:59:02.594 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:UpdateScheduler] Target list changed: <CADisplay:LCD PurpleMain>
+2026-11-26 12:59:02.595 Df ContactSyncSender[22464:473a7] [com.apple.KeyboardArbiter:Client] startConnection
+2026-11-26 12:59:02.595 Df ContactSyncSender[22464:473a7] [com.apple.xpc:connection] [0x10613e710] activating connection: mach=true listener=false peer=false name=com.apple.UIKit.KeyboardManagement.hosted
+2026-11-26 12:59:02.601 Df ContactSyncSender[22464:473a7] [com.apple.KeyboardArbiter:Client] handleKeyboardChange: set currentKeyboard:N (wasKeyboard:N)
+2026-11-26 12:59:02.911 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.dvirchi.contactsync.sender-default  persistentID: D9A22EE6-F1B5-4126-A7CB-315A9F47396C
+2026-11-26 12:59:02.911 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x106311440> (D9A22EE6-F1B5-4126-A7CB-315A9F47396C)
+2026-11-26 12:59:02.935 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.dvirchi.contactsync.sender-default  persistentID: D9A22EE6-F1B5-4126-A7CB-315A9F47396C
+2026-11-26 12:59:02.946 A  ContactSyncSender[22464:4bcf8] (RunningBoardServices) didChangeInheritances
+2026-11-26 12:59:02.960 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.dvirchi.contactsync.sender-default  persistentID: D9A22EE6-F1B5-4126-A7CB-315A9F47396C
+2026-11-26 12:59:02.994 A  ContactSyncSender[22464:49b08] (RunningBoardServices) didChangeInheritances
+2026-11-26 12:59:03.012 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 1, <UIWindowScene: 0x106311440> (D9A22EE6-F1B5-4126-A7CB-315A9F47396C)
+2026-11-26 12:59:03.014 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.dvirchi.contactsync.sender-default  persistentID: D9A22EE6-F1B5-4126-A7CB-315A9F47396C
+2026-11-26 12:59:03.015 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:Application] Deactivation reason removed: 12; deactivation reasons: 4128 -> 32; animating application lifecycle event: 1
+2026-11-26 12:59:03.015 Df ContactSyncSender[22464:473a7] [com.apple.KeyboardArbiter:Client] Send setDeactivating: N (-DeactivationReason:SuspendedEventsOnly)
+2026-11-26 12:59:03.019 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:Application] Deactivation reason removed: 5; deactivation reasons: 32 -> 0; animating application lifecycle event: 0
+2026-11-26 12:59:03.019 Df ContactSyncSender[22464:473a7] [com.apple.contacts:CNTCCVersion2] CNTCCVersion2, app is coming into the foreground. reprompt? 0
+2026-11-26 12:59:03.019 A  ContactSyncSender[22464:473a7] (CoreLocation) CL: CLLocationManager
+2026-11-26 12:59:03.019 Df ContactSyncSender[22464:473a7] [com.apple.locationd.Core:Client] {"msg":"CLLocationManager", "event":activity, "_cmd":onDidBecomeActive:, "self":"0x6000000040b0", "notification":NSConcreteNotification 0x6000002ac700 {name = UIApplicationDidBecomeActiveNotification; object = <_TtC7SwiftUIP33_ACC2C5639A7D76F611E170E831FCA49118SwiftUIApplication: 0x1063065b0>}}
+2026-11-26 12:59:03.020 Df ContactSyncSender[22464:473a7] [com.apple.contacts:CNTCCVersion2] CNTCCVersion2, app is coming into the foreground. reprompt? 0
+2026-11-26 12:59:03.024 A  ContactSyncSender[22464:473a7] (TCC) TCCAccessRequest() IPC
+2026-11-26 12:59:03.027 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Will add backgroundTask with taskName: contact-sync, expirationHandler: (null)
+2026-11-26 12:59:03.027 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Creating new assertion because there is no existing background assertion.
+2026-11-26 12:59:03.027 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Creating new background assertion
+2026-11-26 12:59:03.027 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Created new background assertion <BKSProcessAssertion: 0x6000021c3110>
+2026-11-26 12:59:03.028 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x6000021c3110>
+2026-11-26 12:59:03.029 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x600001738800>: taskID = 10, taskName = contact-sync, creationTime = 3927 (elapsed = 0).
+2026-11-26 12:59:03.029 A  ContactSyncSender[22464:473a7] (TCC) TCCAccessRequest() IPC
+2026-11-26 12:59:03.091 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:_UIVisualStyleRegistry] Note: no default visual style class registered as fallback for stylable class UIActivityIndicatorView
+2026-11-26 12:59:03.091 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:_UIVisualStyleRegistry] Note: no default visual style class registered as fallback for stylable class UIActivityIndicatorView
+2026-11-26 12:59:03.095 A  ContactSyncSender[22464:49b08] (RunningBoardServices) didChangeInheritances
+2026-11-26 12:59:03.215 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c BEGIN: Will execute fetch for request: <CNContactFetchRequest: 0x60000261c180: predicate=(nil), keysToFetch=(
+    givenName,
+    familyName,
+    middleName,
+    namePrefix,
+    nameSuffix,
+    nickname,
+    phoneticGivenName,
+    phoneticFamilyName,
+    organizationName,
+    departmentName,
+    jobTitle,
+    phoneNumbers,
+    emailAddresses,
+    postalAddresses,
+    urlAddresses,
+    birthday,
+    thumbnailImageData
+), unifyResults=1, sortOrder=0, serialNumber=12, alwaysUnifyLabeledValues=YES>
+2026-11-26 12:59:03.215 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c Entry point: enumerateContactsWithFetchRequest:error:usingBlock:
+2026-11-26 12:59:03.215 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c Predicate: (null) (null)
+2026-11-26 12:59:03.215 A  ContactSyncSender[22464:4aab2] (Contacts) FetchingContacts
+2026-11-26 12:59:03.286 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:avatar-decorator] decoratedContacts called with 7 contacts
+2026-11-26 12:59:03.287 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:avatar-decorator] Validating keys for 17 descriptors
+2026-11-26 12:59:03.287 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:avatar-decorator] Final keysToFetchVector: <CNMutableContactKeyVector: 0x6000002b1ca0: keys=namePrefix, givenName, middleName, familyName, nameSuffix, nickname, phoneticGivenName, phoneticFamilyName, organizationName, departmentName, jobTitle, birthday, thumbnailImageData, phoneNumbers, emailAddresses, urlAddresses, postalAddresses>
+2026-11-26 12:59:03.287 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:avatar-decorator] Contains wallpaper key: 0
+2026-11-26 12:59:03.287 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:avatar-decorator] Skipping: required keys missing
+2026-11-26 12:59:03.287 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c Contact: 177C371E-701D-42F8-A03B-C61CA31627F6
+2026-11-26 12:59:03.287 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c Contact: AB211C5F-9EC9-429F-9466-B9382FF61035
+2026-11-26 12:59:03.287 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c Contact: 410FE041-5C4E-48DA-B4DE-04C15EA3DBAC
+2026-11-26 12:59:03.287 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c Contact: F57C8277-585D-4327-88A6-B5689FF69DFE
+2026-11-26 12:59:03.287 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c Contact: 2E73EE73-C03F-4D5F-B1E8-44E85A70F170
+2026-11-26 12:59:03.287 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c Contact: E94CD15C-7964-4A9B-8AC4-10D7CFB791FD
+2026-11-26 12:59:03.288 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c Contact: F63CF867-CB05-40F9-9DC0-A0F880F4759B:ABPerson
+2026-11-26 12:59:03.288 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c All results have been returned to the client
+2026-11-26 12:59:03.289 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c Time spent in client code: 600 µs
+2026-11-26 12:59:03.289 Df ContactSyncSender[22464:4aab2] [com.apple.contacts:api-triage] 000c FINISH (73.6 ms)
+2026-11-26 12:59:03.307 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <BB680AE7-1F0F-46B7-8457-13B46FC869BB>.<5> resuming, timeouts(6.0, 604800.0) qos(0x19) voucher(<OS_voucher: 0x6000021b9b80>) activity(00000000-0000-0000-0000-000000000000)
+2026-11-26 12:59:03.307 A  ContactSyncSender[22464:49b08] (Security) SecTrustReportNetworkingAnalytics
+2026-11-26 12:59:03.308 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Connection 6: starting, TC(0x0)
+2026-11-26 12:59:03.308 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6 16607A5B-F13F-4B48-AB71-5D1B02891478 Hostname#973bc487:8765 tcp, url hash: ec452614, definite, attribution: developer, context: com.apple.CFNetwork.NSURLSession.{146804ED-8610-4806-9BCC-91CAB262DA56}{(null)}{Y}{3}{0x0} (sensitive), proc: BE1BC6D9-7907-348C-9C71-97CD1A24BC5C, delegated upid: 0] start
+2026-11-26 12:59:03.308 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6 Hostname#973bc487:8765 initial parent-flow ((null))] event: path:start @0.000s
+2026-11-26 12:59:03.308 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6 Hostname#973bc487:8765 waiting parent-flow (satisfied (Path is satisfied), interface: en0)] event: path:satisfied @0.000s, uuid: 0478B87F-F651-4830-AD52-D7B9539B54AD
+2026-11-26 12:59:03.308 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6 Hostname#973bc487:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:start_connect @0.000s
+2026-11-26 12:59:03.308 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C6] reporting state preparing
+2026-11-26 12:59:03.309 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6 Hostname#973bc487:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:start_child @0.000s
+2026-11-26 12:59:03.309 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6.1 Hostname#973bc487:8765 initial path ((null))] event: path:start @0.001s
+2026-11-26 12:59:03.309 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6.1 Hostname#973bc487:8765 waiting path (satisfied (Path is satisfied), interface: en0)] event: path:satisfied @0.001s, uuid: 0478B87F-F651-4830-AD52-D7B9539B54AD
+2026-11-26 12:59:03.309 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] event: resolver:start_dns @0.001s
+2026-11-26 12:59:03.312 Df ContactSyncSender[22464:49b08] [com.apple.securityd:SecError] SecTrustReportNetworkingAnalytics failed with error: -4
+2026-11-26 12:59:03.313 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <BB680AE7-1F0F-46B7-8457-13B46FC869BB>.<5> setting up Connection 6
+2026-11-26 12:59:03.313 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_endpoint_resolver_update [C6.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] Adding endpoint handler for IPv4#1341bb67:8765
+2026-11-26 12:59:03.314 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] event: resolver:receive_dns @0.005s
+2026-11-26 12:59:03.314 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6.1.1 IPv4#1341bb67:8765 initial path ((null))] event: path:start @0.005s
+2026-11-26 12:59:03.325 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6.1.1 IPv4#1341bb67:8765 waiting path (satisfied (Path is satisfied), interface: lo0)] event: path:satisfied @0.016s, uuid: 8B4F95E0-B73B-4ADC-AC4A-99A14B74DF13
+2026-11-26 12:59:03.325 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:start_connect @0.017s
+2026-11-26 12:59:03.326 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_socket_handle_socket_event [C6.1.1:2] Socket received CONNECTED event
+2026-11-26 12:59:03.326 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_flow_connected [C6.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] Transport protocol connected (socket)
+2026-11-26 12:59:03.326 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:finish_transport @0.018s
+2026-11-26 12:59:03.326 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_flow_connected [C6.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] Output protocol connected (CFNetworkConnection-3329441061)
+2026-11-26 12:59:03.326 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6.1.1 IPv4#1341bb67:8765 ready socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:child_finish_connect @0.018s
+2026-11-26 12:59:03.326 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6.1 Hostname#973bc487:8765 ready resolver (satisfied (Path is satisfied), interface: en0)] event: flow:child_finish_connect @0.018s
+2026-11-26 12:59:03.326 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_flow_connected [C6 IPv4#1341bb67:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] Output protocol connected (endpoint_flow)
+2026-11-26 12:59:03.326 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C6 IPv4#1341bb67:8765 ready parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:finish_connect @0.018s
+2026-11-26 12:59:03.327 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C6] reporting state ready
+2026-11-26 12:59:03.327 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Connection 6: connected successfully
+2026-11-26 12:59:03.327 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Connection 6: ready C(N) E(N)
+2026-11-26 12:59:03.327 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <BB680AE7-1F0F-46B7-8457-13B46FC869BB>.<5> now using Connection 6
+2026-11-26 12:59:03.328 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <BB680AE7-1F0F-46B7-8457-13B46FC869BB>.<5> sent request, body N 0
+2026-11-26 12:59:04.685 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <BB680AE7-1F0F-46B7-8457-13B46FC869BB>.<5> received response, status 200 content K
+2026-11-26 12:59:04.685 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Connection 6: cleaning up
+2026-11-26 12:59:04.685 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C6 16607A5B-F13F-4B48-AB71-5D1B02891478 Hostname#973bc487:8765 tcp, url hash: ec452614, definite, attribution: developer] cancel
+2026-11-26 12:59:04.686 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] [C6 16607A5B-F13F-4B48-AB71-5D1B02891478 Hostname#973bc487:8765 tcp, url hash: ec452614, definite, attribution: developer] cancelled
+	[C6.1.1 8B4F95E0-B73B-4ADC-AC4A-99A14B74DF13 100.101.102.103:55665<->IPv4#1341bb67:8765]
+	Connected Path: satisfied (Path is satisfied), interface: lo0
+	Privacy Stance: Not Eligible
+	Duration: 1.377s, DNS @0.001s took 0.004s, TCP @0.017s took 0.001s
+	bytes in/out: 252/431, packets in/out: 2/1, rtt: 0.001s, retransmitted bytes: 0, out-of-order bytes: 0
+	ecn packets sent/acked/marked/lost: 0/0/0/0
+2026-11-26 12:59:04.686 Df ContactSyncSender[22464:49b08] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C6] reporting state cancelled
+2026-11-26 12:59:04.686 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <BB680AE7-1F0F-46B7-8457-13B46FC869BB>.<5> response ended
+2026-11-26 12:59:04.686 Df ContactSyncSender[22464:49b08] [com.apple.CFNetwork:Default] Task <BB680AE7-1F0F-46B7-8457-13B46FC869BB>.<5> done using Connection 6
+2026-11-26 12:59:04.687 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Summary] Task <BB680AE7-1F0F-46B7-8457-13B46FC869BB>.<5> summary for task success {transaction_duration_ms=1379, response_status=200, connection=6, protocol="http/1.1", domain_lookup_duration_ms=4, connect_duration_ms=1, secure_connection_duration_ms=0, private_relay=false, request_start_ms=20, request_duration_ms=0, response_start_ms=1377, response_duration_ms=2, request_bytes=431, request_throughput_kbps=32535, response_bytes=252, response_throughput_kbps=990, cache_hit=false}
+2026-11-26 12:59:04.687 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <BB680AE7-1F0F-46B7-8457-13B46FC869BB>.<5> finished successfully
+2026-11-26 12:59:04.689 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Ending background task with UIBackgroundTaskIdentifier: 10
+2026-11-26 12:59:04.689 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Ending task with identifier 10 and description: <_UIBackgroundTaskInfo: 0x600001738800>: taskID = 10, taskName = contact-sync, creationTime = 3927 (elapsed = 2), _expireHandler: (null)
+2026-11-26 12:59:04.690 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Decrementing reference count for assertion <BKSProcessAssertion: 0x6000021c3110> (used by background task with identifier 10: <_UIBackgroundTaskInfo: 0x600001738800>: taskID = 10, taskName = contact-sync, creationTime = 3927 (elapsed = 2))
+2026-11-26 12:59:04.690 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Will invalidate assertion: <BKSProcessAssertion: 0x6000021c3110> for task identifier: 10
+2026-11-26 12:59:08.541 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Will add backgroundTask with taskName: contact-sync, expirationHandler: (null)
+2026-11-26 12:59:08.541 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Creating new assertion because there is no existing background assertion.
+2026-11-26 12:59:08.541 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Creating new background assertion
+2026-11-26 12:59:08.541 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Created new background assertion <BKSProcessAssertion: 0x60000214da90>
+2026-11-26 12:59:08.542 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x60000214da90>
+2026-11-26 12:59:08.542 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x600001701180>: taskID = 11, taskName = contact-sync, creationTime = 3933 (elapsed = 0).
+2026-11-26 12:59:08.543 A  ContactSyncSender[22464:473a7] (TCC) TCCAccessRequest() IPC
+2026-11-26 12:59:08.545 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f BEGIN: Will execute fetch for request: <CNContactFetchRequest: 0x60000263b000: predicate=(nil), keysToFetch=(
+    givenName,
+    familyName,
+    middleName,
+    namePrefix,
+    nameSuffix,
+    nickname,
+    phoneticGivenName,
+    phoneticFamilyName,
+    organizationName,
+    departmentName,
+    jobTitle,
+    phoneNumbers,
+    emailAddresses,
+    postalAddresses,
+    urlAddresses,
+    birthday,
+    thumbnailImageData
+), unifyResults=1, sortOrder=0, serialNumber=15, alwaysUnifyLabeledValues=YES>
+2026-11-26 12:59:08.545 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f Entry point: enumerateContactsWithFetchRequest:error:usingBlock:
+2026-11-26 12:59:08.545 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f Predicate: (null) (null)
+2026-11-26 12:59:08.545 A  ContactSyncSender[22464:4c0cf] (Contacts) FetchingContacts
+2026-11-26 12:59:08.551 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:avatar-decorator] decoratedContacts called with 7 contacts
+2026-11-26 12:59:08.551 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:avatar-decorator] Validating keys for 17 descriptors
+2026-11-26 12:59:08.552 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:avatar-decorator] Final keysToFetchVector: <CNMutableContactKeyVector: 0x6000002b93e0: keys=namePrefix, givenName, middleName, familyName, nameSuffix, nickname, phoneticGivenName, phoneticFamilyName, organizationName, departmentName, jobTitle, birthday, thumbnailImageData, phoneNumbers, emailAddresses, urlAddresses, postalAddresses>
+2026-11-26 12:59:08.552 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:avatar-decorator] Contains wallpaper key: 0
+2026-11-26 12:59:08.552 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:avatar-decorator] Skipping: required keys missing
+2026-11-26 12:59:08.552 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f Contact: 177C371E-701D-42F8-A03B-C61CA31627F6
+2026-11-26 12:59:08.552 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f Contact: AB211C5F-9EC9-429F-9466-B9382FF61035
+2026-11-26 12:59:08.553 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f Contact: 410FE041-5C4E-48DA-B4DE-04C15EA3DBAC
+2026-11-26 12:59:08.553 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f Contact: F57C8277-585D-4327-88A6-B5689FF69DFE
+2026-11-26 12:59:08.553 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f Contact: 2E73EE73-C03F-4D5F-B1E8-44E85A70F170
+2026-11-26 12:59:08.553 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f Contact: E94CD15C-7964-4A9B-8AC4-10D7CFB791FD
+2026-11-26 12:59:08.554 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f Contact: F63CF867-CB05-40F9-9DC0-A0F880F4759B:ABPerson
+2026-11-26 12:59:08.554 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f All results have been returned to the client
+2026-11-26 12:59:08.554 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f Time spent in client code: 1799 µs
+2026-11-26 12:59:08.554 Df ContactSyncSender[22464:4c0cf] [com.apple.contacts:api-triage] 000f FINISH (7.71 ms)
+2026-11-26 12:59:08.567 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:_UIVisualStyleRegistry] Note: no default visual style class registered as fallback for stylable class UIActivityIndicatorView
+2026-11-26 12:59:08.567 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:_UIVisualStyleRegistry] Note: no default visual style class registered as fallback for stylable class UIActivityIndicatorView
+2026-11-26 12:59:08.590 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <DF4C3541-F655-48A1-95D6-FD8E78EF2AE3>.<6> resuming, timeouts(6.0, 604800.0) qos(0x19) voucher((null)) activity(00000000-0000-0000-0000-000000000000)
+2026-11-26 12:59:08.590 A  ContactSyncSender[22464:4c0cf] (Security) SecTrustReportNetworkingAnalytics
+2026-11-26 12:59:08.592 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Connection 7: starting, TC(0x0)
+2026-11-26 12:59:08.592 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7 BA2EE6E4-1402-45AE-AA59-1F6152AF0DFD Hostname#973bc487:8765 tcp, url hash: ec452614, definite, attribution: developer, context: com.apple.CFNetwork.NSURLSession.{146804ED-8610-4806-9BCC-91CAB262DA56}{(null)}{Y}{3}{0x0} (sensitive), proc: BE1BC6D9-7907-348C-9C71-97CD1A24BC5C, delegated upid: 0] start
+2026-11-26 12:59:08.592 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7 Hostname#973bc487:8765 initial parent-flow ((null))] event: path:start @0.000s
+2026-11-26 12:59:08.592 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7 Hostname#973bc487:8765 waiting parent-flow (satisfied (Path is satisfied), interface: en0)] event: path:satisfied @0.000s, uuid: 0478B87F-F651-4830-AD52-D7B9539B54AD
+2026-11-26 12:59:08.593 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7 Hostname#973bc487:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:start_connect @0.000s
+2026-11-26 12:59:08.593 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C7] reporting state preparing
+2026-11-26 12:59:08.594 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7 Hostname#973bc487:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:start_child @0.001s
+2026-11-26 12:59:08.594 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7.1 Hostname#973bc487:8765 initial path ((null))] event: path:start @0.001s
+2026-11-26 12:59:08.594 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7.1 Hostname#973bc487:8765 waiting path (satisfied (Path is satisfied), interface: en0)] event: path:satisfied @0.001s, uuid: 0478B87F-F651-4830-AD52-D7B9539B54AD
+2026-11-26 12:59:08.595 Df ContactSyncSender[22464:4c0cf] [com.apple.securityd:SecError] SecTrustReportNetworkingAnalytics failed with error: -4
+2026-11-26 12:59:08.595 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] event: resolver:start_dns @0.002s
+2026-11-26 12:59:08.597 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <DF4C3541-F655-48A1-95D6-FD8E78EF2AE3>.<6> setting up Connection 7
+2026-11-26 12:59:08.598 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_endpoint_resolver_update [C7.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] Adding endpoint handler for IPv4#1341bb67:8765
+2026-11-26 12:59:08.598 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7.1 Hostname#973bc487:8765 in_progress resolver (satisfied (Path is satisfied), interface: en0)] event: resolver:receive_dns @0.006s
+2026-11-26 12:59:08.599 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7.1.1 IPv4#1341bb67:8765 initial path ((null))] event: path:start @0.007s
+2026-11-26 12:59:08.599 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7.1.1 IPv4#1341bb67:8765 waiting path (satisfied (Path is satisfied), interface: lo0)] event: path:satisfied @0.007s, uuid: 8B4F95E0-B73B-4ADC-AC4A-99A14B74DF13
+2026-11-26 12:59:08.600 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:start_connect @0.008s
+2026-11-26 12:59:08.601 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_socket_handle_socket_event [C7.1.1:2] Socket received CONNECTED event
+2026-11-26 12:59:08.602 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_flow_connected [C7.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] Transport protocol connected (socket)
+2026-11-26 12:59:08.602 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:finish_transport @0.009s
+2026-11-26 12:59:08.603 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_flow_connected [C7.1.1 IPv4#1341bb67:8765 in_progress socket-flow (satisfied (Path is satisfied), interface: lo0)] Output protocol connected (CFNetworkConnection-3329441061)
+2026-11-26 12:59:08.603 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7.1.1 IPv4#1341bb67:8765 ready socket-flow (satisfied (Path is satisfied), interface: lo0)] event: flow:child_finish_connect @0.011s
+2026-11-26 12:59:08.604 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7.1 Hostname#973bc487:8765 ready resolver (satisfied (Path is satisfied), interface: en0)] event: flow:child_finish_connect @0.012s
+2026-11-26 12:59:08.604 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_flow_connected [C7 IPv4#1341bb67:8765 in_progress parent-flow (satisfied (Path is satisfied), interface: en0)] Output protocol connected (endpoint_flow)
+2026-11-26 12:59:08.605 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] [C7 IPv4#1341bb67:8765 ready parent-flow (satisfied (Path is satisfied), interface: en0)] event: flow:finish_connect @0.013s
+2026-11-26 12:59:08.606 Df ContactSyncSender[22464:4aab2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C7] reporting state ready
+2026-11-26 12:59:08.607 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Connection 7: connected successfully
+2026-11-26 12:59:08.607 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Connection 7: ready C(N) E(N)
+2026-11-26 12:59:08.608 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <DF4C3541-F655-48A1-95D6-FD8E78EF2AE3>.<6> now using Connection 7
+2026-11-26 12:59:08.608 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <DF4C3541-F655-48A1-95D6-FD8E78EF2AE3>.<6> sent request, body N 0
+2026-11-26 12:59:08.681 Df ContactSyncSender[22464:4c0cf] [com.apple.CFNetwork:Default] Task <DF4C3541-F655-48A1-95D6-FD8E78EF2AE3>.<6> received response, status 200 content K
+2026-11-26 12:59:08.688 Df ContactSyncSender[22464:4c0cf] [com.apple.CFNetwork:Default] Connection 7: cleaning up
+2026-11-26 12:59:08.688 Df ContactSyncSender[22464:4c0cf] [com.apple.network:connection] [C7 BA2EE6E4-1402-45AE-AA59-1F6152AF0DFD Hostname#973bc487:8765 tcp, url hash: ec452614, definite, attribution: developer] cancel
+2026-11-26 12:59:08.688 Df ContactSyncSender[22464:4c0cf] [com.apple.network:connection] [C7 BA2EE6E4-1402-45AE-AA59-1F6152AF0DFD Hostname#973bc487:8765 tcp, url hash: ec452614, definite, attribution: developer] cancelled
+	[C7.1.1 8B4F95E0-B73B-4ADC-AC4A-99A14B74DF13 100.101.102.103:55693<->IPv4#1341bb67:8765]
+	Connected Path: satisfied (Path is satisfied), interface: lo0
+	Privacy Stance: Not Eligible
+	Duration: 0.096s, DNS @0.002s took 0.004s, TCP @0.008s took 0.001s
+	bytes in/out: 252/431, packets in/out: 2/1, rtt: 0.001s, retransmitted bytes: 0, out-of-order bytes: 0
+	ecn packets sent/acked/marked/lost: 0/0/0/0
+2026-11-26 12:59:08.688 Df ContactSyncSender[22464:4c0cf] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C7] reporting state cancelled
+2026-11-26 12:59:08.688 Df ContactSyncSender[22464:4c0cf] [com.apple.CFNetwork:Default] Task <DF4C3541-F655-48A1-95D6-FD8E78EF2AE3>.<6> response ended
+2026-11-26 12:59:08.689 Df ContactSyncSender[22464:4c0cf] [com.apple.CFNetwork:Default] Task <DF4C3541-F655-48A1-95D6-FD8E78EF2AE3>.<6> done using Connection 7
+2026-11-26 12:59:08.689 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Summary] Task <DF4C3541-F655-48A1-95D6-FD8E78EF2AE3>.<6> summary for task success {transaction_duration_ms=99, response_status=200, connection=7, protocol="http/1.1", domain_lookup_duration_ms=4, connect_duration_ms=5, secure_connection_duration_ms=0, private_relay=false, request_start_ms=18, request_duration_ms=0, response_start_ms=91, response_duration_ms=7, request_bytes=431, request_throughput_kbps=20156, response_bytes=252, response_throughput_kbps=262, cache_hit=false}
+2026-11-26 12:59:08.689 Df ContactSyncSender[22464:4aab2] [com.apple.CFNetwork:Default] Task <DF4C3541-F655-48A1-95D6-FD8E78EF2AE3>.<6> finished successfully
+2026-11-26 12:59:08.690 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Ending background task with UIBackgroundTaskIdentifier: 11
+2026-11-26 12:59:08.690 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Ending task with identifier 11 and description: <_UIBackgroundTaskInfo: 0x600001701180>: taskID = 11, taskName = contact-sync, creationTime = 3933 (elapsed = 0), _expireHandler: (null)
+2026-11-26 12:59:08.690 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Decrementing reference count for assertion <BKSProcessAssertion: 0x60000214da90> (used by background task with identifier 11: <_UIBackgroundTaskInfo: 0x600001701180>: taskID = 11, taskName = contact-sync, creationTime = 3933 (elapsed = 0))
+2026-11-26 12:59:08.691 Df ContactSyncSender[22464:473a7] [com.apple.UIKit:BackgroundTask] Will invalidate assertion: <BKSProcessAssertion: 0x60000214da90> for task identifier: 11

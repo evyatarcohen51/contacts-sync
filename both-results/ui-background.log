@@ -1,0 +1,71 @@
+Command line invocation:
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild test-without-building -project ContactSyncSender.xcodeproj -scheme ContactSyncSender -destination "platform=iOS Simulator,id=6FE167B2-ADE5-432F-9734-2B111C4B6835" -derivedDataPath /Users/runner/work/contacts-sync/contacts-sync/ios/ContactSyncSender/build/sim "-only-testing:ContactSyncSenderUITests/ContactSyncUITests/testTurnOnBackgroundMode"
+
+2026-11-26 12:55:03.290311+0000 ContactSyncSenderUITests-Runner[20483:286092] [UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-11-26 12:55:03.310497+0000 ContactSyncSenderUITests-Runner[20483:286092] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-11-26 12:55:06.263.
+Test Suite 'ContactSyncSenderUITests.xctest' started at 2026-11-26 12:55:06.264.
+Test Suite 'ContactSyncUITests' started at 2026-11-26 12:55:06.265.
+Test Case '-[ContactSyncSenderUITests.ContactSyncUITests testTurnOnBackgroundMode]' started.
+    t =     0.00s Start Test at 2026-11-26 12:55:06.266
+    t =     2.95s Set Up
+    t =     2.96s Open com.dvirchi.contactsync.sender
+    t =     2.96s     Launch com.dvirchi.contactsync.sender
+    t =     2.96s         Terminate com.dvirchi.contactsync.sender:12356
+    t =    20.08s         Setting up automation session
+    t =    28.39s         Wait for com.dvirchi.contactsync.sender to idle
+    t =    33.06s Waiting 15.0s for "1 min" Button to exist
+    t =    34.15s     Checking `Expect predicate `existsNoRetry == 1` for object "1 min" Button`
+    t =    34.15s         Checking existence of `"1 min" Button`
+    t =    39.76s Tap "1 min" Button
+    t =    39.76s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    39.80s     Find the "1 min" Button
+    t =    40.30s     Check for interrupting elements affecting "1 min" Button
+    t =    40.58s     Synthesize event
+    t =    40.93s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    41.56s Waiting 10.0s for "Keep running in background" Switch to exist
+    t =    42.61s     Checking `Expect predicate `existsNoRetry == 1` for object "Keep running in background" Switch`
+    t =    42.61s         Checking existence of `"Keep running in background" Switch`
+    t =    42.77s Find the "Keep running in background" Switch
+    t =    42.90s Tap "Keep running in background" Switch[0.93, 0.50]
+    t =    42.90s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    42.91s     Find the "Keep running in background" Switch
+    t =    43.02s     Check for interrupting elements affecting "Keep running in background" Switch
+    t =    43.18s     Synthesize event
+    t =    43.18s         Find the "Keep running in background" Switch
+    t =    43.30s         Find the "Keep running in background" Switch
+    t =    43.45s         Find the "Keep running in background" Switch
+    t =    43.94s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    45.65s Find the "Keep running in background" Switch
+    t =    45.88s Waiting 20.0s for "Allow While Using App" Button to exist
+    t =    46.92s     Checking `Expect predicate `existsNoRetry == 1` for object "Allow While Using App" Button`
+    t =    46.92s         Checking existence of `"Allow While Using App" Button`
+    t =    47.06s Tap "Allow While Using App" Button
+    t =    47.06s     Wait for com.apple.springboard to idle
+    t =    47.07s     Find the "Allow While Using App" Button
+    t =    47.18s     Check for interrupting elements affecting "Allow While Using App" Button
+    t =    47.31s     Synthesize event
+    t =    47.62s     Wait for com.apple.springboard to idle
+    t =    50.05s Find the "Keep running in background" Switch
+    t =    50.20s Checking existence of `Any (First Match)`
+    t =    51.77s Find the "1 min" Button
+    t =    52.30s Added attachment named 'bg-1-background-mode-on'
+    t =    52.31s Tear Down
+Test Case '-[ContactSyncSenderUITests.ContactSyncUITests testTurnOnBackgroundMode]' passed (54.236 seconds).
+Test Suite 'ContactSyncUITests' passed at 2026-11-26 12:56:00.502.
+	 Executed 1 test, with 0 failures (0 unexpected) in 54.236 (54.237) seconds
+Test Suite 'ContactSyncSenderUITests.xctest' passed at 2026-11-26 12:56:00.503.
+	 Executed 1 test, with 0 failures (0 unexpected) in 54.236 (54.239) seconds
+Test Suite 'Selected tests' passed at 2026-11-26 12:56:00.504.
+	 Executed 1 test, with 0 failures (0 unexpected) in 54.236 (54.241) seconds
+2026-11-26 12:56:01.272 xcodebuild[20409:285716] [MT] IDETestOperationsObserverDebug: 64.504 elapsed -- Testing started completed.
+2026-11-26 12:56:01.272 xcodebuild[20409:285716] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-26 12:56:01.272 xcodebuild[20409:285716] [MT] IDETestOperationsObserverDebug: 64.504 sec, +64.504 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/runner/work/contacts-sync/contacts-sync/ios/ContactSyncSender/build/sim/Logs/Test/Test-ContactSyncSender-2026.11.26_12-54-56-+0000.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

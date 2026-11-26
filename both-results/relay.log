@@ -1,0 +1,62 @@
+relay: port 8765 -> 127.0.0.1:18765
+GET /v1/hello -> no answer, 0.1 KB sent
+GET /v1/hello -> 200, 0.1 KB sent
+(no request) -> no answer, 0.0 KB sent
+POST /v1/pair/start -> 200, 0.4 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 202, 0.3 KB sent
+POST /v1/pair/finish -> 200, 0.3 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+PUT /v1/contacts -> 200, 1.6 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+PUT /v1/contacts -> 200, 1.5 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+PUT /v1/contacts -> 200, 1.6 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+PUT /v1/contacts -> 200, 1.6 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+PUT /v1/contacts -> 200, 1.6 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+PUT /v1/contacts -> 200, 894.9 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+PUT /v1/contacts -> 200, 1.5 KB sent
+POST /v1/ping -> no answer, 0.4 KB sent
+GET /v1/hello -> no answer, 0.1 KB sent
+GET /v1/hello -> no answer, 0.1 KB sent
+GET /v1/hello -> 200, 0.1 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+POST /v1/ping -> 401, 0.4 KB sent
+POST /v1/ping -> 401, 0.4 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+PUT /v1/contacts -> 200, 1.5 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+PUT /v1/contacts -> 200, 1.7 KB sent
+POST /v1/ping -> 200, 0.4 KB sent
+POST /v1/ping -> 200, 0.4 KB sent

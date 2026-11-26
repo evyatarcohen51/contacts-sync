@@ -1,0 +1,163 @@
+Command line invocation:
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild test-without-building -project ContactSyncSender.xcodeproj -scheme ContactSyncSender -destination "platform=iOS Simulator,id=6FE167B2-ADE5-432F-9734-2B111C4B6835" -derivedDataPath /Users/runner/work/contacts-sync/contacts-sync/ios/ContactSyncSender/build/sim "-only-testing:ContactSyncSenderUITests/ContactSyncUITests/testPairWithCode"
+
+2026-11-26 12:49:37.795989+0000 ContactSyncSenderUITests-Runner[7095:255516] [UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-11-26 12:49:37.802665+0000 ContactSyncSenderUITests-Runner[7095:255516] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-11-26 12:49:41.877.
+Test Suite 'ContactSyncSenderUITests.xctest' started at 2026-11-26 12:49:41.879.
+Test Suite 'ContactSyncUITests' started at 2026-11-26 12:49:41.879.
+Test Case '-[ContactSyncSenderUITests.ContactSyncUITests testPairWithCode]' started.
+    t =     0.00s Start Test at 2026-11-26 12:49:41.882
+    t =     0.03s Set Up
+    t =     0.04s Open com.dvirchi.contactsync.sender
+    t =     0.05s     Launch com.dvirchi.contactsync.sender
+    t =     0.05s         Terminate com.dvirchi.contactsync.sender:5427
+    t =    10.54s         Setting up automation session
+    t =    15.89s         Wait for com.dvirchi.contactsync.sender to idle
+    t =    20.62s Swipe up Target Application 'com.dvirchi.contactsync.sender'
+    t =    20.62s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    20.64s     Find the Target Application 'com.dvirchi.contactsync.sender'
+    t =    21.28s     Check for interrupting elements affecting "Contact Sync" Application
+    t =    21.81s     Synthesize event
+    t =    22.42s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    23.58s Waiting 5.0s for "Unpair" Button to exist
+    t =    24.64s     Checking `Expect predicate `existsNoRetry == 1` for object "Unpair" Button`
+    t =    24.64s         Checking existence of `"Unpair" Button`
+    t =    25.19s Tap "Unpair" Button
+    t =    25.19s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    25.20s     Find the "Unpair" Button
+    t =    25.48s     Check for interrupting elements affecting "Unpair" Button
+    t =    25.69s     Synthesize event
+    t =    26.06s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    26.42s Waiting 10.0s for "Pair with Samsung" Button to exist
+    t =    27.45s     Checking `Expect predicate `existsNoRetry == 1` for object "Pair with Samsung" Button`
+    t =    27.45s         Checking existence of `"Pair with Samsung" Button`
+    t =    28.17s Added attachment named 'code-1-not-paired'
+    t =    28.18s Tap "Pair with Samsung" Button
+    t =    28.18s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    28.19s     Find the "Pair with Samsung" Button
+    t =    28.38s     Check for interrupting elements affecting "Pair with Samsung" Button
+    t =    28.61s     Synthesize event
+    t =    28.95s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    29.60s Waiting 10.0s for "Pair" NavigationBar to exist
+    t =    30.61s     Checking `Expect predicate `existsNoRetry == 1` for object "Pair" NavigationBar`
+    t =    30.61s         Checking existence of `"Pair" NavigationBar`
+    t =    30.78s Waiting 2.0s for "Allow While Using App" Button to exist
+    t =    31.80s     Checking `Expect predicate `existsNoRetry == 1` for object "Allow While Using App" Button`
+    t =    31.80s         Checking existence of `"Allow While Using App" Button`
+    t =    31.94s         Capturing element debug description
+    t =    32.79s     Checking `Expect predicate `existsNoRetry == 1` for object "Allow While Using App" Button`
+    t =    32.79s         Checking existence of `"Allow While Using App" Button`
+    t =    32.91s         Capturing element debug description
+    t =    32.92s     Checking existence of `"Allow While Using App" Button`
+    t =    33.05s Collecting debug information to assist test failure triage
+    t =    33.05s     Requesting snapshot of accessibility hierarchy for app with pid 11194
+    t =    33.29s Waiting 2.0s for "Allow" Button to exist
+    t =    34.31s     Checking `Expect predicate `existsNoRetry == 1` for object "Allow" Button`
+    t =    34.31s         Checking existence of `"Allow" Button`
+    t =    34.43s         Capturing element debug description
+    t =    35.30s     Checking `Expect predicate `existsNoRetry == 1` for object "Allow" Button`
+    t =    35.30s         Checking existence of `"Allow" Button`
+    t =    35.42s         Capturing element debug description
+    t =    35.42s     Checking existence of `"Allow" Button`
+    t =    35.54s Collecting debug information to assist test failure triage
+    t =    35.54s     Requesting snapshot of accessibility hierarchy for app with pid 11194
+    t =    35.77s Waiting 2.0s for "OK" Button to exist
+    t =    36.79s     Checking `Expect predicate `existsNoRetry == 1` for object "OK" Button`
+    t =    36.79s         Checking existence of `"OK" Button`
+    t =    36.92s         Capturing element debug description
+    t =    37.78s     Checking `Expect predicate `existsNoRetry == 1` for object "OK" Button`
+    t =    37.78s         Checking existence of `"OK" Button`
+    t =    38.00s         Capturing element debug description
+    t =    38.00s     Checking existence of `"OK" Button`
+    t =    38.26s Collecting debug information to assist test failure triage
+    t =    38.26s     Requesting snapshot of accessibility hierarchy for app with pid 11194
+    t =    38.51s Waiting 10.0s for "Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField to exist
+    t =    39.53s     Checking `Expect predicate `existsNoRetry == 1` for object "Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField`
+    t =    39.53s         Checking existence of `"Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField`
+    t =    39.65s Waiting 10.0s for "Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField to exist
+    t =    40.67s     Checking `Expect predicate `existsNoRetry == 1` for object "Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField`
+    t =    40.67s         Checking existence of `"Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField`
+    t =    40.79s Tap "Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField
+    t =    40.79s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    40.80s     Find the "Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField
+    t =    40.93s     Check for interrupting elements affecting "Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField
+    t =    41.05s     Synthesize event
+    t =    41.42s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    44.94s Type '3JGM-QXYR-HGVV-KNC3' into "Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField
+    t =    44.95s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    45.44s     Find the "Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField
+    t =    46.64s     Check for interrupting elements affecting "Pairing code (XXXX-XXXX-XXXX-XXXX)" TextField
+    t =    46.85s     Synthesize event
+    t =    47.39s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    47.94s Tap "Samsung address (Tailscale 100.x.y.z)" TextField
+    t =    47.94s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    47.97s     Find the "Samsung address (Tailscale 100.x.y.z)" TextField
+    t =    48.54s     Check for interrupting elements affecting "Samsung address (Tailscale 100.x.y.z)" TextField
+    t =    49.06s     Synthesize event
+    t =    49.48s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    50.37s Type '100.101.102.103' into "Samsung address (Tailscale 100.x.y.z)" TextField
+    t =    50.37s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    51.43s     Find the "Samsung address (Tailscale 100.x.y.z)" TextField
+    t =    52.12s     Check for interrupting elements affecting "Samsung address (Tailscale 100.x.y.z)" TextField
+    t =    52.71s     Synthesize event
+    t =    53.49s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    54.80s Added attachment named 'code-2-typed'
+    t =    54.80s Find the "Save" Button
+    t =    55.08s Tap "Save" Button
+    t =    55.08s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    55.09s     Find the "Save" Button
+    t =    56.20s     Check for interrupting elements affecting "Save" Button
+    t =    56.99s     Synthesize event
+    t =    57.34s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    58.77s Waiting 10.0s for "Contact Sync" NavigationBar to exist
+    t =    59.84s     Checking `Expect predicate `existsNoRetry == 1` for object "Contact Sync" NavigationBar`
+    t =    59.84s         Checking existence of `"Contact Sync" NavigationBar`
+    t =    61.78s Swipe down Target Application 'com.dvirchi.contactsync.sender'
+    t =    61.78s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    61.79s     Find the Target Application 'com.dvirchi.contactsync.sender'
+    t =    62.23s     Check for interrupting elements affecting "Contact Sync" Application
+    t =    62.63s     Synthesize event
+    t =    63.11s     Wait for com.dvirchi.contactsync.sender to idle
+    t =    63.65s Waiting 180.0s for Any (First Match) to exist
+    t =    64.69s     Checking `Expect predicate `existsNoRetry == 1` for object Any (First Match)`
+    t =    64.69s         Checking existence of `Any (First Match)`
+    t =    69.19s         Capturing element debug description
+    t =    69.69s     Checking `Expect predicate `existsNoRetry == 1` for object Any (First Match)`
+    t =    69.69s         Checking existence of `Any (First Match)`
+    t =    73.31s         Capturing element debug description
+    t =    73.74s     Checking `Expect predicate `existsNoRetry == 1` for object Any (First Match)`
+    t =    73.74s         Checking existence of `Any (First Match)`
+    t =    78.73s         Capturing element debug description
+    t =    79.65s     Checking `Expect predicate `existsNoRetry == 1` for object Any (First Match)`
+    t =    79.66s         Checking existence of `Any (First Match)`
+    t =    83.39s         Capturing element debug description
+    t =    83.69s     Checking `Expect predicate `existsNoRetry == 1` for object Any (First Match)`
+    t =    83.69s         Checking existence of `Any (First Match)`
+    t =    85.92s         Capturing element debug description
+    t =    86.74s     Checking `Expect predicate `existsNoRetry == 1` for object Any (First Match)`
+    t =    86.74s         Checking existence of `Any (First Match)`
+    t =    89.02s         Capturing element debug description
+    t =    89.71s     Checking `Expect predicate `existsNoRetry == 1` for object Any (First Match)`
+    t =    89.71s         Checking existence of `Any (First Match)`
+    t =    90.65s Checking existence of `Any (First Match)`
+    t =    92.20s Added attachment named 'code-3-synced'
+    t =    92.22s Tear Down
+Test Case '-[ContactSyncSenderUITests.ContactSyncUITests testPairWithCode]' passed (93.627 seconds).
+Test Suite 'ContactSyncUITests' passed at 2026-11-26 12:51:15.508.
+	 Executed 1 test, with 0 failures (0 unexpected) in 93.627 (93.628) seconds
+Test Suite 'ContactSyncSenderUITests.xctest' passed at 2026-11-26 12:51:15.509.
+	 Executed 1 test, with 0 failures (0 unexpected) in 93.627 (93.630) seconds
+Test Suite 'Selected tests' passed at 2026-11-26 12:51:15.510.
+	 Executed 1 test, with 0 failures (0 unexpected) in 93.627 (93.633) seconds
+2026-11-26 12:51:16.832 xcodebuild[6309:253547] [MT] IDETestOperationsObserverDebug: 104.200 elapsed -- Testing started completed.
+2026-11-26 12:51:16.832 xcodebuild[6309:253547] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-26 12:51:16.832 xcodebuild[6309:253547] [MT] IDETestOperationsObserverDebug: 104.200 sec, +104.200 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/runner/work/contacts-sync/contacts-sync/ios/ContactSyncSender/build/sim/Logs/Test/Test-ContactSyncSender-2026.11.26_12-49-32-+0000.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

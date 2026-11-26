@@ -1,0 +1,612 @@
+--------- beginning of main
+11-26 12:44:16.624  3520  3520 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:16.981  3303  3314 I zygote64: Background concurrent copying GC freed 39135(1785KB) AllocSpace objects, 11(220KB) LOS objects, 50% free, 2MB/5MB, paused 3.982ms total 426.028ms
+--------- beginning of system
+11-26 12:44:16.981  1704  1837 W Looper  : Dispatch took 273ms on android.ui, h=Handler (com.android.server.am.ActivityManagerService$UiHandler) {dbb6f77} cb=null msg=53
+11-26 12:44:16.982  3520  3520 D AndroidRuntime: Shutting down VM
+11-26 12:44:17.663  3529  3529 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:17.844  3529  3529 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:44:17.882  3529  3529 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:17.908  3529  3529 D AndroidRuntime: Shutting down VM
+11-26 12:44:19.037  3539  3539 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:19.094  3539  3539 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:44:19.252  3539  3539 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:19.315  3539  3539 D AndroidRuntime: Shutting down VM
+11-26 12:44:19.321  3539  3547 W app_process: Thread attaching while runtime is shutting down: Binder:3539_1
+11-26 12:44:19.321  3539  3547 I AndroidRuntime: NOTE: attach of thread 'Binder:3539_1' failed
+11-26 12:44:36.731  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:44:42.915  3303  3411 I ReceiverApi: applied snapshot: Result(added=1, updated=0, deleted=0, total=7, failed=0)
+11-26 12:44:43.663  3303  3303 I Choreographer: Skipped 72 frames!  The application may be doing too much work on its main thread.
+11-26 12:44:44.413  3553  3553 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:44.458  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:44:44.480  3303  3303 I Choreographer: Skipped 48 frames!  The application may be doing too much work on its main thread.
+11-26 12:44:44.711  3553  3553 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:44:44.736  3553  3553 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:44.892  3553  3553 D AndroidRuntime: Shutting down VM
+11-26 12:44:53.066  3303  3414 I ReceiverApi: applied snapshot: Result(added=0, updated=1, deleted=0, total=7, failed=0)
+11-26 12:44:54.854  3572  3572 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:54.903  3572  3572 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:44:54.963  3572  3572 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:54.979  3572  3572 D AndroidRuntime: Shutting down VM
+11-26 12:44:55.361  3582  3582 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:55.422  3582  3582 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:44:55.445  3582  3582 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:55.466  3582  3582 D AndroidRuntime: Shutting down VM
+11-26 12:45:00.416  1379  1392 D hwcomposer: hw_composer sent 73 syncs in 60s
+11-26 12:45:18.733  3303  3411 I ReceiverApi: applied snapshot: Result(added=0, updated=0, deleted=1, total=6, failed=0)
+11-26 12:45:20.915  3303  3412 D SharedPreferencesImpl: Time required to fsync /data/user/0/com.dvirchi.contactsync.receiver/shared_prefs/contactsync.xml: [<1: 0, <2: 0, <4: 0, <8: 0, <16: 9, <32: 7, <64: 5, <128: 2, <256: 2, <512: 3, <1024: 0, <2048: 0, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+11-26 12:45:21.320  3600  3600 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:45:21.607  3600  3600 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:45:21.742  3600  3600 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:53.338  1704  1704 I chatty  : uid=1000 system_server identical 1 line
+11-26 12:45:18.968  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:45:21.804  1704  1748 W ActivityManager: Slow operation: 59ms so far, now at getContentProviderImpl: after updateOomAdj
+11-26 12:45:21.804  1704  1748 W ActivityManager: Slow operation: 59ms so far, now at getContentProviderImpl: done!
+11-26 12:45:21.836  3600  3600 D AndroidRuntime: Shutting down VM
+11-26 12:45:22.368  3613  3613 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:45:22.468  3613  3613 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:45:22.494  3613  3613 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:45:22.566  3613  3613 D AndroidRuntime: Shutting down VM
+11-26 12:45:36.766  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:46:00.064  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:46:00.065  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:46:01.341  1379  1392 D hwcomposer: hw_composer sent 47 syncs in 61s
+11-26 12:46:36.821  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:46:41.131  3303  3314 I zygote64: Background concurrent copying GC freed 53372(2MB) AllocSpace objects, 19(380KB) LOS objects, 49% free, 2MB/4MB, paused 8.497ms total 42.791ms
+11-26 12:46:45.582  1704  2071 D WificondControl: Scan result ready event
+11-26 12:46:59.139  3303  3314 I zygote64: Background concurrent copying GC freed 3544(789KB) AllocSpace objects, 109(8MB) LOS objects, 30% free, 13MB/19MB, paused 2.917ms total 121.317ms
+11-26 12:46:59.701  2821  2822 I zygote64: Do partial code cache collection, code=11KB, data=30KB
+11-26 12:46:59.701  2821  2822 I zygote64: After code cache collection, code=11KB, data=30KB
+11-26 12:46:59.812  2821  2822 I zygote64: Increasing code cache capacity to 128KB
+11-26 12:46:59.833  2821  2837 I zygote64: Background concurrent copying GC freed 1450(78KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 2MB/4MB, paused 2.664ms total 199.166ms
+11-26 12:46:59.996  3303  3308 I zygote64: Do full code cache collection, code=1013KB, data=660KB
+11-26 12:46:59.996  3303  3308 I zygote64: After code cache collection, code=995KB, data=604KB
+11-26 12:47:00.468  1704  2071 W zygote64: Long monitor contention with owner Binder:1704_E (3382) at void com.android.server.am.BroadcastQueue.processNextBroadcast(boolean)(BroadcastQueue.java:821) waiters=0 in android.content.pm.UserInfo com.android.server.am.UserController.getCurrentUser() for 125ms
+11-26 12:47:01.377  2821  2837 I zygote64: Background concurrent copying GC freed 31954(2MB) AllocSpace objects, 2(40KB) LOS objects, 49% free, 2MB/4MB, paused 38.214ms total 112.544ms
+11-26 12:47:01.650  2821  2822 I zygote64: Do partial code cache collection, code=45KB, data=62KB
+11-26 12:47:01.651  2821  2822 I zygote64: After code cache collection, code=45KB, data=62KB
+11-26 12:47:01.651  2821  2822 I zygote64: Increasing code cache capacity to 256KB
+11-26 12:47:02.295  1379  1392 D hwcomposer: hw_composer sent 70 syncs in 60s
+11-26 12:47:03.291  2821  2837 I zygote64: Background concurrent copying GC freed 29924(1900KB) AllocSpace objects, 8(132KB) LOS objects, 50% free, 2MB/4MB, paused 3.320ms total 118ms
+11-26 12:47:05.915  2821  2822 I zygote64: Do full code cache collection, code=124KB, data=119KB
+11-26 12:47:05.917  2821  2822 I zygote64: After code cache collection, code=120KB, data=90KB
+11-26 12:47:09.413  2821  2837 I zygote64: Background concurrent copying GC freed 32941(2MB) AllocSpace objects, 2(40KB) LOS objects, 50% free, 2MB/4MB, paused 6.282ms total 31.250ms
+11-26 12:47:11.359  2821  2822 I zygote64: Do partial code cache collection, code=120KB, data=95KB
+11-26 12:47:11.360  2821  2822 I zygote64: After code cache collection, code=120KB, data=95KB
+11-26 12:47:11.360  2821  2822 I zygote64: Increasing code cache capacity to 512KB
+11-26 12:47:12.259  2821  2837 I zygote64: Background concurrent copying GC freed 44157(2MB) AllocSpace objects, 9(156KB) LOS objects, 49% free, 2MB/4MB, paused 2.192ms total 129.857ms
+11-26 12:47:13.040  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:47:13.047  3303  3411 I ReceiverApi: applied snapshot: Result(added=300, updated=0, deleted=0, total=306, failed=0)
+11-26 12:47:13.638  3635  3635 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:14.047  3635  3635 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:47:14.068  3635  3635 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:47:14.075  2821  2838 I zygote64: Deoptimizing void com.android.providers.contacts.ContactsDatabaseHelper.runSqlValidation(java.lang.String, java.lang.Runnable) due to JIT inline cache
+11-26 12:47:14.089  3635  3635 D AndroidRuntime: Shutting down VM
+11-26 12:47:14.292  3646  3646 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:14.330  3646  3646 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:47:14.347  3646  3646 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:47:14.408  3646  3646 D AndroidRuntime: Shutting down VM
+11-26 12:47:14.630  1704  1839 E BatteryStatsService: modem info is invalid: ModemActivityInfo{ mTimestamp=0 mSleepTimeMs=0 mIdleTimeMs=0 mTxTimeMs[]=[0, 0, 0, 0, 0] mRxTimeMs=0 mEnergyUsed=0}
+11-26 12:47:16.030  3661  3661 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:16.070  3661  3661 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:47:16.091  3661  3661 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:47:16.157  3661  3661 D AndroidRuntime: Shutting down VM
+11-26 12:47:16.370  3670  3670 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:16.409  3670  3670 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:47:16.426  3670  3670 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:47:16.429  3670  3670 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1040127, downTime=1040127, deviceId=0, source=0x1002 }
+11-26 12:47:16.435  3670  3670 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1040127, downTime=1040127, deviceId=0, source=0x1002 }
+11-26 12:47:16.466  3670  3670 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=895.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1040166, downTime=1040166, deviceId=0, source=0x1002 }
+11-26 12:47:16.520  3303  3303 I zygote64: Deoptimizing int androidx.collection.ObjectIntMap.findKeyIndex(java.lang.Object) due to JIT inline cache
+11-26 12:47:16.523  3303  3303 I zygote64: Deoptimizing void androidx.compose.runtime.SnapshotMutableStateImpl.setValue(java.lang.Object) due to JIT inline cache
+11-26 12:47:16.524  3303  3303 I zygote64: Deoptimizing boolean androidx.collection.ScatterMap.containsKey(java.lang.Object) due to JIT inline cache
+11-26 12:47:16.530  3670  3670 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1220.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1040231, downTime=1040231, deviceId=0, source=0x1002 }
+11-26 12:47:16.559  3303  3308 I zygote64: Do partial code cache collection, code=1005KB, data=616KB
+11-26 12:47:16.561  3670  3670 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1370.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1040261, downTime=1040261, deviceId=0, source=0x1002 }
+11-26 12:47:16.563  3303  3308 I zygote64: After code cache collection, code=1001KB, data=614KB
+11-26 12:47:16.563  3303  3308 I zygote64: Increasing code cache capacity to 3MB
+11-26 12:47:16.716  3670  3670 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1040417, downTime=1040417, deviceId=0, source=0x1002 }
+11-26 12:47:16.737  3670  3670 D AndroidRuntime: Shutting down VM
+11-26 12:47:16.750  3303  3303 I zygote64: Deoptimizing kotlin.coroutines.CoroutineContext$Element kotlin.coroutines.CombinedContext.get(kotlin.coroutines.CoroutineContext$Key) due to JIT inline cache
+11-26 12:47:17.477  3303  3303 I Choreographer: Skipped 39 frames!  The application may be doing too much work on its main thread.
+11-26 12:47:17.488  3680  3680 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:17.581  3680  3680 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:47:17.616  3680  3680 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:47:17.618  3680  3680 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1041317, downTime=1041317, deviceId=0, source=0x1002 }
+11-26 12:47:17.658  3680  3680 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1041317, downTime=1041317, deviceId=0, source=0x1002 }
+11-26 12:47:17.662  3680  3680 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=930.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1041363, downTime=1041363, deviceId=0, source=0x1002 }
+11-26 12:47:17.697  3680  3680 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1105.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1041398, downTime=1041398, deviceId=0, source=0x1002 }
+11-26 12:47:17.734  3680  3680 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1290.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1041435, downTime=1041435, deviceId=0, source=0x1002 }
+11-26 12:47:17.834  3680  3680 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1041534, downTime=1041534, deviceId=0, source=0x1002 }
+11-26 12:47:17.837  3680  3680 D AndroidRuntime: Shutting down VM
+11-26 12:47:18.064  3690  3690 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:18.202  3690  3690 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:47:18.288  3690  3690 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:47:18.290  3690  3690 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1041989, downTime=1041989, deviceId=0, source=0x1002 }
+11-26 12:47:18.417  3690  3690 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1041989, downTime=1041989, deviceId=0, source=0x1002 }
+11-26 12:47:18.491  3690  3690 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1042192, downTime=1042192, deviceId=0, source=0x1002 }
+11-26 12:47:18.495  3690  3690 D AndroidRuntime: Shutting down VM
+11-26 12:47:19.695  1401  1850 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-26 12:47:19.707  1378  1378 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 10371072
+11-26 12:47:19.711  3703  3703 D         : HostConnection::get() New Host Connection established 0x721522c2f780, tid 3703
+11-26 12:47:22.881  1384  1384 E hw-IPCThreadState: binder thread pool (1 threads) starved for 486 ms
+11-26 12:47:36.873  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:47:46.836  3303  3414 I zygote64: Deoptimizing int com.dvirchi.contactsync.receiver.ContactsWriter.run(java.util.List) due to JIT inline cache
+11-26 12:47:47.803  2821  2837 I zygote64: Background concurrent copying GC freed 4218(231KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 1901KB/3MB, paused 2.213ms total 192.332ms
+11-26 12:47:49.072  2821  2837 I zygote64: Background concurrent copying GC freed 35579(1732KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 2MB/4MB, paused 2.741ms total 145.747ms
+11-26 12:47:49.528  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:47:49.542  3303  3414 I ReceiverApi: applied snapshot: Result(added=0, updated=0, deleted=300, total=6, failed=0)
+11-26 12:47:50.336  3714  3714 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:50.415  3714  3714 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:47:50.449  3714  3714 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:47:50.462  3714  3714 D AndroidRuntime: Shutting down VM
+11-26 12:47:52.041  1704  2136 I ActivityManager: Force stopping com.dvirchi.contactsync.receiver appid=10065 user=0: from pid 3728
+11-26 12:47:52.041  1704  2136 I ActivityManager: Killing 3303:com.dvirchi.contactsync.receiver/u0a65 (adj 0): stop com.dvirchi.contactsync.receiver
+11-26 12:47:52.045  1704  2136 W ActivityManager: Scheduling restart of crashed service com.dvirchi.contactsync.receiver/.ReceiverService in 1000ms
+11-26 12:47:52.054  1704  2136 W ActivityManager: Force removing ActivityRecord{e50f439 u0 com.dvirchi.contactsync.receiver/.MainActivity t5}: app died, no saved state
+11-26 12:47:52.090  1704  2136 I WindowManager: Failed to capture screenshot of Token{ff78a7e ActivityRecord{e50f439 u0 com.dvirchi.contactsync.receiver/.MainActivity t5 f}} appWin=Window{86c0248 u0 com.dvirchi.contactsync.receiver/com.dvirchi.contactsync.receiver.MainActivity} drawState=4
+11-26 12:47:52.178  1704  2136 I ActivityManager:   Force stopping service ServiceRecord{d562acf u0 com.dvirchi.contactsync.receiver/.ReceiverService}
+11-26 12:47:52.316  1704  1961 D NsdService: Client disconnected
+11-26 12:47:52.317  1704  1961 D NsdService: Terminating client-ID 1 global-ID 2 type 393225
+11-26 12:47:52.317  1704  1961 D NsdService: unregisterService: 2
+11-26 12:47:52.321  1687  1816 D MDnsDS  : Stopping register with ref 0x7add59629c98
+11-26 12:47:52.322  1687  1816 D MDnsDS  : freeServiceRef 2
+11-26 12:47:52.322  1687  1816 D MDnsDS  : triggering rescan
+11-26 12:47:52.325  1687  1815 D MDnsDS  : Monitor poll got data pollCount = 2, 2
+11-26 12:47:52.325  1687  1815 D MDnsDS  : Monitor found [1].revents = 32 - calling ProcessResults
+11-26 12:47:52.325  1687  1815 W /system/bin/netd: dnssd_clientstub DNSServiceProcessResult called with invalid DNSServiceRef 0x7add5962f780 FFFFFFFF DDDDDDDD
+11-26 12:47:52.326  1687  1815 D MDnsDS  : controlSocket shows revent= 1
+11-26 12:47:52.326  1687  1815 D MDnsDS  : MDnsSdListener::Monitor got 1
+11-26 12:47:52.326  1687  1815 D MDnsDS  : MDnsSdListener::Monitor poll rescanning - size=10, live=0
+11-26 12:47:52.326  1687  1815 D MDnsDS  : Going to poll with pollCount 1
+11-26 12:47:52.326  1704  1961 D NsdService: stopMDnsDaemon
+11-26 12:47:52.329  1687  1816 D MDnsDS  : Stopping MDNSD
+11-26 12:47:52.443  1704  1837 W zygote64: Long monitor contention with owner Binder:1704_7 (2136) at void com.android.server.am.ActivityManagerService.forceStopPackage(java.lang.String, int)(ActivityManagerService.java:5990) waiters=0 in void com.android.server.am.ActivityManagerService.dispatchUidsChanged() for 396ms
+11-26 12:47:52.446  1704  1837 W Looper  : Dispatch took 400ms on android.ui, h=Handler (com.android.server.am.ActivityManagerService$UiHandler) {dbb6f77} cb=null msg=53
+11-26 12:47:52.449  1704  1836 W zygote64: Long monitor contention with owner Binder:1704_7 (2136) at void com.android.server.am.ActivityManagerService.forceStopPackage(java.lang.String, int)(ActivityManagerService.java:5990) waiters=1 in void com.android.server.am.TaskChangeNotificationController$MainHandler.handleMessage(android.os.Message) for 383ms
+11-26 12:47:52.473  1704  1845 W ActivityManager: setHasOverlayUi called on unknown pid: 3303
+11-26 12:47:52.665  1378  1378 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 10371072
+11-26 12:47:52.679  1378  1378 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+11-26 12:47:52.687  1378  1378 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 10371072
+11-26 12:47:52.740  1704  1836 W zygote64: Long monitor contention with owner android.bg (1835) at android.os.Message android.os.MessageQueue.next()(MessageQueue.java:327) waiters=0 in boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long) for 156ms
+11-26 12:47:52.746  2621  2710 D EGL_emulation: eglMakeCurrent: 0x7521d39ffa60: ver 3 1 (tinfo 0x7521d37b0ce0)
+11-26 12:47:52.785  2050  2050 D CarrierSvcBindHelper: No carrier app for: 0
+11-26 12:47:52.845  1704  2071 W zygote64: Long monitor contention with owner ActivityManager (1836) at void com.android.server.am.BroadcastQueue.processNextBroadcast(boolean)(BroadcastQueue.java:821) waiters=0 in java.util.List com.android.server.am.ActivityManagerService.getTasks(int, int) for 108ms
+11-26 12:47:53.310  2621  2710 W OpenGLRenderer: Incorrectly called buildLayer on View: ShortcutAndWidgetContainer, destroying layer...
+11-26 12:47:55.147  1704  1978 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+11-26 12:47:58.799  1361  1361 E adbd    : failed to connect to socket 'tcp:8765': Connection refused
+11-26 12:48:02.754  1704  1839 E BatteryStatsService: modem info is invalid: ModemActivityInfo{ mTimestamp=0 mSleepTimeMs=0 mIdleTimeMs=0 mTxTimeMs[]=[0, 0, 0, 0, 0] mRxTimeMs=0 mEnergyUsed=0}
+11-26 12:48:18.929  1704  2070 I ActivityManager: START u0 {flg=0x10000000 cmp=com.dvirchi.contactsync.receiver/.MainActivity} from uid 2000
+11-26 12:48:18.984  1379  1392 D hwcomposer: hw_composer sent 87 syncs in 77s
+11-26 12:48:19.047  1378  1378 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 10371072
+11-26 12:48:19.187  1704  2071 W ActivityManager: Slow operation: 229ms so far, now at startProcess: returned from zygote!
+11-26 12:48:19.188  1704  2071 W ActivityManager: Slow operation: 229ms so far, now at startProcess: done updating battery stats
+11-26 12:48:19.188  1704  2071 W ActivityManager: Slow operation: 230ms so far, now at startProcess: building log message
+11-26 12:48:19.188  1704  2071 I ActivityManager: Start proc 3741:com.dvirchi.contactsync.receiver/u0a65 for activity com.dvirchi.contactsync.receiver/.MainActivity
+11-26 12:48:19.189  1704  2071 W ActivityManager: Slow operation: 230ms so far, now at startProcess: starting to update pids map
+11-26 12:48:19.190  1704  2071 W ActivityManager: Slow operation: 231ms so far, now at startProcess: done updating pids map
+11-26 12:48:19.191  1704  2071 W ActivityManager: Slow operation: 234ms so far, now at startProcess: done starting proc!
+11-26 12:48:19.221  1704  1837 W Looper  : Dispatch took 257ms on android.ui, h=Handler (com.android.server.am.ActivityManagerService$UiHandler) {dbb6f77} cb=null msg=53
+11-26 12:48:19.254  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:48:19.254  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:48:19.291  3741  3741 W zygote64: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:48:19.360  1378  1378 E hw-IPCThreadState: binder thread pool (1 threads) starved for 312 ms
+11-26 12:48:19.677  1704  1837 W Looper  : Dispatch took 341ms on android.ui, h=Handler (com.android.server.policy.PhoneWindowManager$PolicyHandler) {49703d3} cb=com.android.server.policy.PhoneWindowManager$21@50515e3 msg=0
+11-26 12:48:19.681  1361  1361 E adbd    : failed to connect to socket 'tcp:8765': Connection refused
+11-26 12:48:19.986  1704  2071 W ActivityManager: Slow operation: 656ms so far, now at attachApplicationLocked: after mServices.attachApplicationLocked
+11-26 12:48:19.987  1704  1836 W zygote64: Long monitor contention with owner Binder:1704_5 (2071) at void com.android.server.am.ActivityManagerService.attachApplication(android.app.IApplicationThread)(ActivityManagerService.java:7022) waiters=0 in boolean com.android.server.am.VrController.onVrModeChanged(com.android.server.am.ActivityRecord) for 558ms
+11-26 12:48:19.988  1704  1837 W zygote64: Long monitor contention with owner Binder:1704_5 (2071) at void com.android.server.am.ActivityManagerService.attachApplication(android.app.IApplicationThread)(ActivityManagerService.java:7022) waiters=1 in void com.android.server.am.ActivityManagerService.dispatchProcessesChanged() for 310ms
+11-26 12:48:19.988  1704  1837 W Looper  : Dispatch took 311ms on android.ui, h=Handler (com.android.server.am.ActivityManagerService$UiHandler) {dbb6f77} cb=null msg=31
+11-26 12:48:20.821  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:48:20.821  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:48:20.966  1401  1422 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-26 12:48:20.967  3741  3760 D OpenGLRenderer: HWUI GL Pipeline
+11-26 12:48:21.007  3741  3741 I Choreographer: Skipped 57 frames!  The application may be doing too much work on its main thread.
+11-26 12:48:21.232  2621  2710 D EGL_emulation: eglMakeCurrent: 0x7521d39ffa60: ver 3 1 (tinfo 0x7521d37b0ce0)
+11-26 12:48:21.798  3741  3752 I zygote64: Background concurrent copying GC freed 19570(2MB) AllocSpace objects, 2(40KB) LOS objects, 63% free, 900KB/2MB, paused 6.597ms total 503.355ms
+11-26 12:48:21.996  1361  1361 E adbd    : failed to connect to socket 'tcp:8765': Connection refused
+11-26 12:48:22.221  3741  3741 W zygote64: Class androidx.compose.runtime.snapshots.SnapshotStateList failed lock verification and will run slower.
+11-26 12:48:22.221  3741  3741 W zygote64: Common causes for lock verification issues are non-optimized dex code
+11-26 12:48:22.221  3741  3741 W zygote64: and incorrect proguard optimizations.
+11-26 12:48:22.574  3741  3746 I zygote64: Do partial code cache collection, code=15KB, data=29KB
+11-26 12:48:22.575  3741  3746 I zygote64: After code cache collection, code=15KB, data=29KB
+11-26 12:48:22.576  3741  3746 I zygote64: Increasing code cache capacity to 128KB
+11-26 12:48:22.588  3741  3760 D         : HostConnection::get() New Host Connection established 0x7521dfb2aa60, tid 3760
+11-26 12:48:22.590  1378  1378 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 10371072
+11-26 12:48:22.594  3741  3760 I OpenGLRenderer: Initialized EGL, version 1.4
+11-26 12:48:22.594  3741  3760 D OpenGLRenderer: Swap behavior 1
+11-26 12:48:22.595  3741  3760 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+11-26 12:48:22.595  3741  3760 D OpenGLRenderer: Swap behavior 0
+11-26 12:48:22.597  3741  3760 D EGL_emulation: eglCreateContext: 0x7521dfaa76a0: maj 3 min 1 rcv 4
+11-26 12:48:22.598  1378  1378 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 10371072
+11-26 12:48:22.605  3741  3760 D EGL_emulation: eglMakeCurrent: 0x7521dfaa76a0: ver 3 1 (tinfo 0x7521d357d700)
+11-26 12:48:22.612  1378  1378 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 10371072
+11-26 12:48:22.671  3741  3746 I zygote64: Do partial code cache collection, code=62KB, data=53KB
+11-26 12:48:22.672  3741  3746 I zygote64: After code cache collection, code=62KB, data=53KB
+11-26 12:48:22.672  3741  3746 I zygote64: Increasing code cache capacity to 256KB
+11-26 12:48:22.807  3741  3760 E eglCodecCommon: glUtilsParamSize: unknow param 0x000082da
+11-26 12:48:22.808  3741  3760 E eglCodecCommon: glUtilsParamSize: unknow param 0x000082da
+11-26 12:48:22.928  1378  1378 E hw-IPCThreadState: binder thread pool (1 threads) starved for 316 ms
+11-26 12:48:22.992  1704  1978 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+11-26 12:48:23.053  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:48:23.074  3741  3741 I MiniHttpServer: listening on :8765
+11-26 12:48:23.083  1704  1961 D NsdService: startMDnsDaemon
+11-26 12:48:23.084  1687  1816 D MDnsDS  : Starting MDNSD
+11-26 12:48:23.249  3741  3746 I zygote64: Do full code cache collection, code=120KB, data=108KB
+11-26 12:48:23.249  3741  3746 I zygote64: After code cache collection, code=57KB, data=40KB
+11-26 12:48:23.131  3765  3765 W mdnsd   : type=1400 audit(0.0:35): avc: denied { search } for name="run" dev="dm-0" ino=253442 scontext=u:r:mdnsd:s0 tcontext=u:object_r:varrun_file:s0 tclass=dir permissive=0
+11-26 12:48:23.348  1704  1961 D NsdService: New client listening to asynchronous messages
+11-26 12:48:23.348  1704  1961 D NsdService: New client, channel: com.android.internal.util.AsyncChannel@f50f3c5 messenger: android.os.Messenger@f1c011a
+11-26 12:48:23.355  1704  1961 D NsdService: Register service
+11-26 12:48:23.356  1704  1961 D NsdService: registerService: 3 name: ContactSync Android SDK built for x86_64, type: _contactsync._tcp., host: null, port: 8765, txtRecord: v=1
+11-26 12:48:23.356  1687  1816 D MDnsDS  : serviceRegister(3, (null), ContactSync Android SDK built for x86_64, _contactsync._tcp., (null), (null), 8765, 4, <binary>)
+11-26 12:48:23.358  1687  1816 D MDnsDS  : startMonitoring 3
+11-26 12:48:23.358  1687  1816 D MDnsDS  : triggering rescan
+11-26 12:48:23.359  1687  1816 D MDnsDS  : serviceRegister successful
+11-26 12:48:23.359  1687  1815 D MDnsDS  : Monitor poll got data pollCount = 1, 1
+11-26 12:48:23.359  1687  1815 D MDnsDS  : controlSocket shows revent= 1
+11-26 12:48:23.359  1687  1815 D MDnsDS  : MDnsSdListener::Monitor got 1
+11-26 12:48:23.359  1687  1815 D MDnsDS  : MDnsSdListener::Monitor poll rescanning - size=10, live=1
+11-26 12:48:23.359  1687  1815 D MDnsDS  : Going to poll with pollCount 2
+11-26 12:48:23.360  1704  1961 D NsdService: Register 1 3
+11-26 12:48:23.369  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:48:23.443  3741  3741 I Choreographer: Skipped 128 frames!  The application may be doing too much work on its main thread.
+11-26 12:48:23.446  3741  3741 I zygote64: Deoptimizing java.lang.Object androidx.compose.runtime.CompositionLocalMapKt.read(androidx.compose.runtime.PersistentCompositionLocalMap, androidx.compose.runtime.CompositionLocal) due to JIT inline cache
+11-26 12:48:23.555  1992  2026 I zygote64: Do full code cache collection, code=249KB, data=170KB
+11-26 12:48:23.558  1992  2026 I zygote64: After code cache collection, code=234KB, data=145KB
+11-26 12:48:23.586  3741  3760 D EGL_emulation: eglMakeCurrent: 0x7521dfaa76a0: ver 3 1 (tinfo 0x7521d357d700)
+11-26 12:48:24.143  3741  3741 I zygote64: Deoptimizing kotlin.coroutines.CoroutineContext$Element kotlin.coroutines.CombinedContext.get(kotlin.coroutines.CoroutineContext$Key) due to JIT inline cache
+11-26 12:48:24.145  3741  3741 I Choreographer: Skipped 39 frames!  The application may be doing too much work on its main thread.
+11-26 12:48:24.148  1704  1845 I ActivityManager: Displayed com.dvirchi.contactsync.receiver/.MainActivity: +5s153ms
+11-26 12:48:24.166  1687  1815 D MDnsDS  : Monitor poll got data pollCount = 2, 1
+11-26 12:48:24.166  1687  1815 D MDnsDS  : Monitor found [1].revents = 1 - calling ProcessResults
+11-26 12:48:24.166  1687  1815 D MDnsDS  : register succeeded for 3 as ContactSync Android SDK built for x86_64
+11-26 12:48:24.167  1687  1815 D MDnsDS  : controlSocket shows revent= 0
+11-26 12:48:24.167  1687  1815 D MDnsDS  : Going to poll with pollCount 2
+11-26 12:48:23.428  1704  1704 I chatty  : uid=1000 system_server identical 1 line
+11-26 12:48:24.137  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:48:24.173  1704  1961 D NsdService: Native daemon message SERVICE_REGISTERED: 606 3 "ContactSync Android SDK built for x86_64"
+11-26 12:48:24.262  3741  3764 I ReceiverService: NSD registered ContactSync Android SDK built for x86_64
+11-26 12:48:26.719  3741  3778 D ProfileInstaller: Skipping profile installation for com.dvirchi.contactsync.receiver
+11-26 12:48:29.530  3741  3746 I zygote64: Do partial code cache collection, code=116KB, data=96KB
+11-26 12:48:29.530  3741  3746 I zygote64: After code cache collection, code=102KB, data=88KB
+11-26 12:48:29.530  3741  3746 I zygote64: Increasing code cache capacity to 512KB
+11-26 12:48:32.031  3741  3741 I zygote64: Deoptimizing void androidx.compose.runtime.snapshots.SnapshotStateObserver$ObservedScopeMap.observe(java.lang.Object, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function0) due to JIT inline cache
+11-26 12:48:32.032  3741  3741 I zygote64: Deoptimizing java.lang.Object androidx.compose.runtime.snapshots.Snapshot$Companion.observe(kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function0) due to JIT inline cache
+11-26 12:48:36.915  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:48:42.063  3781  3781 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:42.146  3781  3781 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:48:42.181  3781  3781 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:48:43.493  3781  3781 W AccessibilityNodeInfoDumper: Fetch time: 19ms
+11-26 12:48:43.494  1704  2136 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@13b41c3
+11-26 12:48:43.503  3781  3781 D AndroidRuntime: Shutting down VM
+11-26 12:48:43.564  3781  3781 W app_process: Suspending all threads took: 52.857ms
+11-26 12:48:43.609  3741  3746 I zygote64: Compiler allocated 5MB to compile void androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat.populateAccessibilityNodeInfoProperties(int, androidx.core.view.accessibility.AccessibilityNodeInfoCompat, androidx.compose.ui.semantics.SemanticsNode)
+11-26 12:48:43.647  3741  3746 I zygote64: Do full code cache collection, code=249KB, data=195KB
+11-26 12:48:43.647  3741  3746 I zygote64: After code cache collection, code=228KB, data=154KB
+11-26 12:48:43.998  3795  3795 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:44.056  3795  3795 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:48:44.102  3795  3795 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:48:44.105  3795  3795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1127804, downTime=1127804, deviceId=0, source=0x1002 }
+11-26 12:48:44.176  3795  3795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1127804, downTime=1127804, deviceId=0, source=0x1002 }
+11-26 12:48:44.181  3795  3795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1443.3334, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1127881, downTime=1127881, deviceId=0, source=0x1002 }
+11-26 12:48:44.204  3741  3741 I zygote64: Deoptimizing void kotlinx.coroutines.DispatchedTask.run() due to JIT inline cache
+11-26 12:48:44.207  3741  3741 I zygote64: Deoptimizing androidx.compose.runtime.snapshots.StateRecord androidx.compose.runtime.snapshots.SnapshotKt.readable(androidx.compose.runtime.snapshots.StateRecord, androidx.compose.runtime.snapshots.StateObject) due to JIT same target
+11-26 12:48:44.222  3795  3795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1306.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1127922, downTime=1127922, deviceId=0, source=0x1002 }
+11-26 12:48:44.295  3741  3746 I zygote64: Do partial code cache collection, code=228KB, data=159KB
+11-26 12:48:44.295  3741  3746 I zygote64: After code cache collection, code=219KB, data=154KB
+11-26 12:48:44.296  3741  3746 I zygote64: Increasing code cache capacity to 1024KB
+11-26 12:48:44.334  3795  3795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=933.3334, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1128034, downTime=1128034, deviceId=0, source=0x1002 }
+11-26 12:48:44.612  3795  3795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1128313, downTime=1128313, deviceId=0, source=0x1002 }
+11-26 12:48:44.623  3795  3795 D AndroidRuntime: Shutting down VM
+11-26 12:48:44.640  3741  3741 I zygote64: Deoptimizing kotlin.coroutines.CoroutineContext$Element kotlin.coroutines.CoroutineContext$Element$DefaultImpls.get(kotlin.coroutines.CoroutineContext$Element, kotlin.coroutines.CoroutineContext$Key) due to JIT same target
+11-26 12:48:46.103  3805  3805 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:46.192  3805  3805 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:48:46.224  3805  3805 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:48:47.313  3805  3805 W AccessibilityNodeInfoDumper: Fetch time: 10ms
+11-26 12:48:47.314  1704  2071 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@586371f
+11-26 12:48:47.330  3805  3805 D AndroidRuntime: Shutting down VM
+11-26 12:48:47.765  3818  3818 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:47.937  3818  3818 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:48:48.015  3818  3818 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:48:48.018  3818  3818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1131716, downTime=1131716, deviceId=0, source=0x1002 }
+11-26 12:48:48.072  3818  3818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1131716, downTime=1131716, deviceId=0, source=0x1002 }
+11-26 12:48:48.097  3818  3818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1430.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1131797, downTime=1131797, deviceId=0, source=0x1002 }
+11-26 12:48:48.263  3818  3818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=873.3334, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1131964, downTime=1131964, deviceId=0, source=0x1002 }
+11-26 12:48:48.525  3818  3818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1132225, downTime=1132225, deviceId=0, source=0x1002 }
+11-26 12:48:48.846  3818  3818 D AndroidRuntime: Shutting down VM
+11-26 12:48:48.885  3741  3741 I zygote64: Deoptimizing kotlin.coroutines.CoroutineContext$Element kotlin.coroutines.CombinedContext.get(kotlin.coroutines.CoroutineContext$Key) due to JIT inline cache
+11-26 12:48:49.610  3741  3741 I Choreographer: Skipped 42 frames!  The application may be doing too much work on its main thread.
+11-26 12:48:49.823  1704  1839 E BatteryStatsService: modem info is invalid: ModemActivityInfo{ mTimestamp=0 mSleepTimeMs=0 mIdleTimeMs=0 mTxTimeMs[]=[0, 0, 0, 0, 0] mRxTimeMs=0 mEnergyUsed=0}
+11-26 12:48:50.556  3829  3829 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:50.790  3829  3829 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:48:50.913  3829  3829 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:48:51.621  3741  3741 I zygote64: Deoptimizing java.lang.Object androidx.compose.runtime.snapshots.Snapshot$Companion.observe(kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function0) due to JIT inline cache
+11-26 12:48:51.655  1704  1714 I zygote64: Background concurrent copying GC freed 58330(3MB) AllocSpace objects, 19(428KB) LOS objects, 42% free, 5MB/10MB, paused 3.118ms total 506.280ms
+11-26 12:48:52.427  3741  3741 I Choreographer: Skipped 47 frames!  The application may be doing too much work on its main thread.
+11-26 12:48:52.827  3829  3829 W AccessibilityNodeInfoDumper: Fetch time: 14ms
+11-26 12:48:52.831  1704  2070 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@4af5835
+11-26 12:48:52.842  3829  3829 D AndroidRuntime: Shutting down VM
+11-26 12:48:53.289  3841  3841 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:53.372  3841  3841 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:48:53.398  3841  3841 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:48:53.404  3841  3841 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=2074.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1137102, downTime=1137102, deviceId=0, source=0x1002 }
+11-26 12:48:53.421  3841  3841 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=2074.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1137102, downTime=1137102, deviceId=0, source=0x1002 }
+11-26 12:48:53.433  3841  3841 D AndroidRuntime: Shutting down VM
+11-26 12:48:53.470  3741  3741 I zygote64: Deoptimizing kotlin.coroutines.CoroutineContext kotlin.coroutines.CoroutineContext$plus$1.invoke(kotlin.coroutines.CoroutineContext, kotlin.coroutines.CoroutineContext$Element) due to JIT inline cache
+11-26 12:48:53.471  3741  3741 I zygote64: Deoptimizing androidx.compose.runtime.snapshots.StateRecord androidx.compose.runtime.snapshots.SnapshotKt.readable(androidx.compose.runtime.snapshots.StateRecord, androidx.compose.runtime.snapshots.StateObject) due to JIT inline cache
+11-26 12:48:53.549  1401  1401 D SurfaceFlinger: duplicate layer name: changing com.dvirchi.contactsync.receiver/com.dvirchi.contactsync.receiver.MainActivity to com.dvirchi.contactsync.receiver/com.dvirchi.contactsync.receiver.MainActivity#1
+11-26 12:48:53.863  1704  1898 W zygote64: Long monitor contention with owner Binder:1704_A (2817) at int com.android.server.wm.WindowManagerService.relayoutWindow(com.android.server.wm.Session, android.view.IWindow, int, android.view.WindowManager$LayoutParams, int, int, int, int, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.util.MergedConfiguration, android.view.Surface)(WindowManagerService.java:1902) waiters=1 in void com.android.server.wm.WindowAnimator.lambda$-com_android_server_wm_WindowAnimator_4018(long) for 310ms
+11-26 12:48:53.868  1704  1843 W zygote64: Long monitor contention with owner Binder:1704_A (2817) at int com.android.server.wm.WindowManagerService.relayoutWindow(com.android.server.wm.Session, android.view.IWindow, int, android.view.WindowManager$LayoutParams, int, int, int, int, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.graphics.Rect, android.util.MergedConfiguration, android.view.Surface)(WindowManagerService.java:1902) waiters=2 in void com.android.server.wm.WindowManagerService.monitor() for 115ms
+11-26 12:48:53.874  1378  1378 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 3313664
+11-26 12:48:53.876  1378  1378 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+11-26 12:48:53.912  1378  1378 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 3313664
+11-26 12:48:53.946  3741  3760 D EGL_emulation: eglMakeCurrent: 0x7521dfaa76a0: ver 3 1 (tinfo 0x7521d357d700)
+11-26 12:48:54.004  3741  3760 D EGL_emulation: eglMakeCurrent: 0x7521dfaa76a0: ver 3 1 (tinfo 0x7521d357d700)
+11-26 12:48:54.233  3851  3851 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:54.422  3851  3851 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:48:54.522  3851  3851 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:48:55.658  3851  3851 W AccessibilityNodeInfoDumper: Fetch time: 4ms
+11-26 12:48:55.659  1704  1748 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@12f4322
+11-26 12:48:55.676  3741  3760 D EGL_emulation: eglMakeCurrent: 0x7521dfaa76a0: ver 3 1 (tinfo 0x7521d357d700)
+11-26 12:48:55.714  3851  3851 D AndroidRuntime: Shutting down VM
+11-26 12:48:56.470  3867  3867 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:56.569  3867  3867 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:48:56.640  3867  3867 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:48:57.758  3867  3867 W AccessibilityNodeInfoDumper: Fetch time: 13ms
+11-26 12:48:57.760  1704  3730 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@e251370
+11-26 12:48:57.816  3867  3867 D AndroidRuntime: Shutting down VM
+11-26 12:48:58.161  3879  3879 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:58.247  3879  3879 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:48:58.273  3879  3879 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:48:58.276  3879  3879 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=781.0, y[0]=1369.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1141975, downTime=1141975, deviceId=0, source=0x1002 }
+11-26 12:48:58.299  3879  3879 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=781.0, y[0]=1369.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1141975, downTime=1141975, deviceId=0, source=0x1002 }
+11-26 12:48:58.323  3741  3746 I zygote64: Do full code cache collection, code=507KB, data=355KB
+11-26 12:48:58.323  3741  3746 I zygote64: After code cache collection, code=491KB, data=299KB
+11-26 12:48:58.327  3741  3741 I zygote64: Deoptimizing kotlinx.coroutines.internal.LockFreeLinkedListNode kotlinx.coroutines.internal.LockFreeLinkedListNode.correctPrev() due to JIT inline cache
+11-26 12:48:58.327  3741  3741 I zygote64: Deoptimizing kotlinx.coroutines.DisposableHandle kotlinx.coroutines.JobSupport.invokeOnCompletionInternal$kotlinx_coroutines_core(boolean, kotlinx.coroutines.JobNode) due to JIT inline cache
+11-26 12:48:58.328  3741  3741 I zygote64: Deoptimizing void kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(java.lang.Object) due to JIT inline cache
+11-26 12:48:58.335  3879  3879 D AndroidRuntime: Shutting down VM
+11-26 12:48:58.336  3741  3760 D EGL_emulation: eglMakeCurrent: 0x7521dfaa76a0: ver 3 1 (tinfo 0x7521d357d700)
+11-26 12:48:58.377  3741  3741 I zygote64: Deoptimizing void androidx.compose.ui.node.NodeCoordinator.onMeasured() due to JIT inline cache
+11-26 12:48:58.402  3741  3760 D EGL_emulation: eglMakeCurrent: 0x7521dfaa76a0: ver 3 1 (tinfo 0x7521d357d700)
+11-26 12:48:58.430  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:48:58.569  1704  2817 D AccountManagerService: Visibility was not initialized
+11-26 12:48:58.810  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:48:58.810  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:48:58.824  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:48:58.824  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:48:58.961  1704  1837 W Looper  : Dispatch took 161ms on android.ui, h=Handler (com.android.server.am.ActivityManagerService$UiHandler) {dbb6f77} cb=null msg=53
+11-26 12:48:59.286  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:48:59.430  1704  1898 I Choreographer: Skipped 56 frames!  The application may be doing too much work on its main thread.
+11-26 12:48:59.836  3894  3894 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:49:00.026  3894  3894 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:49:00.113  3894  3894 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:49:00.195  3894  3894 D AndroidRuntime: Shutting down VM
+11-26 12:49:05.163  2050  2273 W zygote64: Long monitor contention with owner main (2050) at void com.android.internal.telephony.RIL.acquireWakeLock(com.android.internal.telephony.RILRequest, int)(RIL.java:3950) waiters=0 in void com.android.internal.telephony.RIL.decrementWakeLock(com.android.internal.telephony.RILRequest) for 577ms
+11-26 12:49:05.830  1704  1839 E BatteryStatsService: modem info is invalid: ModemActivityInfo{ mTimestamp=0 mSleepTimeMs=0 mIdleTimeMs=0 mTxTimeMs[]=[0, 0, 0, 0, 0] mRxTimeMs=0 mEnergyUsed=0}
+11-26 12:49:06.859  3741  3746 I zygote64: Do partial code cache collection, code=503KB, data=323KB
+11-26 12:49:06.859  3741  3746 I zygote64: After code cache collection, code=491KB, data=319KB
+11-26 12:49:06.859  3741  3746 I zygote64: Increasing code cache capacity to 2MB
+11-26 12:49:06.863  1382  1382 E hw-IPCThreadState: binder thread pool (1 threads) starved for 102 ms
+11-26 12:49:16.789  3909  3909 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:49:16.855  3909  3909 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:49:16.877  3909  3909 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:49:17.996  3909  3909 I app_process: Deoptimizing java.lang.String com.android.uiautomator.core.AccessibilityNodeInfoDumper.stripInvalidXMLChars(java.lang.CharSequence) due to JIT inline cache
+11-26 12:49:18.003  3909  3909 W AccessibilityNodeInfoDumper: Fetch time: 12ms
+11-26 12:49:18.003  1704  1748 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@14fe46
+11-26 12:49:18.023  3909  3909 D AndroidRuntime: Shutting down VM
+11-26 12:49:18.319  3921  3921 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:49:18.368  3921  3921 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:49:18.413  3921  3921 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:49:18.418  3921  3921 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=388.0, y[0]=613.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1162114, downTime=1162114, deviceId=0, source=0x1002 }
+11-26 12:49:18.444  3921  3921 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=388.0, y[0]=613.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1162114, downTime=1162114, deviceId=0, source=0x1002 }
+11-26 12:49:18.491  3921  3921 D AndroidRuntime: Shutting down VM
+11-26 12:49:18.547  3741  3741 I zygote64: Deoptimizing void androidx.compose.ui.node.NodeCoordinator.onMeasureResultChanged(int, int) due to JIT inline cache
+11-26 12:49:18.552  3741  3741 I zygote64: Deoptimizing void androidx.compose.ui.node.LayoutNode.dispatchOnPositionedCallbacks$ui_release() due to JIT inline cache
+11-26 12:49:18.576  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:49:19.055  3931  3931 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:49:19.299  3931  3931 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:49:19.325  3931  3931 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:49:20.359  3741  3741 I zygote64: Deoptimizing void androidx.compose.ui.platform.SemanticsUtils_androidKt.getAllUncoveredSemanticsNodesToIntObjectMap$findAllSemanticNodesRecursive(android.graphics.Region, androidx.compose.ui.semantics.SemanticsNode, androidx.collection.MutableIntObjectMap, androidx.compose.ui.semantics.SemanticsNode, android.graphics.Region) due to JIT inline cache
+11-26 12:49:20.359  3741  3741 I zygote64: Deoptimizing void androidx.compose.ui.platform.SemanticsUtils_androidKt.getAllUncoveredSemanticsNodesToIntObjectMap$findAllSemanticNodesRecursive(android.graphics.Region, androidx.compose.ui.semantics.SemanticsNode, androidx.collection.MutableIntObjectMap, androidx.compose.ui.semantics.SemanticsNode, android.graphics.Region) due to JIT inline cache
+11-26 12:49:20.369  3741  3741 I zygote64: Deoptimizing boolean androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat.isScreenReaderFocusable(androidx.compose.ui.semantics.SemanticsNode) due to JIT inline cache
+11-26 12:49:20.542  3931  3931 W AccessibilityNodeInfoDumper: Fetch time: 10ms
+11-26 12:49:20.542  1704  2070 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@1ba7d34
+11-26 12:49:20.580  3931  3931 D AndroidRuntime: Shutting down VM
+11-26 12:49:20.600  1379  1392 D hwcomposer: hw_composer sent 93 syncs in 62s
+11-26 12:49:20.643  3741  3752 I zygote64: Background concurrent copying GC freed 25945(1286KB) AllocSpace objects, 3(60KB) LOS objects, 50% free, 2MB/5MB, paused 7.591ms total 207.104ms
+11-26 12:49:20.833  1401  2158 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-26 12:49:20.845  1378  1378 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 10371072
+11-26 12:49:20.851  3945  3945 D         : HostConnection::get() New Host Connection established 0x733bf602f780, tid 3945
+11-26 12:49:26.144  1704  2070 D WificondControl: Scan result ready event
+11-26 12:49:36.949  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:49:38.069  1704  1839 E BatteryStatsService: modem info is invalid: ModemActivityInfo{ mTimestamp=0 mSleepTimeMs=0 mIdleTimeMs=0 mTxTimeMs[]=[0, 0, 0, 0, 0] mRxTimeMs=0 mEnergyUsed=0}
+11-26 12:49:53.633  3741  3741 I Choreographer: Skipped 57 frames!  The application may be doing too much work on its main thread.
+11-26 12:50:00.623  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:50:00.623  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:50:00.812  1704  1835 W zygote64: Long monitor contention with owner Binder:1704_4 (2070) at void com.android.server.am.ActivityManagerService.trimApplications()(ActivityManagerService.java:23168) waiters=0 in void com.android.server.am.ActivityManagerService$2.handleMessage(android.os.Message) for 154ms
+11-26 12:50:04.343  3741  3741 I Choreographer: Skipped 74 frames!  The application may be doing too much work on its main thread.
+11-26 12:50:21.154  1379  1392 D hwcomposer: hw_composer sent 53 syncs in 60s
+11-26 12:50:22.309  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:50:22.309  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:50:28.224  1704  1835 I GnssLocationProvider: WakeLock acquired by handleInjectNtpTime()
+11-26 12:50:33.738  1704  3954 D SntpClient: request time failed: java.net.SocketTimeoutException: Poll timed out
+11-26 12:50:35.650  1704  3954 E GnssLocationProvider: requestTime failed
+11-26 12:50:35.650  1704  3954 I GnssLocationProvider: WakeLock acquired by sendMessage(INJECT_NTP_TIME_FINISHED, 0, null)
+11-26 12:50:35.651  1704  3954 I GnssLocationProvider: WakeLock released by handleInjectNtpTime()
+11-26 12:50:35.651  1704  1835 I GnssLocationProvider: WakeLock released by handleMessage(INJECT_NTP_TIME_FINISHED, 0, null)
+11-26 12:50:37.250  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:50:45.701  3741  3777 D SharedPreferencesImpl: Time required to fsync /data/user/0/com.dvirchi.contactsync.receiver/shared_prefs/contactsync.xml: [<1: 0, <2: 0, <4: 0, <8: 1, <16: 2, <32: 0, <64: 1, <128: 1, <256: 1, <512: 0, <1024: 0, <2048: 1, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+11-26 12:50:46.268  3741  3777 D SharedPreferencesImpl: Time required to fsync /data/user/0/com.dvirchi.contactsync.receiver/shared_prefs/contactsync.xml: [<1: 0, <2: 0, <4: 0, <8: 1, <16: 2, <32: 0, <64: 1, <128: 1, <256: 1, <512: 0, <1024: 1, <2048: 1, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+11-26 12:50:46.865  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 597 ms
+11-26 12:50:46.898  1704  1843 E NetdConnector: NDC event {613 IfaceClass idle 0 1245773465000} took too long: 1123ms
+11-26 12:50:48.135  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 522 ms
+11-26 12:50:48.137  3741  3741 I Choreographer: Skipped 30 frames!  The application may be doing too much work on its main thread.
+11-26 12:50:48.154  1704  1839 W BatteryStatsService: Timeout reading modem stats
+11-26 12:50:48.614  3741  3780 D SharedPreferencesImpl: Time required to fsync /data/user/0/com.dvirchi.contactsync.receiver/shared_prefs/contactsync.xml: [<1: 0, <2: 0, <4: 0, <8: 1, <16: 2, <32: 0, <64: 2, <128: 1, <256: 1, <512: 0, <1024: 2, <2048: 1, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+11-26 12:50:49.563  1704  1843 W zygote64: Long monitor contention with owner NetdConnector (1948) at boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long)(MessageQueue.java:543) waiters=0 in android.os.Message android.os.MessageQueue.next() for 255ms
+11-26 12:50:52.861  3741  3741 I Choreographer: Skipped 254 frames!  The application may be doing too much work on its main thread.
+11-26 12:50:52.901  1384  1384 E hw-IPCThreadState: binder thread pool (1 threads) starved for 513 ms
+11-26 12:50:54.064  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 610 ms
+11-26 12:50:54.189  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 122 ms
+11-26 12:50:54.967  1382  1382 E hw-IPCThreadState: binder thread pool (1 threads) starved for 1158 ms
+11-26 12:50:55.001  1694  1694 E hw-IPCThreadState: binder thread pool (1 threads) starved for 1349 ms
+11-26 12:50:55.002  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 809 ms
+11-26 12:50:57.746  1382  1382 E hw-IPCThreadState: binder thread pool (1 threads) starved for 1442 ms
+11-26 12:51:00.849  3741  3741 I Choreographer: Skipped 49 frames!  The application may be doing too much work on its main thread.
+11-26 12:51:01.736  1992  1992 I Choreographer: Skipped 31 frames!  The application may be doing too much work on its main thread.
+11-26 12:51:01.741  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:51:01.749  1384  1384 E hw-IPCThreadState: binder thread pool (1 threads) starved for 1054 ms
+11-26 12:51:01.749  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:51:03.602  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 307 ms
+11-26 12:51:04.302  1382  1382 E hw-IPCThreadState: binder thread pool (1 threads) starved for 298 ms
+11-26 12:51:05.802  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 516 ms
+11-26 12:51:05.815  1382  1382 E hw-IPCThreadState: binder thread pool (1 threads) starved for 1265 ms
+11-26 12:51:05.932  1384  1384 E hw-IPCThreadState: binder thread pool (1 threads) starved for 933 ms
+11-26 12:51:06.350  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:51:06.350  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:51:08.805  3741  3780 D SharedPreferencesImpl: Time required to fsync /data/user/0/com.dvirchi.contactsync.receiver/shared_prefs/contactsync.xml: [<1: 0, <2: 0, <4: 0, <8: 1, <16: 2, <32: 0, <64: 2, <128: 1, <256: 1, <512: 1, <1024: 2, <2048: 1, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+11-26 12:51:08.808  3741  3780 I ReceiverApi: applied snapshot: Result(added=6, updated=0, deleted=0, total=6, failed=0)
+11-26 12:51:09.152  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:51:10.487  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 639 ms
+11-26 12:51:10.697  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 208 ms
+11-26 12:51:11.010  1992  1992 I Choreographer: Skipped 78 frames!  The application may be doing too much work on its main thread.
+11-26 12:51:11.023  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 321 ms
+11-26 12:51:18.819  3970  3970 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:51:19.107  2821  2837 W zygote64: Suspending all threads took: 5.652ms
+11-26 12:51:19.530  3970  3970 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:51:19.731  3970  3970 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:51:20.000  3970  3970 D AndroidRuntime: Shutting down VM
+11-26 12:51:22.633  1379  1392 D hwcomposer: hw_composer sent 108 syncs in 62s
+11-26 12:51:37.283  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:52:00.063  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:52:00.063  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:52:02.166  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:52:02.166  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:52:02.206  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:52:02.206  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:52:06.234  1704  2070 D WificondControl: Scan result ready event
+11-26 12:52:18.812  1704  1839 E BatteryStatsService: modem info is invalid: ModemActivityInfo{ mTimestamp=0 mSleepTimeMs=0 mIdleTimeMs=0 mTxTimeMs[]=[0, 0, 0, 0, 0] mRxTimeMs=0 mEnergyUsed=0}
+11-26 12:52:23.787  1379  1392 D hwcomposer: hw_composer sent 66 syncs in 61s
+11-26 12:52:30.491  1382  1382 E hw-IPCThreadState: binder thread pool (1 threads) starved for 193 ms
+11-26 12:52:37.291  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:53:00.052  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:53:00.052  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:53:06.697  3741  3741 I zygote64: Deoptimizing androidx.compose.runtime.snapshots.StateRecord androidx.compose.runtime.snapshots.SnapshotKt.current(androidx.compose.runtime.snapshots.StateRecord) due to JIT inline cache
+11-26 12:53:06.698  3741  3741 I zygote64: Deoptimizing androidx.compose.runtime.snapshots.StateRecord androidx.compose.runtime.snapshots.SnapshotKt.overwritableRecord(androidx.compose.runtime.snapshots.StateRecord, androidx.compose.runtime.snapshots.StateObject, androidx.compose.runtime.snapshots.Snapshot, androidx.compose.runtime.snapshots.StateRecord) due to JIT inline cache
+11-26 12:53:06.699  3741  3741 I zygote64: Deoptimizing boolean androidx.compose.runtime.snapshots.SnapshotKt.overwriteUnusedRecordsLocked(androidx.compose.runtime.snapshots.StateObject) due to JIT inline cache
+11-26 12:53:25.107  1379  1392 D hwcomposer: hw_composer sent 74 syncs in 61s
+11-26 12:53:37.323  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:54:07.862  3741  3752 I zygote64: Background concurrent copying GC freed 58903(2MB) AllocSpace objects, 10(200KB) LOS objects, 49% free, 2MB/5MB, paused 9.054ms total 150.586ms
+11-26 12:54:26.498  1379  1392 D hwcomposer: hw_composer sent 69 syncs in 62s
+11-26 12:54:36.815  1704  1835 I UsageStatsService: User[0] Flushing usage stats to disk
+11-26 12:54:37.345  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:55:01.143  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:55:01.143  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:55:01.927  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 349 ms
+11-26 12:55:10.792  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 803 ms
+11-26 12:55:14.999  1704  2817 D WificondControl: Scan result ready event
+11-26 12:55:26.219  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 907 ms
+11-26 12:55:34.333  1379  1392 D hwcomposer: hw_composer sent 64 syncs in 67s
+11-26 12:55:37.511  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:55:48.917  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 114 ms
+11-26 12:55:51.954  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 236 ms
+11-26 12:55:56.572  1384  1384 E hw-IPCThreadState: binder thread pool (1 threads) starved for 484 ms
+11-26 12:55:56.834  3741  3780 D SharedPreferencesImpl: Time required to fsync /data/user/0/com.dvirchi.contactsync.receiver/shared_prefs/contactsync.xml: [<1: 0, <2: 0, <4: 0, <8: 2, <16: 2, <32: 2, <64: 4, <128: 1, <256: 2, <512: 1, <1024: 3, <2048: 1, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+11-26 12:55:57.147  1704  1847 W zygote64: Long monitor contention with owner Binder:1704_A (2817) at void com.android.server.power.PowerManagerService.acquireWakeLockInternal(android.os.IBinder, int, java.lang.String, java.lang.String, android.os.WorkSource, java.lang.String, int, int)(PowerManagerService.java:1027) waiters=0 in void com.android.server.power.PowerManagerService.handleSandman() for 849ms
+11-26 12:55:57.180  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 1696 ms
+11-26 12:55:57.333  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 144 ms
+11-26 12:56:36.109  1379  1392 D hwcomposer: hw_composer sent 104 syncs in 62s
+11-26 12:56:37.587  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:57:28.016  3741  3746 I zygote64: Do full code cache collection, code=1015KB, data=639KB
+11-26 12:57:28.018  3741  3746 I zygote64: After code cache collection, code=973KB, data=586KB
+11-26 12:57:37.118  1379  1392 D hwcomposer: hw_composer sent 55 syncs in 61s
+11-26 12:57:37.706  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:57:42.502  1704  1835 E memtrack: Couldn't load memtrack module
+11-26 12:57:42.502  1704  1835 W android.os.Debug: failed to get memory consumption info: -1
+11-26 12:57:46.327  1704  3730 D WificondControl: Scan result ready event
+11-26 12:58:37.655  1379  1392 D hwcomposer: hw_composer sent 63 syncs in 61s
+11-26 12:58:37.740  1395  1395 I boot-pipe: done populating /dev/random
+11-26 12:58:57.246  3741  3752 I zygote64: Background concurrent copying GC freed 59841(2MB) AllocSpace objects, 12(240KB) LOS objects, 50% free, 2MB/4MB, paused 5.015ms total 53.970ms
+11-26 12:58:57.608  1401  1421 E hw-IPCThreadState: binder thread pool (1 threads) starved for 112 ms
+11-26 12:58:57.851  3741  3907 I ReceiverApi: applied snapshot: Result(added=1, updated=0, deleted=0, total=7, failed=0)
+11-26 12:58:58.089  1704  1704 D ZenLog  : disable_effects: 0|com.dvirchi.contactsync.receiver|1|null|10065,booleanState
+11-26 12:58:59.573  3998  3998 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:58:59.867  3998  3998 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:59:00.416  3998  3998 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:59:00.656  3998  3998 D AndroidRuntime: Shutting down VM
+11-26 12:59:04.518  3741  3953 D SharedPreferencesImpl: Time required to fsync /data/user/0/com.dvirchi.contactsync.receiver/shared_prefs/contactsync.xml: [<1: 0, <2: 0, <4: 0, <8: 3, <16: 6, <32: 8, <64: 4, <128: 2, <256: 3, <512: 2, <1024: 3, <2048: 1, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+11-26 12:59:08.230  1704  1748 I ActivityManager: START u0 {flg=0x10000000 cmp=com.dvirchi.contactsync.receiver/.MainActivity} from uid 2000
+11-26 12:59:08.307  1704  1714 I zygote64: Background concurrent copying GC freed 61308(2MB) AllocSpace objects, 19(444KB) LOS objects, 42% free, 6MB/10MB, paused 5.681ms total 113.792ms
+11-26 12:59:10.846  4014  4014 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:59:10.952  4014  4014 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:59:10.989  4014  4014 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:59:12.124  4014  4014 W AccessibilityNodeInfoDumper: Fetch time: 21ms
+11-26 12:59:12.125  1704  2817 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@44a594
+11-26 12:59:12.188  4014  4014 D AndroidRuntime: Shutting down VM
+11-26 12:59:12.761  4026  4026 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:59:12.870  4026  4026 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:59:12.901  4026  4026 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:59:12.905  4026  4026 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1756604, downTime=1756604, deviceId=0, source=0x1002 }
+11-26 12:59:12.911  3741  3741 I zygote64: Deoptimizing kotlin.coroutines.Continuation kotlin.coroutines.jvm.internal.ContinuationImpl.intercepted() due to JIT inline cache
+11-26 12:59:12.915  4026  4026 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1756604, downTime=1756604, deviceId=0, source=0x1002 }
+11-26 12:59:12.936  4026  4026 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=865.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1756637, downTime=1756637, deviceId=0, source=0x1002 }
+11-26 12:59:12.966  3741  3741 I zygote64: Deoptimizing androidx.compose.runtime.snapshots.StateRecord androidx.compose.runtime.snapshots.SnapshotKt.usedLocked(androidx.compose.runtime.snapshots.StateObject) due to JIT inline cache
+11-26 12:59:12.966  3741  3741 I zygote64: Deoptimizing boolean androidx.collection.ScatterMap.containsKey(java.lang.Object) due to JIT inline cache
+11-26 12:59:12.969  4026  4026 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1030.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1756670, downTime=1756670, deviceId=0, source=0x1002 }
+11-26 12:59:12.998  4026  4026 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1170.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1756698, downTime=1756698, deviceId=0, source=0x1002 }
+11-26 12:59:13.262  4026  4026 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1756962, downTime=1756962, deviceId=0, source=0x1002 }
+11-26 12:59:13.396  3741  3741 I zygote64: Deoptimizing void kotlinx.coroutines.JobKt.ensureActive(kotlinx.coroutines.Job) due to JIT inline cache
+11-26 12:59:13.397  3741  3741 I zygote64: Deoptimizing void androidx.compose.runtime.SnapshotMutableStateImpl.setValue(java.lang.Object) due to JIT inline cache
+11-26 12:59:13.404  4026  4026 D AndroidRuntime: Shutting down VM
+11-26 12:59:13.903  4036  4036 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:59:13.978  4036  4036 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:59:14.021  4036  4036 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:59:14.025  4036  4036 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1757722, downTime=1757722, deviceId=0, source=0x1002 }
+11-26 12:59:14.047  4036  4036 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1757722, downTime=1757722, deviceId=0, source=0x1002 }
+11-26 12:59:14.066  4036  4036 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=920.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1757766, downTime=1757766, deviceId=0, source=0x1002 }
+11-26 12:59:14.113  4036  4036 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1160.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1757814, downTime=1757814, deviceId=0, source=0x1002 }
+11-26 12:59:14.185  4036  4036 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1515.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1757885, downTime=1757885, deviceId=0, source=0x1002 }
+11-26 12:59:14.327  4036  4036 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1758028, downTime=1758028, deviceId=0, source=0x1002 }
+11-26 12:59:14.441  4036  4036 D AndroidRuntime: Shutting down VM
+11-26 12:59:14.922  4046  4046 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:59:14.984  4046  4046 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:59:15.005  4046  4046 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:59:15.007  4046  4046 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1758706, downTime=1758706, deviceId=0, source=0x1002 }
+11-26 12:59:15.016  4046  4046 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1758706, downTime=1758706, deviceId=0, source=0x1002 }
+11-26 12:59:15.030  4046  4046 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=820.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1758730, downTime=1758730, deviceId=0, source=0x1002 }
+11-26 12:59:15.097  4046  4046 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1160.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1758798, downTime=1758798, deviceId=0, source=0x1002 }
+11-26 12:59:15.153  4046  4046 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1435.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1758853, downTime=1758853, deviceId=0, source=0x1002 }
+11-26 12:59:15.359  4046  4046 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1759060, downTime=1759060, deviceId=0, source=0x1002 }
+11-26 12:59:15.405  4046  4046 D AndroidRuntime: Shutting down VM
+11-26 12:59:17.001  4056  4056 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:59:17.089  4056  4056 W app_process: Unexpected CPU variant for X86 using defaults: x86_64
+11-26 12:59:17.111  4056  4056 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:59:18.268  4056  4056 W AccessibilityNodeInfoDumper: Fetch time: 39ms
+11-26 12:59:18.271  1704  3730 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@2908700
+11-26 12:59:18.294  4056  4056 D AndroidRuntime: Shutting down VM
+11-26 12:59:18.321  4056  4066 W MessageQueue: Handler (com.android.internal.os.HandlerCaller$MyHandler) {d567af3} sending message to a Handler on a dead thread
+11-26 12:59:18.321  4056  4066 W MessageQueue: java.lang.IllegalStateException: Handler (com.android.internal.os.HandlerCaller$MyHandler) {d567af3} sending message to a Handler on a dead thread
+11-26 12:59:18.321  4056  4066 W MessageQueue: 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:545)
+11-26 12:59:18.321  4056  4066 W MessageQueue: 	at android.os.Handler.enqueueMessage(Handler.java:661)
+11-26 12:59:18.321  4056  4066 W MessageQueue: 	at android.os.Handler.sendMessageAtTime(Handler.java:630)
+11-26 12:59:18.321  4056  4066 W MessageQueue: 	at android.os.Handler.sendMessageDelayed(Handler.java:600)
+11-26 12:59:18.321  4056  4066 W MessageQueue: 	at android.os.Handler.sendMessage(Handler.java:537)
+11-26 12:59:18.321  4056  4066 W MessageQueue: 	at com.android.internal.os.HandlerCaller.sendMessage(HandlerCaller.java:86)
+11-26 12:59:18.321  4056  4066 W MessageQueue: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.init(AccessibilityService.java:1627)
+11-26 12:59:18.321  4056  4066 W MessageQueue: 	at android.accessibilityservice.IAccessibilityServiceClient$Stub.onTransact(IAccessibilityServiceClient.java:59)
+11-26 12:59:18.321  4056  4066 W MessageQueue: 	at android.os.Binder.execTransact(Binder.java:674)
+11-26 12:59:18.755  1401  2152 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-26 12:59:18.838  1378  1378 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 10371072
+11-26 12:59:18.915  4070  4070 D         : HostConnection::get() New Host Connection established 0x7aca9a82f780, tid 4070
+11-26 13:00:15.814  1379  1392 D hwcomposer: hw_composer sent 78 syncs in 98s
+11-26 13:00:16.135  1395  1395 I boot-pipe: done populating /dev/random
+11-26 13:00:16.715  3741  3741 I Choreographer: Skipped 53 frames!  The application may be doing too much work on its main thread.
+11-26 13:00:17.100  1704  1704 W zygote64: Long monitor contention with owner batterystats-sync (1839) at void com.android.server.am.BatteryStatsService$1.run()(BatteryStatsService.java:1040) waiters=0 in void com.android.server.am.BatteryStatsService.noteUidProcessState(int, int) for 559ms
+11-26 13:00:17.102  1704  2136 W zygote64: Long monitor contention with owner batterystats-sync (1839) at void com.android.server.am.BatteryStatsService$1.run()(BatteryStatsService.java:1040) waiters=1 in void com.android.server.am.BatteryStatsService.noteStartWakelock(int, int, java.lang.String, java.lang.String, int, boolean) for 745ms
+11-26 13:00:17.107  1704  1847 W zygote64: Long monitor contention with owner Binder:1704_7 (2136) at void com.android.server.power.PowerManagerService.acquireWakeLockInternal(android.os.IBinder, int, java.lang.String, java.lang.String, android.os.WorkSource, java.lang.String, int, int)(PowerManagerService.java:1027) waiters=0 in void com.android.server.power.PowerManagerService.handleSandman() for 749ms
+11-26 13:00:17.136  1704  1837 W zygote64: Long monitor contention with owner main (1704) at void com.android.server.am.ActivityManagerService.trimApplications()(ActivityManagerService.java:23168) waiters=0 in void com.android.server.am.ActivityManagerService.dispatchUidsChanged() for 1.425s
+11-26 13:00:17.144  1704  1837 W Looper  : Dispatch took 1512ms on android.ui, h=Handler (com.android.server.am.ActivityManagerService$UiHandler) {dbb6f77} cb=null msg=53
+11-26 13:00:17.206  1704  1835 W zygote64: Long monitor contention with owner main (1704) at void com.android.server.am.ActivityManagerService.trimApplications()(ActivityManagerService.java:23168) waiters=1 in void com.android.server.am.ActivityManagerService$2.handleMessage(android.os.Message) for 1.488s
+11-26 13:00:17.224  1704  1748 W zygote64: Long monitor contention with owner main (1704) at void com.android.server.am.ActivityManagerService.trimApplications()(ActivityManagerService.java:23168) waiters=2 in void com.android.server.am.ActivityManagerService.finishReceiver(android.os.IBinder, int, java.lang.String, android.os.Bundle, boolean, int) for 1.501s

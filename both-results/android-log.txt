@@ -1,0 +1,149 @@
+--------- beginning of main
+--------- beginning of system
+11-26 12:39:02.389  3303  3303 I MiniHttpServer: listening on :8765
+11-26 12:39:04.271  3303  3325 I ReceiverService: NSD registered ContactSync Android SDK built for x86_64
+11-26 12:39:08.039  3353  3353 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:39:08.208  3353  3353 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:39:08.225  3353  3353 D AndroidRuntime: Shutting down VM
+11-26 12:42:14.453  3384  3384 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:42:15.169  3384  3384 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:42:16.697  3384  3384 D AndroidRuntime: Shutting down VM
+11-26 12:42:17.917  3397  3397 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:42:18.141  3397  3397 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:42:18.219  3397  3397 D AndroidRuntime: Shutting down VM
+11-26 12:42:21.625  3303  3412 I ReceiverApi: pairing request from iPhone Air
+11-26 12:42:24.680  3407  3407 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:42:26.993  3407  3407 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:42:30.204  3407  3407 D AndroidRuntime: Shutting down VM
+11-26 12:42:34.170  3434  3434 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:42:34.637  3434  3434 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:42:35.842  3434  3434 D AndroidRuntime: Shutting down VM
+11-26 12:42:44.406  3457  3457 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:42:45.200  3457  3457 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:42:46.557  3457  3457 D AndroidRuntime: Shutting down VM
+11-26 12:42:48.854  3472  3472 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:42:49.564  3472  3472 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:42:49.601  3472  3472 D AndroidRuntime: Shutting down VM
+11-26 12:43:07.858  3303  3411 I ReceiverApi: applied snapshot: Result(added=6, updated=0, deleted=0, total=6, failed=0)
+11-26 12:43:14.653  3303  3414 I ReceiverApi: applied snapshot: Result(added=0, updated=0, deleted=0, total=6, failed=0)
+11-26 12:44:02.489  3495  3495 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:03.027  3495  3495 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:44:04.302  3495  3495 D AndroidRuntime: Shutting down VM
+11-26 12:44:05.214  3508  3508 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:05.364  3508  3508 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:44:05.821  3508  3508 D AndroidRuntime: Shutting down VM
+11-26 12:44:16.093  3520  3520 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:16.624  3520  3520 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:16.982  3520  3520 D AndroidRuntime: Shutting down VM
+11-26 12:44:17.663  3529  3529 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:17.882  3529  3529 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:17.908  3529  3529 D AndroidRuntime: Shutting down VM
+11-26 12:44:19.037  3539  3539 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:19.252  3539  3539 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:19.315  3539  3539 D AndroidRuntime: Shutting down VM
+11-26 12:44:19.321  3539  3547 I AndroidRuntime: NOTE: attach of thread 'Binder:3539_1' failed
+11-26 12:44:42.915  3303  3411 I ReceiverApi: applied snapshot: Result(added=1, updated=0, deleted=0, total=7, failed=0)
+11-26 12:44:44.413  3553  3553 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:44.736  3553  3553 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:44.892  3553  3553 D AndroidRuntime: Shutting down VM
+11-26 12:44:53.066  3303  3414 I ReceiverApi: applied snapshot: Result(added=0, updated=1, deleted=0, total=7, failed=0)
+11-26 12:44:54.854  3572  3572 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:54.963  3572  3572 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:54.979  3572  3572 D AndroidRuntime: Shutting down VM
+11-26 12:44:55.361  3582  3582 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:44:55.445  3582  3582 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:44:55.466  3582  3582 D AndroidRuntime: Shutting down VM
+11-26 12:45:18.733  3303  3411 I ReceiverApi: applied snapshot: Result(added=0, updated=0, deleted=1, total=6, failed=0)
+11-26 12:45:21.320  3600  3600 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:45:21.742  3600  3600 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:45:21.836  3600  3600 D AndroidRuntime: Shutting down VM
+11-26 12:45:22.368  3613  3613 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:45:22.494  3613  3613 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:45:22.566  3613  3613 D AndroidRuntime: Shutting down VM
+11-26 12:47:13.047  3303  3411 I ReceiverApi: applied snapshot: Result(added=300, updated=0, deleted=0, total=306, failed=0)
+11-26 12:47:13.638  3635  3635 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:14.068  3635  3635 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:47:14.089  3635  3635 D AndroidRuntime: Shutting down VM
+11-26 12:47:14.292  3646  3646 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:14.347  3646  3646 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:47:14.408  3646  3646 D AndroidRuntime: Shutting down VM
+11-26 12:47:16.030  3661  3661 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:16.091  3661  3661 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:47:16.157  3661  3661 D AndroidRuntime: Shutting down VM
+11-26 12:47:16.370  3670  3670 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:16.426  3670  3670 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:47:16.737  3670  3670 D AndroidRuntime: Shutting down VM
+11-26 12:47:17.488  3680  3680 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:17.616  3680  3680 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:47:17.837  3680  3680 D AndroidRuntime: Shutting down VM
+11-26 12:47:18.064  3690  3690 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:18.288  3690  3690 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:47:18.495  3690  3690 D AndroidRuntime: Shutting down VM
+11-26 12:47:49.542  3303  3414 I ReceiverApi: applied snapshot: Result(added=0, updated=0, deleted=300, total=6, failed=0)
+11-26 12:47:50.336  3714  3714 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:47:50.449  3714  3714 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:47:50.462  3714  3714 D AndroidRuntime: Shutting down VM
+11-26 12:48:23.074  3741  3741 I MiniHttpServer: listening on :8765
+11-26 12:48:24.262  3741  3764 I ReceiverService: NSD registered ContactSync Android SDK built for x86_64
+11-26 12:48:42.063  3781  3781 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:42.181  3781  3781 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:48:43.503  3781  3781 D AndroidRuntime: Shutting down VM
+11-26 12:48:43.998  3795  3795 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:44.102  3795  3795 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:48:44.623  3795  3795 D AndroidRuntime: Shutting down VM
+11-26 12:48:46.103  3805  3805 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:46.224  3805  3805 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:48:47.330  3805  3805 D AndroidRuntime: Shutting down VM
+11-26 12:48:47.765  3818  3818 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:48.015  3818  3818 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:48:48.846  3818  3818 D AndroidRuntime: Shutting down VM
+11-26 12:48:50.556  3829  3829 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:50.913  3829  3829 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:48:52.842  3829  3829 D AndroidRuntime: Shutting down VM
+11-26 12:48:53.289  3841  3841 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:53.398  3841  3841 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:48:53.433  3841  3841 D AndroidRuntime: Shutting down VM
+11-26 12:48:54.233  3851  3851 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:54.522  3851  3851 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:48:55.714  3851  3851 D AndroidRuntime: Shutting down VM
+11-26 12:48:56.470  3867  3867 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:56.640  3867  3867 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:48:57.816  3867  3867 D AndroidRuntime: Shutting down VM
+11-26 12:48:58.161  3879  3879 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:48:58.273  3879  3879 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:48:58.335  3879  3879 D AndroidRuntime: Shutting down VM
+11-26 12:48:59.836  3894  3894 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:49:00.113  3894  3894 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:49:00.195  3894  3894 D AndroidRuntime: Shutting down VM
+11-26 12:49:16.789  3909  3909 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:49:16.877  3909  3909 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:49:18.023  3909  3909 D AndroidRuntime: Shutting down VM
+11-26 12:49:18.319  3921  3921 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:49:18.413  3921  3921 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:49:18.491  3921  3921 D AndroidRuntime: Shutting down VM
+11-26 12:49:19.055  3931  3931 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:49:19.325  3931  3931 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:49:20.580  3931  3931 D AndroidRuntime: Shutting down VM
+11-26 12:51:08.808  3741  3780 I ReceiverApi: applied snapshot: Result(added=6, updated=0, deleted=0, total=6, failed=0)
+11-26 12:51:18.819  3970  3970 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:51:19.731  3970  3970 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:51:20.000  3970  3970 D AndroidRuntime: Shutting down VM
+11-26 12:58:57.851  3741  3907 I ReceiverApi: applied snapshot: Result(added=1, updated=0, deleted=0, total=7, failed=0)
+11-26 12:58:59.573  3998  3998 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:59:00.416  3998  3998 D AndroidRuntime: Calling main entry com.android.commands.content.Content
+11-26 12:59:00.656  3998  3998 D AndroidRuntime: Shutting down VM
+11-26 12:59:10.846  4014  4014 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:59:10.989  4014  4014 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:59:12.188  4014  4014 D AndroidRuntime: Shutting down VM
+11-26 12:59:12.761  4026  4026 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:59:12.901  4026  4026 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:59:13.404  4026  4026 D AndroidRuntime: Shutting down VM
+11-26 12:59:13.903  4036  4036 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:59:14.021  4036  4036 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:59:14.441  4036  4036 D AndroidRuntime: Shutting down VM
+11-26 12:59:14.922  4046  4046 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:59:15.005  4046  4046 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-26 12:59:15.405  4046  4046 D AndroidRuntime: Shutting down VM
+11-26 12:59:17.001  4056  4056 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-26 12:59:17.111  4056  4056 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-26 12:59:18.294  4056  4056 D AndroidRuntime: Shutting down VM
