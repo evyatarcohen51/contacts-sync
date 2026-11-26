@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:לוי;דנה;;Dr.;
+FN:Dr. דנה לוי
+ORG:Acme;R&D
+TITLE:CTO
+TEL;type=CELL;type=VOICE;type=pref:+972 50-123-4567
+item1.TEL:+972 52-765-4321
+item1.X-ABLabel:Gym
+EMAIL;type=INTERNET;type=WORK:dana@acme.example
+item2.ADR;type=HOME:;;Herzl 1;Tel Aviv;;6100000;Israel
+BDAY:1990-03-14
+END:VCARD

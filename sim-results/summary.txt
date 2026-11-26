@@ -1,0 +1,14 @@
+Simulator: iPhone_Air (iOS_26.2), Xcode 16.4 Build version 16F6 
+Simulator build: ok
+1. First launch: app is running
+2. Paired and synced: upload: 1120 bytes, 6 contacts -> 6 added, 0 updated, 0 removed
+3. New contact picked up without touching the app: upload: 1343 bytes, 7 contacts -> 1 added, 0 updated, 0 removed
+4. Samsung switched off: app still running (see screenshot for the red status)
+5. Tapping through the app (find Samsung on the network, pair, sync, Sync now): passed
+   Samsung: fake Samsung listening on port 8765, paired with code TEST-CODE-2345-6789
+   Samsung: upload: 1354 bytes, 7 contacts -> 7 added, 0 updated, 0 removed
+   Samsung: pairing request from iPhone Air; number 900063
+   Samsung: paired with iPhone Air; code GUDZ-2HNA-RTF9-A6PP
+   Samsung: upload: 1338 bytes, 7 contacts -> 0 added, 0 updated, 0 removed
+   Samsung: upload: 1339 bytes, 7 contacts -> 0 added, 0 updated, 0 removed
+RESULT: all simulator checks passed

@@ -1,0 +1,400 @@
+2026-11-26 12:09:11.753 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Idle notifier run loop observer fired
+2026-11-26 12:09:11.753 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Sending main run loop idle reply
+2026-11-26 12:09:11.753 Df ContactSyncSender[12339:9b0e] [com.apple.dt.xctest:Default] Received request to notify when animations are idle
+2026-11-26 12:09:11.753 Df ContactSyncSender[12339:9b0e] [com.apple.dt.xctest:Default] Sending animations idle reply with error: (null)
+2026-11-26 12:09:11.762 Df ContactSyncSender[12339:9b0e] [com.apple.dt.xctest:Default] Received request to fetch matches for query:
+2026-11-26 12:09:11.762 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Evaluating query:
+2026-11-26 12:09:11.762 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Getting root element snapshot
+2026-11-26 12:09:11.765 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Getting snapshot for App element pid: 12339 for query
+2026-11-26 12:09:11.766 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Query requires iOS snapshot attributes .
+2026-11-26 12:09:11.766 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: about to CFRunLoopPerform
+2026-11-26 12:09:11.766 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting with 30.00s responsiveness timeout
+2026-11-26 12:09:11.766 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: inside CFRunLoopPerform
+2026-11-26 12:09:11.766 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: MT responded in time (won the race to the busy flag)
+2026-11-26 12:09:11.766 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting 60.00s for work to complete
+2026-11-26 12:09:11.767 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got main window <AXUIElementRef 0x600000c62550> {pid=12339} {uid=[ID:4 hash:0x101619c90]}
+2026-11-26 12:09:11.770 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Capturing hierarchy with attributes XC_kAXXCAttributeElementType, XC_kAXXCAttributeElementBaseType, XC_kAXXCAttributeParent, XC_kAXXCAttributeIdentifier, XC_kAXXCAttributeAutomationType, XC_kAXXCAttributeTraits
+2026-11-26 12:09:11.770 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Capturing hierarchy with parameters {
+    attributes =     (
+        5003,
+        5004,
+        5002,
+        5019,
+        5058,
+        2004
+    );
+    maxArrayCount = 2147483647;
+    maxChildren = 2147483647;
+    maxDepth = 2147483647;
+    snapshotKeyHonorModalViews = 0;
+    traverseFromParentsToChildren = 1;
+}
+2026-11-26 12:09:11.770 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Snapshot attributes 5003, 5004, 5002, 5019, 5058, 2004
+2026-11-26 12:09:11.821 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got snapshot for <AXUIElementRef 0x600000c62340> {pid=12339} {uid=[ID:1 hash:0x0]}
+2026-11-26 12:09:11.822 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got app orientation 0
+2026-11-26 12:09:11.822 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Captured accessibility snapshot data in 0.06s
+2026-11-26 12:09:11.822 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Found main window: Window
+2026-11-26 12:09:11.824 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] SegmentedControl is not actually a child of Other, including at this point anyway (rdar://problem/20738636)
+2026-11-26 12:09:11.824 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Switch is not actually a child of Switch, including at this point anyway (rdar://problem/20738636)
+2026-11-26 12:09:11.824 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Switch is not actually a child of Switch, including at this point anyway (rdar://problem/20738636)
+2026-11-26 12:09:11.824 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] CollectionView is not actually a child of Other, including at this point anyway (rdar://problem/20738636)
+2026-11-26 12:09:11.824 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Other is not actually a child of Other, including at this point anyway (rdar://problem/20738636)
+2026-11-26 12:09:11.825 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Query  found matching snapshots: {(
+    Application, pid: 12339
+)} (error: (null))
+2026-11-26 12:09:11.825 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Replying to query  with results: <XCTElementQueryResults: 0x600000cced30> (error: (null))
+2026-11-26 12:09:11.827 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Received attributes request for element: App element pid: 12339. Attributes: (
+    "XC_kAXXCAttributeLabel"
+)
+2026-11-26 12:09:11.827 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: about to CFRunLoopPerform
+2026-11-26 12:09:11.827 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting with 30.00s responsiveness timeout
+2026-11-26 12:09:11.827 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: inside CFRunLoopPerform
+2026-11-26 12:09:11.827 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: MT responded in time (won the race to the busy flag)
+2026-11-26 12:09:11.827 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting 60.00s for work to complete
+2026-11-26 12:09:11.827 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Fetching AX attributes XC_kAXXCAttributeLabel for App element pid: 12339
+2026-11-26 12:09:11.829 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got attributes, transferring to dictionary for return.
+2026-11-26 12:09:11.829 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Checking 'Contact Sync' for privileged AX value slot attributes
+2026-11-26 12:09:11.829 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Replying with attribute values: {
+    "XC_kAXXCAttributeLabel" = "Contact Sync";
+}
+2026-11-26 12:09:11.830 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Received attributes request for element: App element pid: 12339. Attributes: (
+    "XC_kAXXCAttributeValue"
+)
+2026-11-26 12:09:11.830 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: about to CFRunLoopPerform
+2026-11-26 12:09:11.830 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting with 30.00s responsiveness timeout
+2026-11-26 12:09:11.830 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: inside CFRunLoopPerform
+2026-11-26 12:09:11.830 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: MT responded in time (won the race to the busy flag)
+2026-11-26 12:09:11.830 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting 60.00s for work to complete
+2026-11-26 12:09:11.831 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Fetching AX attributes XC_kAXXCAttributeValue for App element pid: 12339
+2026-11-26 12:09:11.831 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got attributes, transferring to dictionary for return.
+2026-11-26 12:09:11.831 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Replying with attribute values: {
+}
+2026-11-26 12:09:11.831 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Received attributes request for element: App element pid: 12339. Attributes: (
+    "XC_kAXXCAttributePlaceholderValue"
+)
+2026-11-26 12:09:11.831 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: about to CFRunLoopPerform
+2026-11-26 12:09:11.831 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting with 30.00s responsiveness timeout
+2026-11-26 12:09:11.831 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: inside CFRunLoopPerform
+2026-11-26 12:09:11.832 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting 60.00s for work to complete
+2026-11-26 12:09:11.832 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: MT responded in time (won the race to the busy flag)
+2026-11-26 12:09:11.832 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Fetching AX attributes XC_kAXXCAttributePlaceholderValue for App element pid: 12339
+2026-11-26 12:09:11.832 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got attributes, transferring to dictionary for return.
+2026-11-26 12:09:11.832 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Replying with attribute values: {
+}
+2026-11-26 12:09:11.833 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Received attributes request for element: App element pid: 12339. Attributes: (
+    "XC_kAXXCAttributeFrame",
+    "XC_kAXXCAttributeWindowDisplayId",
+    "XC_kAXXCAttributeWindowContextId"
+)
+2026-11-26 12:09:11.833 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: about to CFRunLoopPerform
+2026-11-26 12:09:11.833 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting with 30.00s responsiveness timeout
+2026-11-26 12:09:11.833 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: inside CFRunLoopPerform
+2026-11-26 12:09:11.833 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: MT responded in time (won the race to the busy flag)
+2026-11-26 12:09:11.833 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting 60.00s for work to complete
+2026-11-26 12:09:11.833 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Fetching AX attributes XC_kAXXCAttributeFrame, XC_kAXXCAttributeWindowDisplayId, XC_kAXXCAttributeWindowContextId for App element pid: 12339
+2026-11-26 12:09:11.835 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got attributes, transferring to dictionary for return.
+2026-11-26 12:09:11.836 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Replying with attribute values: {
+    "XC_kAXXCAttributeFrame" =     {
+        Height = 874;
+        Width = 402;
+        X = 0;
+        Y = 0;
+    };
+    "XC_kAXXCAttributeWindowContextId" = 375522167;
+    "XC_kAXXCAttributeWindowDisplayId" = 0;
+}
+2026-11-26 12:09:11.858 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Received request to fetch matches for query: ↪︎ Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+2026-11-26 12:09:11.858 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Evaluating query:
+ ↪︎ Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+2026-11-26 12:09:11.858 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Getting root element snapshot
+2026-11-26 12:09:11.858 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Getting snapshot for App element pid: 12339 for query ↪︎ Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+2026-11-26 12:09:11.858 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Query requires iOS snapshot attributes XC_kAXXCAttributeElementType, XC_kAXXCAttributeElementBaseType, XC_kAXXCAttributeIdentifier, XC_kAXXCAttributeAutomationType, XC_kAXXCAttributeTraits.
+2026-11-26 12:09:11.858 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: about to CFRunLoopPerform
+2026-11-26 12:09:11.859 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting with 30.00s responsiveness timeout
+2026-11-26 12:09:11.859 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: inside CFRunLoopPerform
+2026-11-26 12:09:11.859 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: MT responded in time (won the race to the busy flag)
+2026-11-26 12:09:11.859 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting 60.00s for work to complete
+2026-11-26 12:09:11.859 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got main window <AXUIElementRef 0x600000c483f0> {pid=12339} {uid=[ID:4 hash:0x101619c90]}
+2026-11-26 12:09:11.859 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Capturing hierarchy with attributes XC_kAXXCAttributeElementType, XC_kAXXCAttributeElementBaseType, XC_kAXXCAttributeParent, XC_kAXXCAttributeIdentifier, XC_kAXXCAttributeAutomationType, XC_kAXXCAttributeTraits
+2026-11-26 12:09:11.860 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Capturing hierarchy with parameters {
+    attributes =     (
+        5003,
+        5004,
+        5002,
+        5019,
+        5058,
+        2004
+    );
+    maxArrayCount = 2147483647;
+    maxChildren = 2147483647;
+    maxDepth = 2147483647;
+    snapshotKeyHonorModalViews = 0;
+    traverseFromParentsToChildren = 1;
+}
+2026-11-26 12:09:11.860 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Snapshot attributes 5003, 5004, 5002, 5019, 5058, 2004
+2026-11-26 12:09:11.891 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got snapshot for <AXUIElementRef 0x600000c4ba80> {pid=12339} {uid=[ID:1 hash:0x0]}
+2026-11-26 12:09:11.891 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got app orientation 0
+2026-11-26 12:09:11.891 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Captured accessibility snapshot data in 0.03s
+2026-11-26 12:09:11.891 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Found main window: Window
+2026-11-26 12:09:11.892 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] SegmentedControl is not actually a child of Other, including at this point anyway (rdar://problem/20738636)
+2026-11-26 12:09:11.892 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Switch is not actually a child of Switch, including at this point anyway (rdar://problem/20738636)
+2026-11-26 12:09:11.892 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Switch is not actually a child of Switch, including at this point anyway (rdar://problem/20738636)
+2026-11-26 12:09:11.892 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] CollectionView is not actually a child of Other, including at this point anyway (rdar://problem/20738636)
+2026-11-26 12:09:11.896 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Other is not actually a child of Other, including at this point anyway (rdar://problem/20738636)
+2026-11-26 12:09:11.897 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: about to CFRunLoopPerform
+2026-11-26 12:09:11.897 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting with 30.00s responsiveness timeout
+2026-11-26 12:09:11.897 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: inside CFRunLoopPerform
+2026-11-26 12:09:11.897 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: MT responded in time (won the race to the busy flag)
+2026-11-26 12:09:11.897 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting 60.00s for work to complete
+2026-11-26 12:09:11.897 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTElementQuery: set data source for rootElementSnapshot to <XCTAutomationSession: 0x6000026026a0>
+2026-11-26 12:09:11.897 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Finding all matches with input Application, pid: 12339 using transformers 
+↪︎ Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+2026-11-26 12:09:11.899 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] [Match All] applied transformer `Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7` to input {(
+    Application, pid: 12339
+)}, found {(
+)}
+2026-11-26 12:09:11.899 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] [Match All] setting out related elements in early return {(
+)}
+2026-11-26 12:09:11.901 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Current tree:
+Application, 0x10167aef0, pid: 12339 <App element pid: 12339>
+  Window (Main), 0x1016e8d60 <AX element pid: 12339, elementOrHash.elementID: 4318141584.4>
+    Other, 0x1016ca250 <AX element pid: 12339, elementOrHash.elementID: 4318139840.5>
+      Other, 0x101674cb0 <AX element pid: 12339, elementOrHash.elementID: 4317183136.6>
+        Other, 0x1016e6c20 <AX element pid: 12339, elementOrHash.elementID: 4318123664.7>
+          Other, 0x10166e930 <AX element pid: 12339, elementOrHash.elementID: 4317280880.8>
+            Other, 0x1016a0540 <AX element pid: 12339, elementOrHash.elementID: 4317201776.9>
+              NavigationBar, 0x10167e7a0, identifier: 'Contact Sync' <AX element pid: 12339, elementOrHash.elementID: 4318188736.10>
+                StaticText, 0x101645ad0 <AX element pid: 12339, elementOrHash.elementID: 4318887104.335>
+              Other, 0x1016445c0 <AX element pid: 12339, elementOrHash.elementID: 4317203040.11>
+                Other, 0x1016c1500 <AX element pid: 12339, elementOrHash.elementID: 4317241424.13>
+                  Other, 0x101673630 <AX element pid: 12339, elementOrHash.elementID: 4318170080.14>
+                    Other, 0x1016537b0 <AX element pid: 12339, elementOrHash.elementID: 4318862528.291>
+                      CollectionView, 0x10165ed60 <AX element pid: 12339, elementOrHash.elementID: 4329256448.16>
+                        Other, 0x1016e61d0 <AX element pid: 12339, elementOrHash.elementID: 4319984672.17>
+                        Cell, 0x1016f42e0 <AX element pid: 12339, elementOrHash.elementID: 4321193472.18>
+                          Other, 0x101637d10 <AX element pid: 12339, elementOrHash.elementID: 4317481120.43>
+                          Other, 0x1016f2c90 <AX element pid: 12339, elementOrHash.elementID: 4317480096.44>
+                            Other, 0x1016c9810 <AX element pid: 12339, elementOrHash.elementID: 4321454592.72>
+                              Other, 0x1016093c0 <AX element pid: 12339, elementOrHash.elementID: 4318992144.292>
+                                StaticText, 0x101657450 <AX element pid: 12339, elementOrHash.elementID: 4318991712.308>
+                        Cell, 0x1016c5c50 <AX element pid: 12339, elementOrHash.elementID: 4337673728.19>
+                          Other, 0x1016edec0 <AX element pid: 12339, elementOrHash.elementID: 4318273968.45>
+                            Other, 0x10160af10 <AX element pid: 12339, elementOrHash.elementID: 4318275488.73>
+                          Other, 0x1016f1820 <AX element pid: 12339, elementOrHash.elementID: 4318271504.46>
+                            Other, 0x1016e0ab0 <AX element pid: 12339, elementOrHash.elementID: 4337785344.74>
+                              Other, 0x10162e3b0 <AX element pid: 12339, elementOrHash.elementID: 4319026528.293>
+                                StaticText, 0x1016f8a20 <AX element pid: 12339, elementOrHash.elementID: 4319025664.309>
+                                StaticText, 0x1016e0df0 <AX element pid: 12339, elementOrHash.elementID: 4319026096.310>
+                        Cell, 0x1016e3fb0 <AX element pid: 12339, elementOrHash.elementID: 4337063424.20>
+                          Other, 0x1016e40d0 <AX element pid: 12339, elementOrHash.elementID: 4318277136.47>
+                            Other, 0x101695a10 <AX element pid: 12339, elementOrHash.elementID: 4318295712.75>
+                          Other, 0x101695b30 <AX element pid: 12339, elementOrHash.elementID: 4318276208.48>
+                            Other, 0x1016c8bd0 <AX element pid: 12339, elementOrHash.elementID: 4337592832.76>
+                              Other, 0x1016c8cf0 <AX element pid: 12339, elementOrHash.elementID: 4319046960.294>
+                                StaticText, 0x101668760 <AX element pid: 12339, elementOrHash.elementID: 4319038096.311>
+                                StaticText, 0x101668880 <AX element pid: 12339, elementOrHash.elementID: 4319046096.312>
+                                StaticText, 0x1016cd920 <AX element pid: 12339, elementOrHash.elementID: 4319046528.313>
+                        Other, 0x1016cda40 <AX element pid: 12339, elementOrHash.elementID: 4320095312.149>
+                        Cell, 0x1016a76b0 <AX element pid: 12339, elementOrHash.elementID: 4338055168.22>
+                          Other, 0x1016a77d0 <AX element pid: 12339, elementOrHash.elementID: 4318288288.49>
+                            Other, 0x1016ecca0 <AX element pid: 12339, elementOrHash.elementID: 4318367952.77>
+                          Other, 0x1016ecdc0 <AX element pid: 12339, elementOrHash.elementID: 4318365184.50>
+                            Other, 0x1016ecee0 <AX element pid: 12339, elementOrHash.elementID: 4337896448.78>
+                              Other, 0x1016e6e80 <AX element pid: 12339, elementOrHash.elementID: 4319031520.295>
+                                StaticText, 0x1016e6fa0 <AX element pid: 12339, elementOrHash.elementID: 4319029024.314>
+                                Image, 0x1016e70c0, identifier: 'checkmark.circle.fill', Selected <AX element pid: 12339, elementOrHash.elementID: 4317653504.336>
+                                StaticText, 0x1016b4500 <AX element pid: 12339, elementOrHash.elementID: 4317460480.337>
+                        Other, 0x1016b4620 <AX element pid: 12339, elementOrHash.elementID: 4319986704.23>
+                        Cell, 0x1016b4740 <AX element pid: 12339, elementOrHash.elementID: 4337639424.24>
+                          Other, 0x1016e64d0 <AX element pid: 12339, elementOrHash.elementID: 4318297296.51>
+                            Other, 0x1016e65f0 <AX element pid: 12339, elementOrHash.elementID: 4318361568.79>
+                          Other, 0x1016e6710 <AX element pid: 12339, elementOrHash.elementID: 4318352320.52>
+                            Other, 0x101699870 <AX element pid: 12339, elementOrHash.elementID: 4338130432.80>
+                              Other, 0x101699990 <AX element pid: 12339, elementOrHash.elementID: 4318998992.296>
+                                StaticText, 0x101699ab0 <AX element pid: 12339, elementOrHash.elementID: 4318997536.317>
+                        Other, 0x10168e3f0 <AX element pid: 12339, elementOrHash.elementID: 4319987216.25>
+                        Cell, 0x10168e510 <AX element pid: 12339, elementOrHash.elementID: 4337976832.26>
+                          Other, 0x10168e630 <AX element pid: 12339, elementOrHash.elementID: 4318397296.53>
+                            Other, 0x1016d1160 <AX element pid: 12339, elementOrHash.elementID: 4318377072.81>
+                          Other, 0x1016d1280 <AX element pid: 12339, elementOrHash.elementID: 4318376656.54>
+                            Other, 0x1016d13a0 <AX element pid: 12339, elementOrHash.elementID: 4337978368.82>
+                              Other, 0x1016e1f30 <AX element pid: 12339, elementOrHash.elementID: 4319024288.297>
+                                StaticText, 0x1016e2050 <AX element pid: 12339, elementOrHash.elementID: 4319022400.318>
+                                StaticText, 0x1016e2170 <AX element pid: 12339, elementOrHash.elementID: 4319023856.319>
+                        Other, 0x1016e2290 <AX element pid: 12339, elementOrHash.elementID: 4319987728.27>
+                        Cell, 0x1016e23b0 <AX element pid: 12339, elementOrHash.elementID: 4320993280.28>
+                          Other, 0x1016e24d0 <AX element pid: 12339, elementOrHash.elementID: 4317325312.55>
+                            Other, 0x1016e25f0 <AX element pid: 12339, elementOrHash.elementID: 4317325808.83>
+                          Other, 0x1016e2710 <AX element pid: 12339, elementOrHash.elementID: 4317324048.56>
+                            Other, 0x1016e2830 <AX element pid: 12339, elementOrHash.elementID: 4320994816.84>
+                              Other, 0x1016e2950 <AX element pid: 12339, elementOrHash.elementID: 4319021728.298>
+                                StaticText, 0x1016e2a70 <AX element pid: 12339, elementOrHash.elementID: 4319019840.320>
+                                StaticText, 0x1016e2b90 <AX element pid: 12339, elementOrHash.elementID: 4319021296.321>
+                        Other, 0x1016e2cb0 <AX element pid: 12339, elementOrHash.elementID: 4319988240.29>
+                        Cell, 0x1016e2dd0 <AX element pid: 12339, elementOrHash.elementID: 4321145856.184>
+                          Other, 0x1016e2ef0 <AX element pid: 12339, elementOrHash.elementID: 4317690352.185>
+                            Other, 0x1016dfea0 <AX element pid: 12339, elementOrHash.elementID: 4317690848.187>
+                          Other, 0x1016dffc0 <AX element pid: 12339, elementOrHash.elementID: 4317689424.186>
+                            Other, 0x1016e00e0 <AX element pid: 12339, elementOrHash.elementID: 4321111040.188>
+                              Other, 0x1016e0200 <AX element pid: 12339, elementOrHash.elementID: 4318396592.299>
+                                StaticText, 0x1016e0320 <AX element pid: 12339, elementOrHash.elementID: 4318394704.322>
+                                StaticText, 0x1016e0440 <AX element pid: 12339, elementOrHash.elementID: 4318396160.323>
+                        Other, 0x1016c7fe0 <AX element pid: 12339, elementOrHash.elementID: 4319988752.31>
+                        Cell, 0x1016c8100 <AX element pid: 12339, elementOrHash.elementID: 4320754176.30>
+                          Other, 0x1016c8220 <AX element pid: 12339, elementOrHash.elementID: 4317327040.57>
+                            Other, 0x1016c8340 <AX element pid: 12339, elementOrHash.elementID: 4317327536.85>
+                          Other, 0x1016dd280 <AX element pid: 12339, elementOrHash.elementID: 4317328704.58>
+                            Other, 0x1016dd3a0 <AX element pid: 12339, elementOrHash.elementID: 4320755712.86>
+                              Other, 0x1016dd4c0 <AX element pid: 12339, elementOrHash.elementID: 4319018768.300>
+                                Button, 0x1016dd5e0 <AX element pid: 12339, elementOrHash.elementID: 4319017520.324>
+                        Other, 0x1016dd700 <AX element pid: 12339, elementOrHash.elementID: 4317236512.145>
+                        Other, 0x1016dd820 <AX element pid: 12339, elementOrHash.elementID: 4319989264.32>
+                        Cell, 0x1016dd940 <AX element pid: 12339, elementOrHash.elementID: 4329858560.33>
+                          Other, 0x1016dda60 <AX element pid: 12339, elementOrHash.elementID: 4319895712.59>
+                          Other, 0x1016ddb80 <AX element pid: 12339, elementOrHash.elementID: 4319902160.60>
+                            Other, 0x1016ddca0 <AX element pid: 12339, elementOrHash.elementID: 4328843264.87>
+                              Other, 0x1016dddc0 <AX element pid: 12339, elementOrHash.elementID: 4318996512.301>
+                                StaticText, 0x1016ddee0 <AX element pid: 12339, elementOrHash.elementID: 4318996080.325>
+                        Cell, 0x1016de000 <AX element pid: 12339, elementOrHash.elementID: 4329138688.34>
+                          Other, 0x1016de120 <AX element pid: 12339, elementOrHash.elementID: 4319845952.61>
+                            Other, 0x1016de240 <AX element pid: 12339, elementOrHash.elementID: 4319880288.88>
+                          Other, 0x1016de360 <AX element pid: 12339, elementOrHash.elementID: 4319693056.62>
+                            Other, 0x1016de480 <AX element pid: 12339, elementOrHash.elementID: 4329342976.89>
+                              Other, 0x1016de5a0 <AX element pid: 12339, elementOrHash.elementID: 4319013920.302>
+                                SegmentedControl, 0x1016de6c0 <AX element pid: 12339, elementOrHash.elementID: 4319915968.126>
+                                  Button, 0x1016de7e0 <AX element pid: 12339, elementOrHash.elementID: 4318418944.132>
+                                  Button, 0x1016de900, Selected <AX element pid: 12339, elementOrHash.elementID: 4318429600.133>
+                                  Button, 0x1016a0850 <AX element pid: 12339, elementOrHash.elementID: 4318434416.134>
+                        Cell, 0x112552520 <AX element pid: 12339, elementOrHash.elementID: 4338288128.35>
+                          Other, 0x1017728f0 <AX element pid: 12339, elementOrHash.elementID: 4318435904.63>
+                            Other, 0x1017b9560 <AX element pid: 12339, elementOrHash.elementID: 4318436400.90>
+                          Other, 0x10175a460 <AX element pid: 12339, elementOrHash.elementID: 4318431088.64>
+                            Other, 0x101794370 <AX element pid: 12339, elementOrHash.elementID: 4338289664.91>
+                              Other, 0x101752780 <AX element pid: 12339, elementOrHash.elementID: 4319012032.303>
+                                Switch, 0x101759d70 <AX element pid: 12339, elementOrHash.elementID: 4319010064.326>
+                                  StaticText, 0x1017a7b60 <AX element pid: 12339, elementOrHash.elementID: 4319008528.331>
+                                  Switch, 0x1017839b0 <AX element pid: 12339, elementOrHash.elementID: 4318477552.136>
+                        Other, 0x1017378e0 <AX element pid: 12339, elementOrHash.elementID: 4319989760.36>
+                        Cell, 0x1017aaec0 <AX element pid: 12339, elementOrHash.elementID: 4329676800.37>
+                          Other, 0x101792810 <AX element pid: 12339, elementOrHash.elementID: 4319917136.65>
+                            Other, 0x1017b19b0 <AX element pid: 12339, elementOrHash.elementID: 4319917632.92>
+                          Other, 0x1017697b0 <AX element pid: 12339, elementOrHash.elementID: 4319914048.66>
+                            Other, 0x10177eb40 <AX element pid: 12339, elementOrHash.elementID: 4329669120.93>
+                              Other, 0x101750840 <AX element pid: 12339, elementOrHash.elementID: 4319007392.304>
+                                Switch, 0x101786a10 <AX element pid: 12339, elementOrHash.elementID: 4319005424.327>
+                                  StaticText, 0x1017a8c60 <AX element pid: 12339, elementOrHash.elementID: 4318074640.332>
+                                  Switch, 0x10178b510 <AX element pid: 12339, elementOrHash.elementID: 4319929056.138>
+                        Other, 0x10179e1c0 <AX element pid: 12339, elementOrHash.elementID: 4319990272.38>
+                        Cell, 0x101784a50 <AX element pid: 12339, elementOrHash.elementID: 4329910784.39>
+                          Other, 0x1017497c0 <AX element pid: 12339, elementOrHash.elementID: 4319955120.67>
+                          Other, 0x10179f310 <AX element pid: 12339, elementOrHash.elementID: 4319953856.68>
+                            Other, 0x101754da0 <AX element pid: 12339, elementOrHash.elementID: 4329919488.94>
+                              Other, 0x1017a3f20 <AX element pid: 12339, elementOrHash.elementID: 4318995056.305>
+                                StaticText, 0x101786320 <AX element pid: 12339, elementOrHash.elementID: 4318994624.328>
+                        Other, 0x1017a4cd0 <AX element pid: 12339, elementOrHash.elementID: 4317249840.42>
+                          Other, 0x10179a500 <AX element pid: 12339, elementOrHash.elementID: 4317250304.71>
+                        Other, 0x101798dd0 <AX element pid: 12339, elementOrHash.elementID: 4317249840.42>
+                          Other, 0x101769440 <AX element pid: 12339, elementOrHash.elementID: 4317250304.71>
+2026-11-26 12:09:11.903 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Query ↪︎ Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7 found matching snapshots: {(
+)} (error: (null))
+2026-11-26 12:09:11.904 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Replying to query ↪︎ Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7 with results: <XCTElementQueryResults: 0x600000cca3a0> (error: (null))
+2026-11-26 12:09:11.909 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Received attributes request for element: App element pid: 12339. Attributes: (
+    "XC_kAXXCAttributeWindowDisplayId"
+)
+2026-11-26 12:09:11.909 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: about to CFRunLoopPerform
+2026-11-26 12:09:11.910 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: inside CFRunLoopPerform
+2026-11-26 12:09:11.910 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: MT responded in time (won the race to the busy flag)
+2026-11-26 12:09:11.910 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting with 30.00s responsiveness timeout
+2026-11-26 12:09:11.911 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting 60.00s for work to complete
+2026-11-26 12:09:11.911 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Fetching AX attributes XC_kAXXCAttributeWindowDisplayId for App element pid: 12339
+2026-11-26 12:09:11.912 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got attributes, transferring to dictionary for return.
+2026-11-26 12:09:11.912 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Replying with attribute values: {
+    "XC_kAXXCAttributeWindowDisplayId" = 0;
+}
+2026-11-26 12:09:11.917 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Received attributes request for element: App element pid: 12339. Attributes: (
+    "XC_kAXXCAttributeWindowDisplayId"
+)
+2026-11-26 12:09:11.918 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: about to CFRunLoopPerform
+2026-11-26 12:09:11.919 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting with 30.00s responsiveness timeout
+2026-11-26 12:09:11.919 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: inside CFRunLoopPerform
+2026-11-26 12:09:11.920 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: MT responded in time (won the race to the busy flag)
+2026-11-26 12:09:11.920 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting 60.00s for work to complete
+2026-11-26 12:09:11.920 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Fetching AX attributes XC_kAXXCAttributeWindowDisplayId for App element pid: 12339
+2026-11-26 12:09:11.920 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got attributes, transferring to dictionary for return.
+2026-11-26 12:09:11.920 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Replying with attribute values: {
+    "XC_kAXXCAttributeWindowDisplayId" = 0;
+}
+2026-11-26 12:09:11.922 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Received attributes request for element: App element pid: 12339. Attributes: (
+    "XC_kAXXCAttributeSystemAutomationProperties"
+)
+2026-11-26 12:09:11.923 Df ContactSyncSender[12339:9b0e] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: about to CFRunLoopPerform
+2026-11-26 12:09:11.923 Df ContactSyncSender[12339:9b0e] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting with 30.00s responsiveness timeout
+2026-11-26 12:09:11.923 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: inside CFRunLoopPerform
+2026-11-26 12:09:11.923 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[MT]: MT responded in time (won the race to the busy flag)
+2026-11-26 12:09:11.923 Df ContactSyncSender[12339:9b0e] [com.apple.dt.xctest:Default] XCTPerformOnMainRunLoop[not MT]: waiting 60.00s for work to complete
+2026-11-26 12:09:11.923 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Fetching AX attributes XC_kAXXCAttributeSystemAutomationProperties for App element pid: 12339
+2026-11-26 12:09:11.925 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Got attributes, transferring to dictionary for return.
+2026-11-26 12:09:11.925 Df ContactSyncSender[12339:9b0e] [com.apple.dt.xctest:Default] Replying with attribute values: {
+}
+2026-11-26 12:09:11.943 Df ContactSyncSender[12339:9ae3] [com.apple.KeyboardArbiter:Client] TX focusApplication (peekAppEvent) stealKB:Y scene:com.dvirchi.contactsync.sender-default
+2026-11-26 12:09:11.943 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:11.943 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:11.943 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:11.962 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:11.962 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:11.963 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:11.965 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 0; ignoreInteractionEvents: 0, systemGestureStateChange: 1
+2026-11-26 12:09:11.965 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:11.968 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:UIPointerArbiter] Ignoring beginScrollingWithRegion: <UIPointerRegion: 0x6000021d5540; rect = (0 0; 402 874); identifier = UIScrollView.scrollingPointerRegion> because pointer state is disabled
+2026-11-26 12:09:11.982 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:11.982 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:11.982 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:11.982 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:11.985 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:11.999 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:11.999 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:11.999 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:11.999 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:12.015 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:12.015 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:12.015 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:12.015 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:12.032 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:12.032 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:12.032 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:12.033 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:12.054 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:12.054 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:12.054 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:12.054 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:12.065 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:12.065 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:12.066 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:12.066 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:12.082 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:12.082 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:12.082 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:12.082 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:12.099 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:12.099 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:12.099 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:12.100 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:12.115 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:12.115 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:12.116 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:12.116 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:12.132 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:12.132 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:12.132 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:12.133 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:12.149 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Evaluating dispatch of UIEvent: 0x600003d40ff0; type: 0; subtype: 0; backing type: 11; shouldSend: 1; ignoreInteractionEvents: 0, systemGestureStateChange: 0
+2026-11-26 12:09:12.149 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to windows: 1
+2026-11-26 12:09:12.149 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:EventDispatch] Sending UIEvent type: 0; subtype: 0; to window: <UIWindow: 0x101619c90>; contextId: 0x16620377
+2026-11-26 12:09:12.149 A  ContactSyncSender[12339:9ae3] (UIKitCore) send gesture actions
+2026-11-26 12:09:12.359 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Received request to notify when the main run loop is idle
+2026-11-26 12:09:12.359 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Idle notifier finished setting up run loop observer
+2026-11-26 12:09:12.360 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Received request to notify when animations are idle
+2026-11-26 12:09:12.360 Df ContactSyncSender[12339:9b1c] [com.apple.dt.xctest:Default] Sending animations idle reply with error: (null)
+2026-11-26 12:09:12.982 Df ContactSyncSender[12339:9ae3] [com.apple.UIKit:UIPointerArbiter] Ignoring endScrollingWithRegion: <UIPointerRegion: 0x6000021d5540; rect = (0 0; 402 874); identifier = UIScrollView.scrollingPointerRegion> because scrollingRegion does not match: (null)
+2026-11-26 12:09:12.984 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Idle notifier run loop observer fired
+2026-11-26 12:09:12.984 Df ContactSyncSender[12339:9ae3] [com.apple.dt.xctest:Default] Sending main run loop idle reply

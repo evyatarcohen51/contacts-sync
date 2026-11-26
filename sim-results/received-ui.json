@@ -1,0 +1,267 @@
+{
+  "contacts": [
+    {
+      "addresses": [
+        {
+          "city": "Hillsborough",
+          "street": "165 Davis Street",
+          "label": "work",
+          "state": "CA",
+          "postalCode": "94010"
+        }
+      ],
+      "emails": [
+        {
+          "value": "kate-bell@mac.com",
+          "label": "work"
+        }
+      ],
+      "birthday": {
+        "day": 20,
+        "year": 1978,
+        "month": 1
+      },
+      "jobTitle": "Producer",
+      "familyName": "Bell",
+      "id": "177C371E-701D-42F8-A03B-C61CA31627F6",
+      "phones": [
+        {
+          "value": "(555) 564-8583",
+          "label": "mobile"
+        },
+        {
+          "value": "(415) 555-3695",
+          "label": "main"
+        }
+      ],
+      "givenName": "Kate",
+      "hash": "9f6cbc6691e9b529",
+      "organization": "Creative Consulting",
+      "urls": [
+        {
+          "value": "www.icloud.com",
+          "label": "homepage"
+        }
+      ]
+    },
+    {
+      "emails": [
+        {
+          "label": "work",
+          "value": "hank-zakroff@mac.com"
+        }
+      ],
+      "middleName": "M.",
+      "jobTitle": "Portfolio Manager",
+      "familyName": "Zakroff",
+      "id": "2E73EE73-C03F-4D5F-B1E8-44E85A70F170",
+      "phones": [
+        {
+          "value": "(555) 766-4823",
+          "label": "work"
+        },
+        {
+          "label": "other",
+          "value": "(707) 555-1854"
+        }
+      ],
+      "givenName": "Hank",
+      "hash": "b75253fda6f3e540",
+      "organization": "Financial Services Inc.",
+      "addresses": [
+        {
+          "street": "1741 Kearny Street",
+          "state": "CA",
+          "postalCode": "94901",
+          "label": "work",
+          "city": "San Rafael"
+        }
+      ]
+    },
+    {
+      "emails": [
+        {
+          "label": "work",
+          "value": "John-Appleseed@mac.com"
+        }
+      ],
+      "familyName": "Appleseed",
+      "phones": [
+        {
+          "label": "mobile",
+          "value": "888-555-5512"
+        },
+        {
+          "label": "home",
+          "value": "888-555-1212"
+        }
+      ],
+      "id": "410FE041-5C4E-48DA-B4DE-04C15EA3DBAC",
+      "givenName": "John",
+      "hash": "37c9463524b38e6b",
+      "addresses": [
+        {
+          "state": "GA",
+          "city": "Atlanta",
+          "label": "work",
+          "street": "3494 Kuhl Avenue",
+          "postalCode": "30303",
+          "country": "USA"
+        },
+        {
+          "state": "GA",
+          "city": "Atlanta",
+          "label": "home",
+          "street": "1234 Laurel Street",
+          "postalCode": "30303",
+          "country": "USA"
+        }
+      ],
+      "birthday": {
+        "month": 6,
+        "year": 1980,
+        "day": 22
+      }
+    },
+    {
+      "birthday": {
+        "month": 3,
+        "year": 1990,
+        "day": 14
+      },
+      "emails": [
+        {
+          "label": "work",
+          "value": "dana@acme.example"
+        }
+      ],
+      "namePrefix": "Dr.",
+      "department": "R&D",
+      "jobTitle": "CTO",
+      "familyName": "לוי",
+      "id": "845B8A79-4AEE-4FFA-8BF7-566C50E2424D:ABPerson",
+      "phones": [
+        {
+          "label": "mobile",
+          "value": "+972 50-123-4567"
+        },
+        {
+          "label": "Gym",
+          "value": "+972 52-765-4321"
+        }
+      ],
+      "givenName": "דנה",
+      "organization": "Acme",
+      "hash": "43b9c5d56dd8e2a0",
+      "addresses": [
+        {
+          "street": "Herzl 1",
+          "postalCode": "6100000",
+          "label": "home",
+          "city": "Tel Aviv",
+          "country": "Israel"
+        }
+      ]
+    },
+    {
+      "addresses": [
+        {
+          "street": "332 Laguna Street",
+          "state": "CA",
+          "postalCode": "94925",
+          "label": "home",
+          "city": "Corte Madera",
+          "country": "USA"
+        }
+      ],
+      "id": "AB211C5F-9EC9-429F-9466-B9382FF61035",
+      "emails": [
+        {
+          "value": "d-higgins@mac.com",
+          "label": "home"
+        }
+      ],
+      "familyName": "Higgins",
+      "phones": [
+        {
+          "label": "home",
+          "value": "555-478-7672"
+        },
+        {
+          "label": "mobile",
+          "value": "(408) 555-5270"
+        },
+        {
+          "label": "homefax",
+          "value": "(408) 555-3514"
+        }
+      ],
+      "hash": "f2af6c660a89b409",
+      "givenName": "Daniel",
+      "nameSuffix": "Jr."
+    },
+    {
+      "addresses": [
+        {
+          "city": "Tiburon",
+          "state": "CA",
+          "postalCode": "94920",
+          "country": "USA",
+          "label": "home",
+          "street": "1747 Steuart Street"
+        }
+      ],
+      "id": "E94CD15C-7964-4A9B-8AC4-10D7CFB791FD",
+      "familyName": "Taylor",
+      "phones": [
+        {
+          "value": "555-610-6679",
+          "label": "home"
+        }
+      ],
+      "hash": "cda74b0faa3ff6de",
+      "givenName": "David",
+      "birthday": {
+        "month": 6,
+        "year": 1998,
+        "day": 15
+      }
+    },
+    {
+      "addresses": [
+        {
+          "street": "1001  Leavenworth Street",
+          "state": "CA",
+          "postalCode": "94965",
+          "label": "home",
+          "city": "Sausalito",
+          "country": "USA"
+        }
+      ],
+      "id": "F57C8277-585D-4327-88A6-B5689FF69DFE",
+      "emails": [
+        {
+          "value": "anna-haro@mac.com",
+          "label": "home"
+        }
+      ],
+      "nickname": "Annie",
+      "familyName": "Haro",
+      "phones": [
+        {
+          "value": "555-522-8243",
+          "label": "home"
+        }
+      ],
+      "hash": "2de33f99fc546670",
+      "givenName": "Anna",
+      "birthday": {
+        "month": 8,
+        "year": 1985,
+        "day": 29
+      }
+    }
+  ],
+  "generatedAt": 1795694945897,
+  "v": 1
+}
