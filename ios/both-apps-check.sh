@@ -33,9 +33,13 @@ HOSTS=no
 STARTED_EMULATOR=no
 
 cleanup() {
-  adb logcat -d -t 600 > "$OUT/android-last-log-lines.txt" 2> /dev/null
-  kill ${PIDS[@]+"${PIDS[@]}"} 2> /dev/null
-  wait ${PIDS[@]+"${PIDS[@]}"} 2> /dev/null
+  # (Without a device `adb logcat` would wait for one for ever.)
+  device_attached && adb logcat -d -t 600 > "$OUT/android-last-log-lines.txt" 2> /dev/null
+  # (Never a bare `wait`: it would also wait for the emulator, which only stops below.)
+  if [ -n "${PIDS[*]-}" ]; then
+    kill "${PIDS[@]}" 2> /dev/null
+    wait "${PIDS[@]}" 2> /dev/null
+  fi
   [ "$STARTED_EMULATOR" = yes ] && adb emu kill > /dev/null 2>&1
   [ "$ALIAS" = yes ] && sudo -n ifconfig lo0 -alias "$TS_IP" 2> /dev/null
   [ "$HOSTS" = yes ] && sudo -n sed -i '' "/$TS_NAME/d" /etc/hosts 2> /dev/null
@@ -80,8 +84,9 @@ boot_and_install || exit 1
 booted() { [ "$(adb shell getprop sys.boot_completed 2> /dev/null | tr -d '\r')" = 1 ]; }
 if [ -n "${ANDROID_AVD:-}" ] && [ -z "$(adb devices | grep "device$")" ]; then
   # Let the freshly started iPhone simulator finish its own housekeeping first.
-  mac_quiet() { [ "$(sysctl -n vm.loadavg | awk '{ print ($2 < 2.5) ? "yes" : "no" }')" = yes ]; }
-  EVERY=10 wait_until 300 mac_quiet
+  # (It can keep all of the Mac's cores busy for ten minutes after its first start.)
+  mac_quiet() { [ "$(sysctl -n vm.loadavg | awk '{ print ($2 < 4) ? "yes" : "no" }')" = yes ]; }
+  EVERY=15 wait_until 900 mac_quiet
   echo "Mac load before starting Android: $(sysctl -n vm.loadavg)" >> "$OUT/android-ui.log"
   T=$SECONDS
   nohup "${ANDROID_HOME:-$HOME/Library/Android/sdk}/emulator/emulator" -avd "$ANDROID_AVD" -no-window -no-audio \
@@ -97,18 +102,9 @@ wait_until 120 device_attached || { fail "no Android emulator is running (start 
 booted || { fail "the Android emulator has not finished starting"; exit 1; }
 [ -f "$APK" ] || { fail "no APK at $APK"; exit 1; }
 # A freshly started emulator can refuse installs for a while ("Broken pipe"): keep trying.
-install_samsung_app() {
-  local permission
-  contacts_ready || return 1
-  adb uninstall "$PKG" > /dev/null 2>&1
-  adb install -r "$APK" > "$OUT/apk-install.log" 2>&1 || return 1
-  for permission in READ_CONTACTS WRITE_CONTACTS POST_NOTIFICATIONS; do
-    adb shell pm grant "$PKG" "android.permission.$permission" || return 1
-  done
-}
 INSTALLED=no
 for attempt in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15; do
-  if install_samsung_app; then INSTALLED=yes; break; fi
+  if samsung_install "$APK" "$OUT/apk-install.log"; then INSTALLED=yes; break; fi
   echo "install attempt $attempt: $(tail -n 1 "$OUT/apk-install.log" 2> /dev/null)" >> "$OUT/android-ui.log"
   sleep 20
 done

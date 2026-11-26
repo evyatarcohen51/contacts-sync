@@ -186,15 +186,21 @@ ios/simulator-check.sh
 node tools/fake-samsung.js --pairing-open --auto-accept    # or run the stand-in by hand
 ```
 
-**Both real apps against each other** (on an Intel Mac, or automatically on GitHub Actions).
+**Both real apps against each other** (on an Intel Mac, or on request on GitHub Actions).
 `ios/both-apps-check.sh` runs the iPhone app in the iOS Simulator and the Samsung app in an
 Android emulator on the same Mac. It pairs them by tapping through both apps and comparing
 the number, then adds, edits and deletes contacts on the "iPhone" (with a small helper app,
 `ios/ContactSyncSender/Fixture`) and looks in Android's contact list for the result. It also
-syncs 1,000 contacts with photos, stops the Samsung app and starts it again, unpairs, pairs
-again with the typed code at a Tailscale-style address, and leaves the iPhone app in the
-background with "Keep running in background" on. Results go to
+syncs 1,000 contacts with photos (300 on GitHub), stops the Samsung app and starts it again,
+unpairs, pairs again with the typed code at a Tailscale-style address, and leaves the iPhone
+app in the background with "Keep running in background" on. Results go to
 `ios/ContactSyncSender/both-results/`, and on GitHub to the `ci-results-both` branch.
+
+On GitHub this check is the `Both apps together` workflow. It does not run on every push:
+start it with **Run workflow** on the Actions page, or put `[both-apps]` in a commit
+message. GitHub's Intel Mac gives the Android emulator one slow processor core, so a run can
+take two hours, and a red result there can mean "Android was too slow to answer" rather than
+a fault in the apps; the summary on `ci-results-both` says which step stopped.
 
 The emulator sits behind its own little network, so `adb forward`, `tools/tcp-relay.js` and
 `dns-sd` stand in for the shared Wi-Fi, and an extra address on the Mac stands in for

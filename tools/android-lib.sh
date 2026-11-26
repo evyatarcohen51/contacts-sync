@@ -38,6 +38,20 @@ contacts_ready() {
   out=$(adb shell "content query --uri content://com.android.contacts/raw_contacts --projection _id" 2>&1) || return 1
   ! grep -qE "Error|Exception" <<< "$out"
 }
+# samsung_install <apk> <log file>: install the app afresh and allow it what it asks for.
+samsung_install() {
+  local permission sdk
+  contacts_ready || return 1
+  adb uninstall "$PKG" > /dev/null 2>&1
+  adb install -r "$1" > "$2" 2>&1 || return 1
+  for permission in READ_CONTACTS WRITE_CONTACTS; do
+    adb shell pm grant "$PKG" "android.permission.$permission" >> "$2" 2>&1 || return 1
+  done
+  # Only Android 13 and later ask before an app may show notifications; older versions
+  # refuse the grant itself, because they do not know that permission.
+  sdk=$(adb shell getprop ro.build.version.sdk 2> /dev/null | tr -d '\r')
+  [ "${sdk:-0}" -lt 33 ] || adb shell pm grant "$PKG" android.permission.POST_NOTIFICATIONS >> "$2" 2>&1
+}
 # Screen on and unlocked, and kept that way.
 android_wake() {
   adb shell input keyevent KEYCODE_WAKEUP

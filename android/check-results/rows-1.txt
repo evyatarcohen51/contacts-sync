@@ -1,3 +1,0 @@
-_id=3026, sourceid=fake-1, version=2
-_id=3027, sourceid=fake-2, version=2
-_id=3028, sourceid=fake-3, version=2

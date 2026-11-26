@@ -9,3 +9,4 @@ ios/linux-check/Package.resolved
 .DS_Store
 ios/ContactSyncSender/sim-results/
 ios/ContactSyncSender/both-results/
+android/check-results/

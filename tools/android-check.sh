@@ -62,20 +62,9 @@ all_ids() {
 wait_until 300 device_attached || { fail "no Android device or emulator is attached (see: adb devices)"; exit 1; }
 wait_until 600 booted || { fail "the Android device has not finished starting"; exit 1; }
 SDK=$(adb shell getprop ro.build.version.sdk | tr -d '\r')
-install_app() {
-  local permission
-  contacts_ready || return 1
-  adb uninstall "$PKG" > /dev/null 2>&1
-  adb install -r "$APK" > "$OUT/apk-install.log" 2>&1 || return 1
-  for permission in READ_CONTACTS WRITE_CONTACTS; do
-    adb shell pm grant "$PKG" "android.permission.$permission" || return 1
-  done
-  # Android 13 and later ask before an app may show notifications.
-  [ "$SDK" -lt 33 ] || adb shell pm grant "$PKG" android.permission.POST_NOTIFICATIONS
-}
 INSTALLED=no
 for attempt in 1 2 3 4 5 6; do
-  if install_app; then INSTALLED=yes; break; fi
+  if samsung_install "$APK" "$OUT/apk-install.log"; then INSTALLED=yes; break; fi
   sleep 15
 done
 [ "$INSTALLED" = yes ] || { fail "could not install the app: $(tail -n 1 "$OUT/apk-install.log" 2> /dev/null)"; exit 1; }
