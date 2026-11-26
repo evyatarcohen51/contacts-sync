@@ -113,6 +113,7 @@ jobs:
   # supports, with tools/fake-iphone.js standing in for the iPhone. On Android 14 the
   # iPhone app's own Swift code (ios/linux-check) then pairs and syncs with it too.
   android-device:
+    needs: android # checks the APK that job built
     runs-on: ubuntu-latest
     timeout-minutes: 40
     strategy:
@@ -125,7 +126,7 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-      - name: Start an Android emulator (it boots while the app builds)
+      - name: Start an Android emulator
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules
@@ -141,11 +142,12 @@ jobs:
           nohup "$ANDROID_HOME/emulator/emulator" -avd contactsync -no-window -no-audio -no-boot-anim \
             -gpu swiftshader_indirect -no-snapshot -no-metrics > emulator.log 2>&1 &
           echo "$ANDROID_HOME/platform-tools" >> "$GITHUB_PATH"
-      - name: Build the Samsung app
-        working-directory: android
-        run: ./gradlew assembleRelease --no-daemon
+      - uses: actions/download-artifact@v4
+        with:
+          name: ContactSyncReceiver-android
+          path: apk
       - name: Check the Samsung app on Android API ${{ matrix.api }}
-        run: tools/android-check.sh android/app/build/outputs/apk/release/app-release.apk
+        run: tools/android-check.sh apk/app-release.apk
       - name: The iPhone app's Swift code against this Samsung app
         if: matrix.api == 34
         run: |
