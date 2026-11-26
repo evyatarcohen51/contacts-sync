@@ -15,8 +15,10 @@ phones() {
   adb shell "content query --uri content://com.android.contacts/data/phones --projection display_name:data1" 2> /dev/null | tr -d '\r'
 }
 # has_phone <name> <number>, has_name <name>, no_name <name>
-has_phone() { phones | grep -qF "display_name=$1, data1=$2"; }
-has_name() { phones | grep -qF "display_name=$1, "; }
+# (grep -c, not grep -q: under `set -o pipefail` a grep that stops reading early makes the
+# command before it fail, and the answer would wrongly be "no".)
+has_phone() { [ "$(phones | grep -cF "display_name=$1, data1=$2")" != 0 ]; }
+has_name() { [ "$(phones | grep -cF "display_name=$1, ")" != 0 ]; }
 no_name() { adb shell true 2> /dev/null && ! has_name "$1"; }
 
 # How many contact photos Android holds.
@@ -25,13 +27,13 @@ photos() {
 }
 
 # Does the Samsung app answer on its port (through `adb forward tcp:18765 tcp:8765`)?
-samsung_answers() { curl -s -m 3 "http://127.0.0.1:${1:-18765}/v1/hello" | grep -q contactsync-receiver; }
+samsung_answers() { [ "$(curl -s -m 3 "http://127.0.0.1:${1:-18765}/v1/hello" | grep -c contactsync-receiver)" != 0 ]; }
 
 # Android's contact storage only answers once the emulator has fully started.
 contacts_ready() {
   local out
   out=$(adb shell "content query --uri content://com.android.contacts/raw_contacts --projection _id" 2>&1) || return 1
-  ! echo "$out" | grep -qE "Error|Exception"
+  ! grep -qE "Error|Exception" <<< "$out"
 }
 # Screen on and unlocked, and kept that way.
 android_wake() {

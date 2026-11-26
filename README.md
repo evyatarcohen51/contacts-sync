@@ -24,6 +24,14 @@ It is a **one-way mirror**: new, edited and deleted contacts on the iPhone show 
 the Samsung. Edits made on the Samsung to a synced contact are overwritten the next time
 that contact changes on the iPhone. Contacts you create on the Samsung are never touched.
 
+Each cycle only the differences are written. The iPhone first asks the Samsung whether
+anything changed since last time (a few hundred bytes); if nothing did, nothing is sent.
+If something did, the iPhone sends its current list (compressed and encrypted) and the
+Samsung adds the new contacts, rewrites the edited ones, removes the deleted ones and
+leaves every other contact alone, so nothing is duplicated. Measured with 2,000 contacts
+that each have a photo: adding one contact on the iPhone made the Samsung write exactly
+one contact, in under half a second; the other 2,000 were not touched.
+
 Not synced: contact notes (Apple requires a special entitlement for those).
 
 ## Setup
@@ -141,6 +149,19 @@ node tools/fake-iphone.js push <samsung-ip> <code> bulk:2000:10   # 2000 contact
 node tools/fake-iphone.js push <samsung-ip> <code> a --stale  # an out-of-date snapshot (refused)
 ```
 
+**The Samsung app in an Android emulator** (on any computer with the Android SDK, or
+automatically on GitHub Actions for Android 8, 11, 14 and 16). `tools/android-check.sh`
+installs the APK, pairs by tapping the app while the fake iPhone plays the other side,
+and looks in Android's contact list after each step: a first sync, the same list again
+(nothing may be written), one contact edited, one deleted and one added, 1,000 contacts
+with photos and then one more (exactly one may be written), uploads the app must refuse,
+the app being killed, the device being restarted (the app must listen again by itself),
+and unpairing. A contact created on the "Samsung" itself must survive all of it.
+
+```bash
+tools/android-check.sh        # an emulator must be running (adb devices); it restarts it once
+```
+
 **The iPhone app's own code, on Linux.** `ios/linux-check` compiles the real Swift sources
 against small stand-ins for Apple's frameworks and runs them. It does not replace an Xcode
 build (the stand-ins are hand-written, and nothing is drawn), but it checks the parts that
@@ -205,6 +226,7 @@ ios/ContactSyncSender/   iPhone sender (SwiftUI; XcodeGen project.yml)
 ios/linux-check/         compiles and tests the iPhone sources on Linux
 ios/simulator-check.sh   runs the iPhone app in the iOS Simulator against a stand-in Samsung
 ios/both-apps-check.sh   runs the iPhone app and the Samsung app against each other
+tools/android-check.sh   runs the Samsung app in an Android emulator against a stand-in iPhone
 tools/                   protocol reference, fake iPhone and fake Samsung for testing
 dist/                    built Android APK
 ```

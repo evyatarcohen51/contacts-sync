@@ -1,0 +1,7 @@
+Samsung app: installed on Android 16 (API 36, Android SDK built for x86_64) and listening
+1. Paired by tapping; both sides showed the same number (860044)
+2. First sync: the 3 contacts are in Android's contact list, with their numbers
+   The same list sent again: nothing written, no duplicates
+3. One edited, one deleted, one added: exactly those changed; the unchanged contact was not touched
+4. 1000 contacts with photos: all saved (1000 contacts, 8147 KB, 2791 ms)
+FAILED: after adding one contact to 1000, Android wrote 2 and left 999 untouched

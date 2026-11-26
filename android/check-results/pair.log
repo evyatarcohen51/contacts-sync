@@ -1,0 +1,9 @@
+Samsung: Unknown Android SDK built for x86_64
+Confirm this number on the Samsung: 860044
+Paired: {
+  code: '8M2R-TPGE-6H2B-R6SW',
+  device: 'Unknown Android SDK built for x86_64',
+  port: 8765,
+  tailscale: null,
+  lan: '10.0.2.16'
+}

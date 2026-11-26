@@ -365,7 +365,7 @@ shot iphone-12-after-background 4
 samsung_open; sleep 2; samsung_top
 samsung_shot "$OUT/samsung-13-status.png"
 SCREEN=$($TAP texts 2> /dev/null)
-if echo "$SCREEN" | grep -q '^✓ Success$'; then
+if grep -q '^✓ Success$' <<< "$SCREEN"; then
   note "13. The Samsung app shows ✓ Success: $(echo "$SCREEN" | grep -A 1 '^✓ Success$' | tail -n 1)"
 else
   fail "the Samsung app does not show Success at the end; it shows: $(echo "$SCREEN" | sed -n '5,10p' | tr '\n' '|')"

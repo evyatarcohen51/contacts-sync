@@ -71,7 +71,7 @@ boot_and_install() {
 
 # shot <name> <seconds to wait first>
 shot() { sleep "$2"; xcrun simctl io "$UDID" screenshot "$OUT/$1.png" > /dev/null 2>&1 || note "(no screenshot $1)"; }
-running() { xcrun simctl spawn "$UDID" launchctl list 2> /dev/null | grep -q "$BUNDLE"; }
+running() { [ "$(xcrun simctl spawn "$UDID" launchctl list 2> /dev/null | grep -c "$BUNDLE")" != 0 ]; }
 # launch [arguments]: restart the app.   activate: bring it to the front, as when a person opens it.
 launch() { xcrun simctl terminate "$UDID" "$BUNDLE" > /dev/null 2>&1; sleep 1; xcrun simctl launch "$UDID" "$BUNDLE" "$@" > /dev/null; }
 activate() { xcrun simctl launch "$UDID" "$BUNDLE" > /dev/null; }
@@ -92,7 +92,7 @@ if isinstance(value, datetime.datetime):
     value = int((now - value).total_seconds())
 print(value)' "$(xcrun simctl get_app_container "$UDID" "$BUNDLE" data 2> /dev/null)/Library/Preferences/$BUNDLE.plist" "$1"
 }
-prefs_match() { prefs "$1" | grep -Eq "$2"; }
+prefs_match() { [ "$(prefs "$1" | grep -Ec "$2")" != 0 ]; }
 # wait_prefs <key> <regex> <seconds>
 wait_prefs() { wait_until "$3" prefs_match "$1" "$2"; }
 
