@@ -158,6 +158,26 @@ else
 fi
 samsung_top; samsung_shot "$OUT/3-after-changes.png"
 
+# ---- the other place to save contacts: a separate "iPhone" account -------------------------
+in_iphone_account() {
+  adb shell "content query --uri content://com.android.contacts/raw_contacts --projection _id --where \"deleted=0 AND account_type='com.dvirchi.contactsync.account'\"" 2> /dev/null | grep -c '^Row'
+}
+tap_android tap "Separate" >> "$OUT/android-ui.log" 2>&1 || fail "could not choose the separate \"iPhone\" account"
+wait_until 60 synced_is 0 || fail "switching where contacts are saved did not clear the synced contacts"
+ANSWER=$(iphone push "$AT" "$CODE" b)
+expect "a sync into the separate account" '"added":3,"updated":0,"deleted":0,"total":3,"failed":0' "$ANSWER"
+IN_ACCOUNT=$(in_iphone_account)
+samsung_shot "$OUT/3-separate-account.png"
+tap_android tap "Phone storage" >> "$OUT/android-ui.log" 2>&1 || fail "could not choose phone storage again"
+wait_until 60 synced_is 0 || fail "switching back to phone storage did not clear the synced contacts"
+ANSWER=$(iphone push "$AT" "$CODE" b)
+expect "a sync into phone storage again" '"added":3,"updated":0,"deleted":0,"total":3,"failed":0' "$ANSWER"
+if [ "$IN_ACCOUNT" = 3 ] && [ "$(in_iphone_account)" = 0 ] && synced_is 3 && has_name "Noa"; then
+  note "   Saving to a separate \"iPhone\" account and back to phone storage: the 3 contacts moved each time, no leftovers"
+else
+  fail "separate account: $IN_ACCOUNT contacts were in it (expected 3), $(in_iphone_account) are left in it (expected 0), $(synced) synced in all"
+fi
+
 # ---- 4. a large address book with photos, then one more contact --------------------------
 T=$SECONDS
 ANSWER=$(iphone push "$AT" "$CODE" "bulk:$BULK:8")
