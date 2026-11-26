@@ -25,6 +25,8 @@ source "$ROOT/tools/android-lib.sh"
 APK="${APK:-$ROOT/android/app/build/outputs/apk/release/app-release.apk}"
 TS_IP=100.101.102.103
 TS_NAME=samsung.contactsync-test.ts.net
+BULK="${BULK:-1000}" # how many contacts the large-address-book step adds
+export TAP_EVERY=3   # how often the tap helper re-reads the Android screen while waiting
 PIDS=()
 ALIAS=no
 HOSTS=no
@@ -40,17 +42,23 @@ cleanup() {
 }
 trap cleanup EXIT
 
+# Uploads the Samsung app has answered with "saved", as seen by the relay on this Mac.
+# Waiting for these costs the emulator nothing; asking Android itself every two seconds
+# would keep a slow emulator busy with the questions.
+uploads() { grep -c "^PUT /v1/contacts -> 200" "$OUT/relay.log" 2> /dev/null || true; }
+more_uploads_than() { [ "$(uploads)" -gt "$1" ]; }
 # After a change made with the contacts helper, wait for the sync app to send it. It may do
 # so by itself while still in the background; otherwise open it, as a person would.
-#   sent_after_change <seconds> <check command…>     sets HOW
+#   UPLOADS=$(uploads); fixture …; sent_after_change <seconds>     sets HOW
 sent_after_change() {
-  local limit=$1; shift
   HOW="by itself, in the background"
-  wait_until 14 "$@" && return 0
+  wait_until 14 more_uploads_than "$UPLOADS" && return 0
   HOW="when the app was opened"
   activate
-  wait_until "$limit" "$@"
+  wait_until "$1" more_uploads_than "$UPLOADS"
 }
+# on_android <check command…>: look in Android's contact list, asking again a few times.
+on_android() { EVERY=8 wait_until 40 "$@"; }
 message() { prefs lastMessage; }
 # What the Samsung app logged about the last upload it saved, e.g. "added=1, updated=0, deleted=0, total=7, failed=0".
 applied() { adb logcat -d -s ReceiverApi:I 2> /dev/null | grep "applied snapshot" | tail -n 1 | sed -e 's/.*Result(//' -e 's/).*//' | tr -d '\r'; }
@@ -71,6 +79,10 @@ boot_and_install || exit 1
 # ---- the Samsung app, in the Android emulator ------------------------------------------
 booted() { [ "$(adb shell getprop sys.boot_completed 2> /dev/null | tr -d '\r')" = 1 ]; }
 if [ -n "${ANDROID_AVD:-}" ] && [ -z "$(adb devices | grep "device$")" ]; then
+  # Let the freshly started iPhone simulator finish its own housekeeping first.
+  mac_quiet() { [ "$(sysctl -n vm.loadavg | awk '{ print ($2 < 2.5) ? "yes" : "no" }')" = yes ]; }
+  EVERY=10 wait_until 300 mac_quiet
+  echo "Mac load before starting Android: $(sysctl -n vm.loadavg)" >> "$OUT/android-ui.log"
   T=$SECONDS
   nohup "${ANDROID_HOME:-$HOME/Library/Android/sdk}/emulator/emulator" -avd "$ANDROID_AVD" -no-window -no-audio \
     -no-boot-anim -gpu swiftshader_indirect -no-snapshot -no-metrics -cores 2 -memory 3072 > "$OUT/emulator.log" 2>&1 &
@@ -105,8 +117,8 @@ android_calm
 android_wake
 # A just-started emulator is busy with itself for a while; wait until its screen can be read
 # and it has quietened down, or the taps below land on a frozen screen.
-wait_until 600 screen_readable || fail "the Android screen cannot be read (the emulator is too slow?)"
-wait_until 300 android_quiet
+EVERY=10 wait_until 600 screen_readable || fail "the Android screen cannot be read (the emulator is too slow?)"
+EVERY=10 wait_until 600 android_quiet
 echo "load before the checks: $(adb shell cat /proc/loadavg 2> /dev/null | tr -d '\r')" >> "$OUT/android-ui.log"
 adb logcat -c
 samsung_open
@@ -178,7 +190,7 @@ fi
 # ---- 2. the first sync: every iPhone contact is now in Android's contact list ----------
 IPHONE_COUNT=$(fixture count | grep -oE '[0-9]+' | head -n 1)
 IPHONE_COUNT=${IPHONE_COUNT:-0}
-if [ "$IPHONE_COUNT" -gt 0 ] && wait_until 90 synced_is "$IPHONE_COUNT"; then
+if [ "$IPHONE_COUNT" -gt 0 ] && EVERY=8 wait_until 90 synced_is "$IPHONE_COUNT"; then
   note "2. First sync: all $IPHONE_COUNT iPhone contacts are in Android's contact list"
 else
   fail "the iPhone has $IPHONE_COUNT contacts, Android's contact list has $(synced) from it"
@@ -188,16 +200,18 @@ has_name "Kate Bell" || fail "\"Kate Bell\" (an iPhone sample contact) is not in
 [ "$START_COUNT" = 0 ] || note "   (the emulator already held $START_COUNT synced contacts before this run)"
 
 # ---- 3. add, edit and delete a contact on the iPhone -----------------------------------
+UPLOADS=$(uploads)
 fixture add Noa Katz +972501112233 > /dev/null || fail "the contacts helper could not add a contact"
-if sent_after_change 90 has_phone "Noa Katz" "+972501112233"; then
+if sent_after_change 120 && on_android has_phone "Noa Katz" "+972501112233"; then
   note "3. Added on the iPhone -> appeared on Android ($HOW)"
   expect_applied "added=1, updated=0, deleted=0"
 else
   fail "a contact added on the iPhone did not reach Android"
 fi
 
+UPLOADS=$(uploads)
 fixture edit Noa +972509998877 > /dev/null || fail "the contacts helper could not edit a contact"
-if sent_after_change 90 has_phone "Noa Katz" "+972509998877"; then
+if sent_after_change 120 && on_android has_phone "Noa Katz" "+972509998877"; then
   if has_phone "Noa Katz" "+972501112233"; then
     fail "the old phone number is still on Android after the edit"
   else
@@ -208,8 +222,9 @@ else
   fail "an edit made on the iPhone did not reach Android"
 fi
 
+UPLOADS=$(uploads)
 fixture delete Noa > /dev/null || fail "the contacts helper could not delete a contact"
-if sent_after_change 90 no_name "Noa Katz" && synced_is "$IPHONE_COUNT"; then
+if sent_after_change 120 && on_android no_name "Noa Katz" && synced_is "$IPHONE_COUNT"; then
   note "5. Deleted on the iPhone -> removed from Android ($HOW)"
   expect_applied "added=0, updated=0, deleted=1"
 else
@@ -226,22 +241,23 @@ fi
 shot iphone-6-up-to-date 2
 
 # ---- 7. a large address book, with photos ------------------------------------------------
-BULK=1000
+UPLOADS=$(uploads)
 T=$SECONDS
 ANSWER=$(fixture bulk "$BULK" 4) || fail "the contacts helper could not add $BULK contacts: $ANSWER"
-MADE=$((SECONDS - T)); T=$SECONDS
-if sent_after_change 400 synced_is "$((IPHONE_COUNT + BULK))"; then
+T=$SECONDS
+if sent_after_change 600 && on_android synced_is "$((IPHONE_COUNT + BULK))"; then
   note "7. $BULK more contacts ($ANSWER) -> all on Android $((SECONDS - T)) s later ($HOW); Android holds $(photos) photos"
-  note "   $(grep "upload passed through" "$OUT/relay.log" | tail -n 1)"
+  note "   The upload: $(grep "^PUT /v1/contacts -> 200" "$OUT/relay.log" | tail -n 1 | sed 's/.*, //')"
   expect_applied "added=$BULK, updated=0, deleted=0"
   [ "$(photos)" -gt 0 ] || fail "no contact photo arrived on Android"
 else
   fail "after adding $BULK contacts on the iPhone, Android has $(synced) of $((IPHONE_COUNT + BULK)) (iPhone app: \"$(message)\")"
 fi
 samsung_top; samsung_shot "$OUT/samsung-7-large-address-book.png"
+UPLOADS=$(uploads)
 T=$SECONDS
 fixture delete Bulk > /dev/null || fail "the contacts helper could not delete the $BULK contacts"
-if sent_after_change 400 synced_is "$IPHONE_COUNT"; then
+if sent_after_change 600 && on_android synced_is "$IPHONE_COUNT"; then
   note "   Deleted them again on the iPhone -> gone from Android $((SECONDS - T)) s later"
   expect_applied "added=0, updated=0, deleted=$BULK"
 else
@@ -269,7 +285,7 @@ fi
 # ---- 9. unpair on the Samsung: its synced contacts go, and the iPhone is told to pair again
 tap_android tap "Unpair and remove" >> "$OUT/android-ui.log" 2>&1 && $TAP wait '^Unpair\?$' 30 > /dev/null 2>&1 \
   && tap_android tap-exact "Unpair" >> "$OUT/android-ui.log" 2>&1 || fail "could not tap through Unpair on the Samsung"
-if wait_until 120 synced_is 0; then
+if EVERY=10 wait_until 180 synced_is 0; then
   note "9. Unpaired on the Samsung -> the contacts that came from the iPhone were removed"
 else
   fail "after unpairing, Android still has $(synced) synced contacts"
@@ -298,7 +314,7 @@ if [ -n "$CODE" ]; then
     fail "pairing with the typed code reported problems:"; ui_problems "$OUT/ui-code.log"
   fi
   cp "$SHARED"/*.png "$OUT/" 2> /dev/null
-  wait_until 90 synced_is "$IPHONE_COUNT" || fail "after pairing with the code, Android has $(synced) of $IPHONE_COUNT contacts"
+  EVERY=8 wait_until 90 synced_is "$IPHONE_COUNT" || fail "after pairing with the code, Android has $(synced) of $IPHONE_COUNT contacts"
   wait_prefs lastGoodHost "^$MANUAL_HOST\$" 20 || fail "the iPhone app did not connect through $MANUAL_HOST but through \"$(prefs lastGoodHost)\""
 else
   fail "the Samsung app did not show a manual pairing code"
@@ -352,8 +368,9 @@ if [ "${AWAKE_AGE:-999}" -lt 90 ]; then
 else
   fail "with background mode on, the app did not sync while in the background"
 fi
+UPLOADS=$(uploads)
 fixture add Background Bob +972500000001 > /dev/null || fail "the contacts helper could not add a contact"
-if wait_until 60 has_phone "Background Bob" "+972500000001"; then
+if wait_until 60 more_uploads_than "$UPLOADS" && on_android has_phone "Background Bob" "+972500000001"; then
   note "   A contact added while the app was in the background reached Android without opening the app"
 else
   fail "a contact added while the app was in the background did not reach Android within 60 s"

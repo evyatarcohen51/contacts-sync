@@ -93,7 +93,7 @@ final class ContactSyncUITests: XCTestCase {
         XCTAssertTrue(app.navigationBars["Contact Sync"].waitForExistence(timeout: 10), "not back on the main screen")
         app.swipeDown()
         let sent = element("BEGINSWITH 'Sent ·'")
-        XCTAssertTrue(sent.waitForExistence(timeout: 60), "no successful sync after pairing")
+        XCTAssertTrue(sent.waitForExistence(timeout: 180), "no successful sync after pairing")
         XCTAssertTrue(element("CONTAINS 'Success'").exists, "the result is not shown as Success")
         shot(shotName)
     }
@@ -122,7 +122,7 @@ final class ContactSyncUITests: XCTestCase {
         samsung.tap()
 
         let prompt = element("CONTAINS 'shows this number'")
-        XCTAssertTrue(prompt.waitForExistence(timeout: 30), "the comparison number did not appear")
+        XCTAssertTrue(prompt.waitForExistence(timeout: 60), "the comparison number did not appear")
         let number = app.descendants(matching: .any)
             .matching(NSPredicate(format: "label MATCHES %@", "(?s).*[0-9]{3} [0-9]{3}.*"))
             .firstMatch
@@ -141,7 +141,7 @@ final class ContactSyncUITests: XCTestCase {
 
         app.buttons["Sync now"].tap()
         sleep(4)
-        XCTAssertTrue(element("BEGINSWITH 'Sent ·'").waitForExistence(timeout: 30), "Sync now did not send")
+        XCTAssertTrue(element("BEGINSWITH 'Sent ·'").waitForExistence(timeout: 120), "Sync now did not send")
         XCTAssertTrue(element("CONTAINS 'Success'").exists, "Sync now did not end in Success")
         shot("ui-6-after-sync-now")
 

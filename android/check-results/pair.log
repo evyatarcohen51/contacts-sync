@@ -1,9 +1,9 @@
-Samsung: Google sdk_gphone64_x86_64
-Confirm this number on the Samsung: 399281
+Samsung: Unknown Android SDK built for x86_64
+Confirm this number on the Samsung: 512623
 Paired: {
-  code: 'FHBF-X4T9-4M2A-BN8K',
-  device: 'Google sdk_gphone64_x86_64',
+  code: 'P8KX-ALAA-AZBC-JGAE',
+  device: 'Unknown Android SDK built for x86_64',
   port: 8765,
   tailscale: null,
-  lan: '10.0.2.16'
+  lan: null
 }

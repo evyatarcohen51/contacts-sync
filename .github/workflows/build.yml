@@ -88,7 +88,7 @@ jobs:
   # cannot run an Android emulator.
   both-apps:
     runs-on: macos-15-intel
-    timeout-minutes: 100
+    timeout-minutes: 150
     permissions:
       contents: write # publishes logs and screenshots to the ci-results-both branch
     steps:
@@ -101,19 +101,28 @@ jobs:
         working-directory: android
         run: ./gradlew assembleRelease --no-daemon
       - name: Prepare an Android emulator
-        # The plain Android image is the lightest; the script starts it after the iPhone build.
+        # This Mac gives the emulator a single processor core, so it gets the lightest Android
+        # the app supports (8.0) and none of the simulated hardware the app does not use.
+        # tools/android-check.sh covers the newer Android versions, on faster machines.
         run: |
           SDK="$ANDROID_HOME/cmdline-tools/latest/bin"
-          for IMAGE in "system-images;android-34;default;x86_64" "system-images;android-34;google_apis;x86_64"; do
-            yes | "$SDK/sdkmanager" --install emulator platform-tools "$IMAGE" > /dev/null || true
-            [ -d "$ANDROID_HOME/$(echo "$IMAGE" | tr ';' '/')" ] && break
-          done
-          echo "Android image: $IMAGE"
+          IMAGE="system-images;android-26;default;x86_64"
+          yes | "$SDK/sdkmanager" --install emulator platform-tools "$IMAGE" > /dev/null || true
           echo no | "$SDK/avdmanager" create avd -n contactsync -k "$IMAGE" -d pixel_6 --force
+          CONFIG="$HOME/.android/avd/contactsync.avd/config.ini"
+          for setting in hw.accelerometer=no hw.gyroscope=no hw.sensors.proximity=no hw.sensors.light=no \
+              hw.sensors.pressure=no hw.sensors.humidity=no hw.sensors.magnetic_field=no \
+              hw.sensors.orientation=no hw.sensors.temperature=no hw.gps=no hw.audioInput=no \
+              hw.audioOutput=no hw.camera.back=none hw.camera.front=none; do
+            grep -v "^${setting%%=*} *=" "$CONFIG" > "$CONFIG.new" || true
+            mv "$CONFIG.new" "$CONFIG"
+            echo "$setting" >> "$CONFIG"
+          done
       - name: Run both apps against each other
         id: both
         env:
           ANDROID_AVD: contactsync
+          BULK: "300"
         run: |
           brew install xcodegen
           ios/both-apps-check.sh

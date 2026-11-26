@@ -9,12 +9,12 @@ FAILED=0
 note() { echo "$*" | tee -a "$OUT/summary.txt"; }
 fail() { note "FAILED: $*"; FAILED=1; }
 
-# wait_until <seconds> <command...>: run the command every 2 s until it succeeds.
+# wait_until <seconds> <command...>: run the command every 2 s (or every $EVERY s) until it succeeds.
 wait_until() {
   local deadline=$((SECONDS + $1)); shift
   until "$@" > /dev/null 2>&1; do
     [ "$SECONDS" -ge "$deadline" ] && return 1
-    sleep 2
+    sleep "${EVERY:-2}"
   done
 }
 

@@ -80,6 +80,6 @@ elif command in ('find', 'wait') and len(sys.argv) >= 3:
             break
         if time.time() >= deadline:
             sys.exit('not on screen: ' + sys.argv[2])
-        time.sleep(1)
+        time.sleep(float(os.environ.get('TAP_EVERY', '1')))  # reading the screen is work for a slow emulator
 else:
     sys.exit(__doc__)

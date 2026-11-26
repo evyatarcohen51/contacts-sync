@@ -5,7 +5,9 @@
 //
 // Used by ios/both-apps-check.sh. `adb forward` only listens on 127.0.0.1; this makes the
 // Android emulator's port reachable on every address of the Mac, the way a phone on the
-// Wi-Fi would be.
+// Wi-Fi would be. It prints one line per HTTP request that went through, for example
+// "PUT /v1/contacts -> 200, 1.3 KB sent", so the check can see a sync happen without
+// asking the (slow) emulator.
 
 'use strict';
 const net = require('net');
@@ -21,14 +23,22 @@ net.createServer((client) => {
   client.pipe(target);
   target.pipe(client);
   let sent = 0;
+  let request = '';
+  let status = '';
   let logged = false;
-  client.on('data', (chunk) => { sent += chunk.length; });
+  client.on('data', (chunk) => {
+    if (!sent) request = chunk.toString('latin1').split('\r\n')[0].split(' ').slice(0, 2).join(' ');
+    sent += chunk.length;
+  });
+  target.on('data', (chunk) => {
+    if (!status) status = chunk.toString('latin1').split(' ')[1] || '?';
+  });
   const close = () => {
     client.destroy();
     target.destroy();
-    // Small requests are check-ins; a large one is an upload of the contacts.
-    if (!logged && sent > 4096) console.log(`upload passed through: ${Math.round(sent / 1024)} KB`);
+    if (logged) return;
     logged = true;
+    console.log(`${request || '(no request)'} -> ${status || 'no answer'}, ${(sent / 1024).toFixed(1)} KB sent`);
   };
   client.on('error', close);
   target.on('error', close);

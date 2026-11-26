@@ -1,25 +1,25 @@
-ping: 200 {"lastSnapshotHash":"","count":0,"tailscale":null,"lan":"10.0.2.16"}
+ping: 200 {"lastSnapshotHash":"","count":0,"tailscale":null,"lan":null}
+push: 200 {"added":3,"updated":0,"deleted":0,"total":3,"failed":0}  (3 contacts, 0 KB, 44 ms)
+ping: 200 {"lastSnapshotHash":"310bc7ca9d90524c898576dd314a0dc37d4d8a0d257973920ba9852211c5b64f","count":3,"tailscale":null,"lan":null}
+push: 200 {"added":0,"updated":0,"deleted":0,"total":3,"failed":0}  (3 contacts, 0 KB, 19 ms)
+ping: 200 {"lastSnapshotHash":"310bc7ca9d90524c898576dd314a0dc37d4d8a0d257973920ba9852211c5b64f","count":3,"tailscale":null,"lan":null}
+push: 200 {"added":1,"updated":1,"deleted":1,"total":3,"failed":0}  (3 contacts, 0 KB, 35 ms)
+ping: 200 {"lastSnapshotHash":"","count":0,"tailscale":null,"lan":"192.168.232.2"}
+push: 200 {"added":3,"updated":0,"deleted":0,"total":3,"failed":0}  (3 contacts, 0 KB, 61 ms)
+ping: 200 {"lastSnapshotHash":"","count":0,"tailscale":null,"lan":"192.168.232.2"}
 push: 200 {"added":3,"updated":0,"deleted":0,"total":3,"failed":0}  (3 contacts, 0 KB, 36 ms)
-ping: 200 {"lastSnapshotHash":"310bc7ca9d90524c898576dd314a0dc37d4d8a0d257973920ba9852211c5b64f","count":3,"tailscale":null,"lan":"10.0.2.16"}
-push: 200 {"added":0,"updated":0,"deleted":0,"total":3,"failed":0}  (3 contacts, 0 KB, 16 ms)
-ping: 200 {"lastSnapshotHash":"310bc7ca9d90524c898576dd314a0dc37d4d8a0d257973920ba9852211c5b64f","count":3,"tailscale":null,"lan":"10.0.2.16"}
-push: 200 {"added":1,"updated":1,"deleted":1,"total":3,"failed":0}  (3 contacts, 0 KB, 39 ms)
-ping: 200 {"lastSnapshotHash":"","count":0,"tailscale":null,"lan":"10.0.2.16"}
-push: 200 {"added":3,"updated":0,"deleted":0,"total":3,"failed":0}  (3 contacts, 0 KB, 67 ms)
-ping: 200 {"lastSnapshotHash":"","count":0,"tailscale":null,"lan":"10.0.2.16"}
-push: 200 {"added":3,"updated":0,"deleted":0,"total":3,"failed":0}  (3 contacts, 0 KB, 30 ms)
-ping: 200 {"lastSnapshotHash":"f7948454603b2550c0ef78ed339f53495c511fe6f38606e37db1cff8a375936c","count":3,"tailscale":null,"lan":"10.0.2.16"}
-push: 200 {"added":1000,"updated":0,"deleted":3,"total":1000,"failed":0}  (1000 contacts, 8147 KB, 3469 ms)
-ping: 200 {"lastSnapshotHash":"56b332d6f08d2117198f0c8f300fcee1632e98b4ce219cc7271810f10f61b4c4","count":1000,"tailscale":null,"lan":"10.0.2.16"}
-push: 200 {"added":1,"updated":0,"deleted":0,"total":1001,"failed":0}  (1001 contacts, 8156 KB, 209 ms)
-ping: 200 {"lastSnapshotHash":"88a216d46f68a8cb8a31018ca60d42b595a383b021d14aebc2cedf8cf34ba8c8","count":1001,"tailscale":null,"lan":"10.0.2.16"}
+ping: 200 {"lastSnapshotHash":"f7948454603b2550c0ef78ed339f53495c511fe6f38606e37db1cff8a375936c","count":3,"tailscale":null,"lan":"192.168.232.2"}
+push: 200 {"added":1000,"updated":0,"deleted":3,"total":1000,"failed":0}  (1000 contacts, 8147 KB, 2903 ms)
+ping: 200 {"lastSnapshotHash":"56b332d6f08d2117198f0c8f300fcee1632e98b4ce219cc7271810f10f61b4c4","count":1000,"tailscale":null,"lan":"192.168.232.2"}
+push: 200 {"added":1,"updated":0,"deleted":0,"total":1001,"failed":0}  (1001 contacts, 8156 KB, 245 ms)
+ping: 200 {"lastSnapshotHash":"88a216d46f68a8cb8a31018ca60d42b595a383b021d14aebc2cedf8cf34ba8c8","count":1001,"tailscale":null,"lan":"192.168.232.2"}
 push: 409 {"error":"older than the snapshot already applied"}  (3 contacts, 0 KB, 17 ms)
-ping: 200 {"lastSnapshotHash":"88a216d46f68a8cb8a31018ca60d42b595a383b021d14aebc2cedf8cf34ba8c8","count":1001,"tailscale":null,"lan":"10.0.2.16"}
-push: 422 {"error":"refusing to delete every contact without confirmation"}  (0 contacts, 0 KB, 20 ms)
+ping: 200 {"lastSnapshotHash":"88a216d46f68a8cb8a31018ca60d42b595a383b021d14aebc2cedf8cf34ba8c8","count":1001,"tailscale":null,"lan":"192.168.232.2"}
+push: 422 {"error":"refusing to delete every contact without confirmation"}  (0 contacts, 0 KB, 16 ms)
 ping: 401 {"error":"Wrong pairing code — pair again"}
-push: 401 {"error":"Wrong pairing code — pair again"}  (3 contacts, 0 KB, 9 ms)
-ping: 200 {"lastSnapshotHash":"88a216d46f68a8cb8a31018ca60d42b595a383b021d14aebc2cedf8cf34ba8c8","count":1001,"tailscale":null,"lan":"10.0.2.16"}
-ping: 200 {"lastSnapshotHash":"88a216d46f68a8cb8a31018ca60d42b595a383b021d14aebc2cedf8cf34ba8c8","count":1001,"tailscale":null,"lan":"10.0.2.16"}
-push: 200 {"added":0,"updated":0,"deleted":1,"total":1000,"failed":0}  (1000 contacts, 8147 KB, 294 ms)
+push: 401 {"error":"Wrong pairing code — pair again"}  (3 contacts, 0 KB, 10 ms)
+ping: 200 {"lastSnapshotHash":"88a216d46f68a8cb8a31018ca60d42b595a383b021d14aebc2cedf8cf34ba8c8","count":1001,"tailscale":null,"lan":"192.168.232.2"}
+ping: 200 {"lastSnapshotHash":"88a216d46f68a8cb8a31018ca60d42b595a383b021d14aebc2cedf8cf34ba8c8","count":1001,"tailscale":null,"lan":null}
+push: 200 {"added":0,"updated":0,"deleted":1,"total":1000,"failed":0}  (1000 contacts, 8147 KB, 256 ms)
 ping: 401 {"error":"Samsung is not paired"}
 push: 401 {"error":"Samsung is not paired"}  (3 contacts, 0 KB, 8 ms)

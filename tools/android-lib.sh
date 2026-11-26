@@ -42,17 +42,18 @@ android_wake() {
   adb shell svc power stayon true
 }
 
-# For a slow emulator: no animations, and no "… isn't responding" dialogs on top of the app.
+# For a slow emulator: no animations. ("… isn't responding" dialogs stay on: with them hidden
+# Android closes a slow app instead of waiting; the tap helper answers them with "Wait".)
 android_calm() {
   local scale
   for scale in window_animation_scale transition_animation_scale animator_duration_scale; do
     adb shell settings put global "$scale" 0
   done
-  adb shell settings put global hide_error_dialogs 1
+  adb shell settings delete global hide_error_dialogs > /dev/null 2>&1
 }
 # Can the screen be read (the tap helper needs that)? Has the emulator quietened down?
 screen_readable() { $TAP texts > /dev/null 2>&1; }
-android_quiet() { [ "$(adb shell cat /proc/loadavg 2> /dev/null | awk '{ print ($1 < 3) ? "yes" : "no" }')" = yes ]; }
+android_quiet() { [ "$(adb shell cat /proc/loadavg 2> /dev/null | awk '{ print ($1 < 1.5) ? "yes" : "no" }')" = yes ]; }
 # tap_android <tap.py arguments…>: tap, trying again if the screen could not be read.
 tap_android() {
   local try
