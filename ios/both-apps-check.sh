@@ -28,6 +28,7 @@ ALIAS=no
 HOSTS=no
 
 cleanup() {
+  adb logcat -d -t 600 > "$OUT/android-last-log-lines.txt" 2> /dev/null
   kill ${PIDS[@]+"${PIDS[@]}"} 2> /dev/null
   [ "$ALIAS" = yes ] && sudo -n ifconfig lo0 -alias "$TS_IP" 2> /dev/null
   [ "$HOSTS" = yes ] && sudo -n sed -i '' "/$TS_NAME/d" /etc/hosts 2> /dev/null
@@ -61,13 +62,24 @@ expect_applied() {
 adb wait-for-device
 [ "$(adb shell getprop sys.boot_completed | tr -d '\r')" = 1 ] || { fail "the Android emulator has not finished starting"; exit 1; }
 [ -f "$APK" ] || { fail "no APK at $APK"; exit 1; }
-wait_until 300 contacts_ready || { fail "Android's contact storage is not answering"; exit 1; }
-android_wake
-adb uninstall "$PKG" > /dev/null 2>&1
-adb install -r "$APK" > "$OUT/apk-install.log" 2>&1 || { fail "could not install the Samsung app"; cat "$OUT/apk-install.log"; exit 1; }
-for permission in READ_CONTACTS WRITE_CONTACTS POST_NOTIFICATIONS; do
-  adb shell pm grant "$PKG" "android.permission.$permission"
+# A freshly started emulator can refuse installs for a while ("Broken pipe"): keep trying.
+install_samsung_app() {
+  local permission
+  contacts_ready || return 1
+  adb uninstall "$PKG" > /dev/null 2>&1
+  adb install -r "$APK" > "$OUT/apk-install.log" 2>&1 || return 1
+  for permission in READ_CONTACTS WRITE_CONTACTS POST_NOTIFICATIONS; do
+    adb shell pm grant "$PKG" "android.permission.$permission" || return 1
+  done
+}
+INSTALLED=no
+for attempt in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15; do
+  if install_samsung_app; then INSTALLED=yes; break; fi
+  echo "install attempt $attempt: $(tail -n 1 "$OUT/apk-install.log" 2> /dev/null)" >> "$OUT/android-ui.log"
+  sleep 20
 done
+[ "$INSTALLED" = yes ] || { fail "could not install the Samsung app: $(tail -n 1 "$OUT/apk-install.log" 2> /dev/null)"; exit 1; }
+android_wake
 adb logcat -c
 samsung_open
 adb forward tcp:18765 tcp:8765 > /dev/null
