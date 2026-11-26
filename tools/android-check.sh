@@ -198,13 +198,67 @@ else
   fail "after the refused uploads Android holds $(synced) contacts instead of $((BULK + 1))"
 fi
 
-# ---- 6. the app is killed, and the phone is restarted -------------------------------------
+# ---- 6. awkward moments: two uploads at once, a broken connection, the app killed mid-save
+# Android may end up with the one list or the other, complete; never with contacts doubled,
+# and never with a mixture that the next sync does not put right.
+no_doubles() { [ "$(sed -n 's/.*sourceid=\([^,]*\),.*/\1/p' "$1" | LC_ALL=C sort | uniq -d | wc -l | tr -d ' ')" = 0 ]; }
+iphone push "$AT" "$CODE" "bulk:$BULK:8" > "$OUT/at-once-1.txt" &
+P1=$!
+iphone push "$AT" "$CODE" "bulk:$((BULK + 1)):8" > "$OUT/at-once-2.txt" &
+P2=$!
+wait "$P1" "$P2"
+rows > "$OUT/rows-6.txt"
+COUNT=$(grep -c . "$OUT/rows-6.txt")
+if { [ "$COUNT" = "$BULK" ] || [ "$COUNT" = "$((BULK + 1))" ]; } && no_doubles "$OUT/rows-6.txt"; then
+  note "6. Two different lists sent at the same moment: Android kept one of them, complete ($COUNT contacts), nothing doubled"
+else
+  fail "after two uploads at the same moment Android holds $COUNT contacts: $(cat "$OUT/at-once-1.txt") / $(cat "$OUT/at-once-2.txt")"
+fi
+
+ANSWER=$(iphone push "$AT" "$CODE" "bulk:$((BULK + 200)):8" --cut)
+sleep 3
+rows > "$OUT/rows-7.txt"
+if [ "$(grep -c . "$OUT/rows-7.txt")" = "$COUNT" ] && [ "$(in_both "$OUT/rows-6.txt" "$OUT/rows-7.txt")" = "$COUNT" ] && samsung_answers; then
+  note "   An upload whose connection broke half-way: no contact was touched, and the app went on answering"
+else
+  fail "after an upload that broke off ($ANSWER) Android holds $(grep -c . "$OUT/rows-7.txt") contacts, $(in_both "$OUT/rows-6.txt" "$OUT/rows-7.txt") of $COUNT untouched"
+fi
+
+iphone push "$AT" "$CODE" a > /dev/null # back to 3 contacts, so that the next upload has a lot to save
+iphone push "$AT" "$CODE" "bulk:$BULK:8" > "$OUT/killed.txt" &
+P1=$!
+for attempt in $(seq 60); do synced_is 3 || break; sleep 0.2; done # until the first of them are saved
+adb shell am force-stop "$PKG"
+wait "$P1"
+PARTLY=$(synced)
+samsung_open
+wait_until 60 samsung_answers || fail "the app did not listen again after being killed while it was saving"
+ANSWER=$(iphone push "$AT" "$CODE" "bulk:$((BULK + 1)):8")
+rows > "$OUT/rows-8.txt"
+if synced_is "$((BULK + 1))" && no_doubles "$OUT/rows-8.txt" && [ "$(grep -c "sourceid=fake-" "$OUT/rows-8.txt")" = 0 ]; then
+  note "   App killed while it was saving $BULK contacts (Android held $PARTLY at that moment): the next sync completed the list, nothing doubled"
+else
+  fail "after the app was killed while saving ($PARTLY contacts at that moment), the next sync answered: $ANSWER; Android holds $(synced) contacts"
+fi
+
+# ---- 7. the app is stopped, and the phone is restarted ------------------------------------
 adb shell am force-stop "$PKG"
 samsung_open
 wait_until 60 samsung_answers || fail "the app did not listen again after being stopped"
 ANSWER=$(iphone ping "$AT" "$CODE")
 expect "after the app was stopped and opened" "\"count\":$((BULK + 1))" "$ANSWER" \
-  && note "6. App stopped and opened again: still paired, still knows its $((BULK + 1)) contacts"
+  && note "7. App stopped and opened again: still paired, still knows its $((BULK + 1)) contacts"
+# A newer version installed over this one (here: the same APK again). The app is not opened
+# afterwards: it has to start listening by itself, still paired.
+T=$SECONDS
+adb install -r "$APK" > "$OUT/apk-update.log" 2>&1 || fail "could not install the app over itself: $(tail -n 1 "$OUT/apk-update.log")"
+if wait_until 120 samsung_answers; then
+  ANSWER=$(iphone ping "$AT" "$CODE")
+  expect "after the app was updated" "\"count\":$((BULK + 1))" "$ANSWER" \
+    && note "   App updated (installed over itself): still paired, and listening again by itself after $((SECONDS - T)) s"
+else
+  fail "after the app was updated it did not start listening by itself"
+fi
 if [ -z "${SKIP_REBOOT:-}" ]; then
   T=$SECONDS
   adb reboot
@@ -226,7 +280,7 @@ if [ -z "${SKIP_REBOOT:-}" ]; then
   wait_until 60 screen_readable
 fi
 
-# ---- 7. the Samsung's own contact, and unpairing ------------------------------------------
+# ---- 8. the Samsung's own contact, and unpairing ------------------------------------------
 if [ -n "$LOCAL_ID" ]; then
   own_contact_intact || fail "a contact made on the Samsung itself was changed or removed by the syncs"
 fi
@@ -239,7 +293,7 @@ if wait_until 120 synced_is 0; then
   if [ -z "$LOCAL_ID" ] || own_contact_intact; then
     OWN=
     [ -n "$LOCAL_ID" ] && OWN="; the contact made on the Samsung itself is still there"
-    note "7. Unpaired: the synced contacts were removed$OWN"
+    note "8. Unpaired: the synced contacts were removed$OWN"
   else
     fail "unpairing removed a contact made on the Samsung itself"
   fi

@@ -155,8 +155,11 @@ installs the APK, pairs by tapping the app while the fake iPhone plays the other
 and looks in Android's contact list after each step: a first sync, the same list again
 (nothing may be written), one contact edited, one deleted and one added, 1,000 contacts
 with photos and then one more (exactly one may be written), uploads the app must refuse,
-the app being killed, the device being restarted (the app must listen again by itself),
-and unpairing. A contact created on the "Samsung" itself must survive all of it.
+two uploads arriving at the same moment, an upload whose connection breaks half-way, the
+app being killed while it is saving (the next sync must complete the list without doubling
+anything), the app being stopped, updated, and the device being restarted (the app must
+listen again by itself), and unpairing. A contact created on the "Samsung" itself must
+survive all of it.
 
 ```bash
 tools/android-check.sh        # an emulator must be running (adb devices); it restarts it once

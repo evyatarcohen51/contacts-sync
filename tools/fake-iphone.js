@@ -3,11 +3,12 @@
 //
 //   node tools/fake-iphone.js pair <samsungIp>                    # same-Wi-Fi pairing (accept on the Samsung)
 //   node tools/fake-iphone.js ping <samsungIp> <code>             # what the Samsung has
-//   node tools/fake-iphone.js push <samsungIp> <code> [variant] [--stale] [--allow-empty]
+//   node tools/fake-iphone.js push <samsungIp> <code> [variant] [--stale] [--allow-empty] [--cut]
 //
 // variants: a = 3 contacts; b = edits one, deletes one, adds one; empty = no contacts;
 //           bulk:N[:photoKB] = N generated contacts, each with a photo of about photoKB (default 0 = none).
-// --stale sends a snapshot dated in the past; --allow-empty sets X-Allow-Empty.
+// --stale sends a snapshot dated in the past; --allow-empty sets X-Allow-Empty;
+// --cut drops the connection half-way through the upload, as when the iPhone loses its network.
 
 'use strict';
 const crypto = require('crypto');
@@ -20,7 +21,7 @@ const flags = new Set(argv.filter((a) => a.startsWith('--')));
 const [cmd, host, ...rest] = argv.filter((a) => !a.startsWith('--'));
 if (!cmd || !host) {
   console.error('usage:\n  fake-iphone.js pair <ip>\n  fake-iphone.js ping <ip> <code>\n' +
-    '  fake-iphone.js push <ip> <code> [a|b|empty|bulk:N[:photoKB]] [--stale] [--allow-empty]');
+    '  fake-iphone.js push <ip> <code> [a|b|empty|bulk:N[:photoKB]] [--stale] [--allow-empty] [--cut]');
   process.exit(1);
 }
 const base = `http://${host.includes(":") ? host : `${host}:${P.PORT}`}`;
@@ -147,9 +148,29 @@ async function push(code, variant = 'a') {
   if (flags.has('--allow-empty')) headers['X-Allow-Empty'] = '1';
   const generatedAt = flags.has('--stale') ? Date.now() - 86400000 : Date.now();
   const body = P.seal(key, { v: 1, generatedAt, contacts });
+  if (flags.has('--cut')) return cutUpload(headers, body);
   const t0 = Date.now();
   const r = await fetch(`${base}/v1/contacts`, { method: 'PUT', headers, body });
   console.log(`push: ${r.status} ${await r.text()}  (${contacts.length} contacts, ${(body.length / 1024).toFixed(0)} KB, ${Date.now() - t0} ms)`);
+}
+
+// Sends the first half of an upload, then drops the connection.
+function cutUpload(headers, body) {
+  const { hostname, port } = new URL(base);
+  const half = body.subarray(0, body.length >> 1);
+  return new Promise((resolve) => {
+    const socket = require('net').connect(Number(port), hostname, () => {
+      const head = Object.entries({ Host: hostname, ...headers, 'Content-Length': body.length })
+        .map(([name, value]) => `${name}: ${value}\r\n`).join('');
+      socket.write(`PUT /v1/contacts HTTP/1.1\r\n${head}\r\n`);
+      socket.write(half, () => setTimeout(() => {
+        socket.destroy();
+        console.log(`push: cut after ${half.length >> 10} of ${body.length >> 10} KB`);
+        resolve();
+      }, 500));
+    });
+    socket.on('error', (e) => { console.log(`push: cut (${e.message})`); resolve(); });
+  });
 }
 
 // Like the iPhone app, tell the Samsung the hash of what we hold (omitted for a bare `ping`).

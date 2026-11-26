@@ -151,14 +151,20 @@ jobs:
       - name: The iPhone app's Swift code against this Samsung app
         if: matrix.api == 34
         run: |
-          curl -sfL https://download.swift.org/swift-6.1.2-release/ubuntu2404/swift-6.1.2-RELEASE/swift-6.1.2-RELEASE-ubuntu24.04.tar.gz \
-            | tar -xz -C "$RUNNER_TEMP"
-          export PATH="$RUNNER_TEMP/swift-6.1.2-RELEASE-ubuntu24.04/usr/bin:$PATH"
-          adb shell am start -n com.dvirchi.contactsync.receiver/.MainActivity
-          adb forward tcp:18765 tcp:8765
-          cd ios/linux-check
-          ./run.sh 127.0.0.1:18765 2>&1 | tee "$GITHUB_WORKSPACE/swift-check.log" | grep -E "Test Case|error|Executed|PAIRED" || true
-          grep -q "testPairThenSyncLikeTheIPhone' passed" "$GITHUB_WORKSPACE/swift-check.log"
+          {
+            if ! swift --version 2> /dev/null | grep -q "Swift version 6"; then
+              curl -fsSL --retry 3 -o "$RUNNER_TEMP/swift.tar.gz" \
+                https://download.swift.org/swift-6.1.2-release/ubuntu2404/swift-6.1.2-RELEASE/swift-6.1.2-RELEASE-ubuntu24.04.tar.gz
+              tar -xzf "$RUNNER_TEMP/swift.tar.gz" -C "$RUNNER_TEMP"
+              export PATH="$RUNNER_TEMP/swift-6.1.2-RELEASE-ubuntu24.04/usr/bin:$PATH"
+            fi
+            swift --version
+            adb shell am start -n com.dvirchi.contactsync.receiver/.MainActivity
+            adb forward tcp:18765 tcp:8765
+            ios/linux-check/run.sh 127.0.0.1:18765
+          } > swift-check.log 2>&1 || true
+          grep -E "Test Case .*(passed|failed)|error:|Executed|Swift version" swift-check.log | tail -n 40 || true
+          grep -q "testPairThenSyncLikeTheIPhone' passed" swift-check.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -196,7 +202,12 @@ jobs:
               echo
               echo '```'
               cat "$d/android/check-results/summary.txt" 2> /dev/null || echo "(no summary)"
-              grep -hE "testPairThenSyncLikeTheIPhone|Executed .* tests" "$d/swift-check.log" 2> /dev/null | tail -n 2
+              if [ -f "$d/swift-check.log" ]; then
+                echo "The iPhone app's Swift code against this Samsung app:"
+                grep -hE "testPairThenSyncLikeTheIPhone|Executed .* tests" "$d/swift-check.log" | tail -n 2 || true
+                # If that did not pass, show why.
+                grep -q "testPairThenSyncLikeTheIPhone' passed" "$d/swift-check.log" || tail -n 25 "$d/swift-check.log"
+              fi
               echo '```'
             done
           } > README.md
