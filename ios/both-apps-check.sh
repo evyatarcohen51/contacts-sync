@@ -81,9 +81,11 @@ if ! wait_until 120 samsung_answers 8765; then
   exit 1
 fi
 note "Samsung app: installed on an Android $(adb shell getprop ro.build.version.release | tr -d '\r') emulator and listening"
+adb shell dumpsys power 2> /dev/null | grep -E "mWakefulness=" >> "$OUT/android-ui.log"
+samsung_shot "$OUT/samsung-0-first-screen.png"
 START_COUNT=$(synced)
 
-if sudo -n ifconfig lo0 alias "$TS_IP" 255.255.255.255 2> /dev/null; then
+if sudo -n ifconfig lo0 alias "$TS_IP" netmask 255.255.255.255 2> /dev/null; then
   ALIAS=yes
   if echo "$TS_IP $TS_NAME" | sudo -n tee -a /etc/hosts > /dev/null 2>&1; then
     HOSTS=yes
