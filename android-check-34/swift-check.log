@@ -1,0 +1,233 @@
+Swift version 6.4.2 (swift-6.4.2-RELEASE)
+Target: x86_64-unknown-linux-gnu
+Starting: Intent { cmp=com.dvirchi.contactsync.receiver/.MainActivity }
+Warning: Activity not started, intent has been delivered to currently running top-most instance.
+Fetching https://github.com/apple/swift-crypto.git
+[1/19023] Fetching swift-crypto
+Fetched https://github.com/apple/swift-crypto.git (1.36s)
+Computing version for https://github.com/apple/swift-crypto.git
+Computed https://github.com/apple/swift-crypto.git at 3.15.1 (5.06s)
+Fetching https://github.com/apple/swift-asn1.git
+[1/2088] Fetching swift-asn1
+Fetched https://github.com/apple/swift-asn1.git (0.46s)
+Computing version for https://github.com/apple/swift-asn1.git
+Computed https://github.com/apple/swift-asn1.git at 1.7.5 (1.42s)
+Creating working copy for https://github.com/apple/swift-crypto.git
+Working copy of https://github.com/apple/swift-crypto.git resolved at 3.15.1
+Creating working copy for https://github.com/apple/swift-asn1.git
+Working copy of https://github.com/apple/swift-asn1.git resolved at 1.7.5
+warning: 'linux-check': Invalid Exclude '/home/runner/work/contacts-sync/contacts-sync/ios/linux-check/App/Info.plist': File not found.
+warning: 'linux-check': Invalid Exclude '/home/runner/work/contacts-sync/contacts-sync/ios/linux-check/App/Info.plist': File not found.
+Building for debugging...
+[Computing dependencies]
+[Pre-planning 1 / 504]
+[Planning deferred tasks]
+[105 / 577]
+[110 / 588] Network
+[135 / 595] Combine
+[148 / 597] CryptoBoringWrapper
+[149 / 597] UIKit
+[158 / 598] UIKit
+[160 / 599] Network
+[166 / 600] SwiftUI
+[173 / 605] Contacts
+[177 / 607] BackgroundTasks
+[179 / 607] BackgroundTasks
+[184 / 607] CCryptoBoringSSL
+[186 / 607] CCryptoBoringSSL
+[187 / 607] CCryptoBoringSSL
+[191 / 607] CCryptoBoringSSL
+[194 / 607] CCryptoBoringSSL
+[201 / 607] CCryptoBoringSSL
+[202 / 607] CCryptoBoringSSL
+[204 / 607] CCryptoBoringSSL
+[205 / 607] CCryptoBoringSSL
+[207 / 607] CCryptoBoringSSL
+[208 / 607] CCryptoBoringSSL
+[211 / 607] CCryptoBoringSSL
+[214 / 607] CCryptoBoringSSL
+[215 / 607] CCryptoBoringSSL
+[218 / 607] CCryptoBoringSSL
+[228 / 607] CCryptoBoringSSL
+[230 / 607] CCryptoBoringSSL
+[231 / 607] CCryptoBoringSSL
+[234 / 607] CCryptoBoringSSL
+[235 / 607] CCryptoBoringSSL
+[238 / 607] CCryptoBoringSSL
+[240 / 607] CCryptoBoringSSL
+[242 / 607] CCryptoBoringSSL
+[245 / 607] CCryptoBoringSSL
+[247 / 607] CCryptoBoringSSL
+[249 / 607] CCryptoBoringSSL
+[250 / 607] CCryptoBoringSSL
+[254 / 607] CCryptoBoringSSL
+[256 / 607] CCryptoBoringSSL
+[257 / 607] CCryptoBoringSSL
+[260 / 607] CCryptoBoringSSL
+[263 / 607] CCryptoBoringSSL
+[267 / 607] CCryptoBoringSSL
+[268 / 607] CCryptoBoringSSL
+[269 / 607] CCryptoBoringSSL
+[272 / 607] CCryptoBoringSSL
+[274 / 607] CCryptoBoringSSL
+[276 / 607] CCryptoBoringSSL
+[281 / 607] CCryptoBoringSSL
+[288 / 607] CCryptoBoringSSL
+[297 / 607] CCryptoBoringSSL
+[308 / 607] CCryptoBoringSSL
+[309 / 607] CCryptoBoringSSL
+[313 / 607] CCryptoBoringSSL
+[317 / 607] CCryptoBoringSSL
+[322 / 607] CCryptoBoringSSL
+[327 / 607] CCryptoBoringSSL
+[329 / 607] CCryptoBoringSSL
+[331 / 607] CCryptoBoringSSL
+[333 / 607] CCryptoBoringSSL
+[335 / 607] CCryptoBoringSSL
+[337 / 607] CCryptoBoringSSL
+[338 / 607] CCryptoBoringSSL
+[341 / 607] CCryptoBoringSSL
+[342 / 607] CCryptoBoringSSL
+[343 / 607] CCryptoBoringSSL
+[346 / 607] CCryptoBoringSSL
+[348 / 607] CCryptoBoringSSL
+[351 / 607] CCryptoBoringSSL
+[352 / 607] CCryptoBoringSSL
+[354 / 607] CCryptoBoringSSL
+[356 / 607] CCryptoBoringSSL
+[361 / 607] CCryptoBoringSSL
+[370 / 607] CCryptoBoringSSL
+[372 / 607] CCryptoBoringSSL
+[377 / 607] CCryptoBoringSSL
+[380 / 607] CCryptoBoringSSL
+[383 / 607] CCryptoBoringSSL
+[385 / 607] CCryptoBoringSSL
+[386 / 607] CCryptoBoringSSL
+[397 / 607] CCryptoBoringSSL
+[407 / 607] CCryptoBoringSSL
+[414 / 607] CCryptoBoringSSL
+[416 / 607] CCryptoBoringSSL
+[418 / 607] CCryptoBoringSSL
+[420 / 607] CCryptoBoringSSL
+[421 / 607] CCryptoBoringSSL
+[423 / 607] CCryptoBoringSSL
+[425 / 607] CCryptoBoringSSL
+[428 / 607] CCryptoBoringSSL
+[431 / 607] CCryptoBoringSSL
+[432 / 607] CCryptoBoringSSL
+[435 / 607] CCryptoBoringSSL
+[437 / 607] CCryptoBoringSSL
+[440 / 607] CCryptoBoringSSL
+[444 / 607] CCryptoBoringSSL
+[447 / 607] CCryptoBoringSSL
+[449 / 607] CCryptoBoringSSL
+[452 / 607] CCryptoBoringSSL
+[454 / 607] CCryptoBoringSSL
+[455 / 607] CCryptoBoringSSL
+[458 / 607] CCryptoBoringSSL
+[459 / 607] CCryptoBoringSSL
+[465 / 607] CCryptoBoringSSL
+[467 / 607] CCryptoBoringSSL
+[473 / 607] CCryptoBoringSSL
+[480 / 607] CCryptoBoringSSL
+[483 / 607] CCryptoBoringSSL
+[486 / 607] CCryptoBoringSSL
+[494 / 607] CCryptoBoringSSL
+[495 / 607] CCryptoBoringSSL
+[498 / 607] CCryptoBoringSSL
+[502 / 607] CCryptoBoringSSL
+[508 / 607] CCryptoBoringSSL
+[514 / 607] CCryptoBoringSSL
+[522 / 607] CCryptoBoringSSL
+[526 / 607] CCryptoBoringSSL
+[529 / 607] CCryptoBoringSSL
+[532 / 607] CCryptoBoringSSL
+[533 / 607] CCryptoBoringSSL
+[534 / 607] CCryptoBoringSSL
+[536 / 607] CCryptoBoringSSL
+[539 / 607] CCryptoBoringSSL
+[540 / 607] CCryptoBoringSSL
+[542 / 607] CCryptoBoringSSL
+[544 / 607] CCryptoBoringSSL
+[558 / 610] SwiftUI
+[562 / 612] CoreLocation
+[565 / 617] SwiftUI
+[566 / 618] Crypto
+[578 / 618] SwiftUI
+[579 / 618] Crypto-product
+[582 / 621] CryptoKit
+[583 / 621] CryptoKit
+[591 / 623]
+[592 / 628] SwiftUI
+[594 / 628] ContactSyncSender-product
+[596 / 628] ContactSyncSender-product
+[597 / 628] CCryptoBoringSSL
+[597 / 628] ContactSyncSender-product
+[598 / 628] CCryptoBoringSSL
+[603 / 634] ContactSyncSender
+[604 / 635] Crypto
+[611 / 635] ContactSyncSender
+[612 / 635] CheckTests-product
+[617 / 642] ContactSyncSender-product
+[624 / 642] CheckTests-product
+[627 / 642] Crypto
+[629 / 642] ContactSyncSender
+[635 / 644] CheckTests-product
+[635 / 644] ContactSyncSender-product
+[636 / 644] CheckTests-product
+[640 / 647] CheckTests-test-runner
+[644 / 647] CheckTests-test-runner
+[648 / 648] CheckTests-test-runner
+Build complete! (38.86 secs)
+warning: 'linux-check': Invalid Exclude '/home/runner/work/contacts-sync/contacts-sync/ios/linux-check/App/Info.plist': File not found.
+Test Suite 'All tests' started at 2026-11-26 12:08:09.679
+Test Suite 'Debug-linux-x86_64.xctest' started at 2026-11-26 12:08:09.751
+Test Suite 'EndToEndTests' started at 2026-11-26 12:08:09.751
+Test Case 'EndToEndTests.testPairThenSyncLikeTheIPhone' started at 2026-11-26 12:08:09.751
+PAIRED_CODE=NAUT-Z2LF-EEBU-QJTX
+Test Case 'EndToEndTests.testPairThenSyncLikeTheIPhone' passed (44.494 seconds)
+Test Suite 'EndToEndTests' passed at 2026-11-26 12:08:54.245
+	 Executed 1 test, with 0 failures (0 unexpected) in 44.494 (44.494) seconds
+Test Suite 'ExporterTests' started at 2026-11-26 12:08:54.245
+Test Case 'ExporterTests.testBirthdayWithoutYearAndOtherLabels' started at 2026-11-26 12:08:54.245
+Test Case 'ExporterTests.testBirthdayWithoutYearAndOtherLabels' passed (0.002 seconds)
+Test Case 'ExporterTests.testEmptyAddressBook' started at 2026-11-26 12:08:54.247
+Test Case 'ExporterTests.testEmptyAddressBook' passed (0.0 seconds)
+Test Case 'ExporterTests.testHashesAreStableAndFollowContent' started at 2026-11-26 12:08:54.247
+Test Case 'ExporterTests.testHashesAreStableAndFollowContent' passed (0.002 seconds)
+Test Case 'ExporterTests.testMapsFieldsAndLabels' started at 2026-11-26 12:08:54.249
+Test Case 'ExporterTests.testMapsFieldsAndLabels' passed (0.0 seconds)
+Test Case 'ExporterTests.testSnapshotJsonShape' started at 2026-11-26 12:08:54.250
+Test Case 'ExporterTests.testSnapshotJsonShape' passed (0.001 seconds)
+Test Suite 'ExporterTests' passed at 2026-11-26 12:08:54.250
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
+Test Suite 'ProtoTests' started at 2026-11-26 12:08:54.250
+Test Case 'ProtoTests.testAuthTokenMatchesNodeAndAndroid' started at 2026-11-26 12:08:54.250
+Test Case 'ProtoTests.testAuthTokenMatchesNodeAndAndroid' passed (0.0 seconds)
+Test Case 'ProtoTests.testCodeNormalization' started at 2026-11-26 12:08:54.251
+Test Case 'ProtoTests.testCodeNormalization' passed (0.0 seconds)
+Test Case 'ProtoTests.testComparisonNumberKeepsLeadingZeros' started at 2026-11-26 12:08:54.251
+Test Case 'ProtoTests.testComparisonNumberKeepsLeadingZeros' passed (0.001 seconds)
+Test Case 'ProtoTests.testEcdhAndComparisonNumberMatchNodeAndAndroid' started at 2026-11-26 12:08:54.252
+Test Case 'ProtoTests.testEcdhAndComparisonNumberMatchNodeAndAndroid' passed (0.001 seconds)
+Test Case 'ProtoTests.testOpensNodeSealedBlobAndRejectsWrongKey' started at 2026-11-26 12:08:54.252
+Test Case 'ProtoTests.testOpensNodeSealedBlobAndRejectsWrongKey' passed (0.0 seconds)
+Test Case 'ProtoTests.testSealRoundTripAndLayout' started at 2026-11-26 12:08:54.252
+Test Case 'ProtoTests.testSealRoundTripAndLayout' passed (0.0 seconds)
+Test Suite 'ProtoTests' passed at 2026-11-26 12:08:54.252
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'ReceiverClientTests' started at 2026-11-26 12:08:54.252
+Test Case 'ReceiverClientTests.testAddressesTypedByHand' started at 2026-11-26 12:08:54.252
+Test Case 'ReceiverClientTests.testAddressesTypedByHand' passed (0.0 seconds)
+Test Case 'ReceiverClientTests.testBadAddressesThrowInsteadOfCrashing' started at 2026-11-26 12:08:54.252
+Test Case 'ReceiverClientTests.testBadAddressesThrowInsteadOfCrashing' passed (0.0 seconds)
+Test Suite 'ReceiverClientTests' passed at 2026-11-26 12:08:54.253
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.0 (0.0) seconds
+Test Suite 'Debug-linux-x86_64.xctest' passed at 2026-11-26 12:08:54.253
+	 Executed 14 tests, with 0 failures (0 unexpected) in 44.501 (44.501) seconds
+Test Suite 'All tests' passed at 2026-11-26 12:08:54.253
+	 Executed 14 tests, with 0 failures (0 unexpected) in 44.501 (44.501) seconds
+◇ Test run started.
+↳ Testing Library Version: 6.4.2 (288a2328ff84644)
+↳ Target Platform: x86_64-unknown-linux-gnu
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

@@ -1,0 +1,9 @@
+Samsung: Unknown Android SDK built for x86_64
+Confirm this number on the Samsung: 050031
+Paired: {
+  code: 'SSG7-R78X-42SD-LAN5',
+  device: 'Unknown Android SDK built for x86_64',
+  port: 8765,
+  tailscale: null,
+  lan: '10.0.2.16'
+}

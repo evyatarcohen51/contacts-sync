@@ -1,0 +1,9 @@
+Samsung: Unknown Android SDK built for x86_64
+Confirm this number on the Samsung: 251363
+Paired: {
+  code: 'NN8E-XRJQ-EPAY-RPYG',
+  device: 'Unknown Android SDK built for x86_64',
+  port: 8765,
+  tailscale: null,
+  lan: '10.0.2.16'
+}

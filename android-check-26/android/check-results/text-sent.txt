@@ -1,0 +1,105 @@
+odd-01 :: familyName :: כֹּהֵן־לֵוִי
+odd-01 :: givenName :: שָׁלוֹם
+odd-01 :: phone :: 050-123-4567
+odd-02 :: familyName :: 👩‍👧‍👦 Family
+odd-02 :: givenName :: Mom ❤️
+odd-02 :: nickname :: 🌸 אמא
+odd-02 :: phone :: +972 54-000-0001
+odd-03 :: email :: dani+tag@דוגמה.co.il
+odd-03 :: familyName :: Levi / לוי
+odd-03 :: givenName :: דני (work)
+odd-04 :: familyName :: Robert'); DROP TABLE raw_contacts;-- %s %n {0} $(id) `id`
+odd-04 :: givenName :: O'Brien "Bob" \ <b> & ;--
+odd-04 :: jobTitle :: 100% | ; * ?
+odd-04 :: organization :: "Quotes" & 'Sons' <Ltd>
+odd-05 :: familyName :: אאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאא
+odd-06 :: phone :: *6789
+odd-07 :: familyName :: Numbers
+odd-07 :: givenName :: Many
+odd-07 :: phone :: +972 3-555-1000
+odd-07 :: phone :: +972 3-555-1001
+odd-07 :: phone :: +972 3-555-1002
+odd-07 :: phone :: +972 3-555-1003
+odd-07 :: phone :: +972 3-555-1004
+odd-07 :: phone :: +972 3-555-1005
+odd-07 :: phone :: +972 3-555-1006
+odd-07 :: phone :: +972 3-555-1007
+odd-07 :: phone :: +972 3-555-1008
+odd-07 :: phone :: +972 3-555-1009
+odd-07 :: phone :: +972 3-555-1010
+odd-07 :: phone :: +972 3-555-1011
+odd-07 :: phone :: +972 3-555-1012
+odd-07 :: phone :: +972 3-555-1013
+odd-07 :: phone :: +972 3-555-1014
+odd-07 :: phone :: +972 3-555-1015
+odd-07 :: phone :: +972 3-555-1016
+odd-07 :: phone :: +972 3-555-1017
+odd-07 :: phone :: +972 3-555-1018
+odd-07 :: phone :: +972 3-555-1019
+odd-07 :: phone :: +972 3-555-1020
+odd-07 :: phone :: +972 3-555-1021
+odd-07 :: phone :: +972 3-555-1022
+odd-07 :: phone :: +972 3-555-1023
+odd-07 :: phone :: +972 3-555-1024
+odd-07 :: phone :: +972 3-555-1025
+odd-07 :: phone :: +972 3-555-1026
+odd-07 :: phone :: +972 3-555-1027
+odd-07 :: phone :: +972 3-555-1028
+odd-07 :: phone :: +972 3-555-1029
+odd-07 :: phone :: +972 3-555-1030
+odd-07 :: phone :: +972 3-555-1031
+odd-07 :: phone :: +972 3-555-1032
+odd-07 :: phone :: +972 3-555-1033
+odd-07 :: phone :: +972 3-555-1034
+odd-07 :: phone :: +972 3-555-1035
+odd-07 :: phone :: +972 3-555-1036
+odd-07 :: phone :: +972 3-555-1037
+odd-07 :: phone :: +972 3-555-1038
+odd-07 :: phone :: +972 3-555-1039
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-07 :: phoneLabel :: חדר כושר
+odd-08 :: familyName :: Codes
+odd-08 :: givenName :: Dial
+odd-08 :: phone :: (03) 555-1234;ext=77
+odd-08 :: phone :: +972-50-123-4567,,123#
+odd-08 :: phone :: 050 123 4567 ext. 9
+odd-09 :: familyName :: عبد الله
+odd-09 :: givenName :: محمد
+odd-09 :: organization :: شركة
+odd-10 :: familyName :: Петров-Водкин
+odd-10 :: givenName :: Иван
+odd-10 :: url :: https://пример.рф/путь?q=1&x=я
+odd-11 :: familyName :: 田中
+odd-11 :: givenName :: 美咲
+odd-11 :: phoneticFamilyName :: たなか
+odd-11 :: phoneticGivenName :: みさき
+odd-12 :: city :: תל אביב-יפו
+odd-12 :: country :: ישראל
+odd-12 :: department :: מכירות
+odd-12 :: organization :: קפה ☕ בע"מ
+odd-12 :: street :: דרך מנחם בגין 132
+odd-13 :: familyName :: בן־דוד
+odd-13 :: givenName :: רות
+odd-13 :: middleName :: ב.
+odd-13 :: namePrefix :: ד"ר
+odd-13 :: nameSuffix :: Ph.D.
+odd-14 :: familyName :: Marks‎ inside
+odd-14 :: givenName :: Left‏Right

@@ -1,0 +1,9 @@
+Samsung: Unknown Android SDK built for x86_64
+Confirm this number on the Samsung: 887447
+Paired: {
+  code: 'GT39-CH3L-29GU-NCUV',
+  device: 'Unknown Android SDK built for x86_64',
+  port: 8765,
+  tailscale: null,
+  lan: '10.0.2.16'
+}

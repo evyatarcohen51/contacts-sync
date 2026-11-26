@@ -1,0 +1,9 @@
+Samsung: Unknown Android SDK built for x86_64
+Confirm this number on the Samsung: 387811
+Paired: {
+  code: 'H7JR-LSSS-3V34-CK7M',
+  device: 'Unknown Android SDK built for x86_64',
+  port: 8765,
+  tailscale: null,
+  lan: null
+}
