@@ -97,27 +97,23 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-      - name: Start an Android emulator (it boots while the app builds)
-        run: |
-          SDK="$ANDROID_HOME/cmdline-tools/latest/bin"
-          IMAGE="system-images;android-34;google_apis;x86_64"
-          yes | "$SDK/sdkmanager" --install emulator platform-tools "$IMAGE" > /dev/null || true
-          echo no | "$SDK/avdmanager" create avd -n contactsync -k "$IMAGE" -d pixel_6 --force
-          nohup "$ANDROID_HOME/emulator/emulator" -avd contactsync -no-window -no-audio -no-boot-anim \
-            -gpu swiftshader_indirect -no-snapshot > emulator.log 2>&1 &
       - name: Build the Samsung app
         working-directory: android
         run: ./gradlew assembleRelease --no-daemon
-      - name: Wait for Android to finish starting
+      - name: Prepare an Android emulator
+        # The plain Android image is the lightest; the script starts it after the iPhone build.
         run: |
-          ADB="$ANDROID_HOME/platform-tools/adb"
-          for i in $(seq 300); do
-            [ "$("$ADB" shell getprop sys.boot_completed 2> /dev/null | tr -d '\r')" = 1 ] && break
-            sleep 5
+          SDK="$ANDROID_HOME/cmdline-tools/latest/bin"
+          for IMAGE in "system-images;android-34;default;x86_64" "system-images;android-34;google_apis;x86_64"; do
+            yes | "$SDK/sdkmanager" --install emulator platform-tools "$IMAGE" > /dev/null || true
+            [ -d "$ANDROID_HOME/$(echo "$IMAGE" | tr ';' '/')" ] && break
           done
-          "$ADB" shell getprop ro.build.version.release || { tail -n 40 emulator.log; exit 1; }
+          echo "Android image: $IMAGE"
+          echo no | "$SDK/avdmanager" create avd -n contactsync -k "$IMAGE" -d pixel_6 --force
       - name: Run both apps against each other
         id: both
+        env:
+          ANDROID_AVD: contactsync
         run: |
           brew install xcodegen
           ios/both-apps-check.sh
@@ -139,7 +135,6 @@ jobs:
             echo '```'
           } > README.md
           cp -R ../ios/ContactSyncSender/both-results . 2> /dev/null || true
-          cp ../emulator.log . 2> /dev/null || true
           git init -q -b ci-results-both
           git add -A
           git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \

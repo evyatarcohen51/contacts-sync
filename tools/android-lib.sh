@@ -40,6 +40,27 @@ android_wake() {
   adb shell svc power stayon true
 }
 
+# For a slow emulator: no animations, and no "… isn't responding" dialogs on top of the app.
+android_calm() {
+  local scale
+  for scale in window_animation_scale transition_animation_scale animator_duration_scale; do
+    adb shell settings put global "$scale" 0
+  done
+  adb shell settings put global hide_error_dialogs 1
+}
+# Can the screen be read (the tap helper needs that)? Has the emulator quietened down?
+screen_readable() { $TAP texts > /dev/null 2>&1; }
+android_quiet() { [ "$(adb shell cat /proc/loadavg 2> /dev/null | awk '{ print ($1 < 3) ? "yes" : "no" }')" = yes ]; }
+# tap_android <tap.py arguments…>: tap, trying again if the screen could not be read.
+tap_android() {
+  local try
+  for try in 1 2 3; do
+    $TAP "$@" && return 0
+    sleep 5
+  done
+  return 1
+}
+
 samsung_open() { adb shell am start -n "$PKG/.MainActivity" > /dev/null 2>&1; }
 samsung_top() { local i; for i in 1 2 3; do adb shell input swipe 540 700 540 1700 200; done; sleep 1; }
 samsung_shot() { adb exec-out screencap -p > "$1" 2> /dev/null; }

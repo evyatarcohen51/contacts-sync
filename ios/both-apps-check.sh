@@ -4,8 +4,10 @@
 # then adds, edits and deletes contacts on the "iPhone" and looks in Android's contact list
 # for the result. Screenshots and logs go to ios/ContactSyncSender/both-results/.
 #
-# Needs macOS with Xcode, xcodegen, node, the Android SDK's adb, a running Android emulator
-# (adb devices) and the built APK (set APK=… if it is not in the usual Gradle folder).
+# Needs macOS with Xcode, xcodegen, node, the Android SDK's adb, the built APK (set APK=… if
+# it is not in the usual Gradle folder) and an Android emulator: either one that is already
+# running (adb devices), or set ANDROID_AVD=<name> and this script starts it after the
+# iPhone build, so that the two do not fight over the Mac's processor.
 #
 # The emulator sits behind its own little network, so three things stand in for real Wi-Fi:
 # `adb forward` plus tools/tcp-relay.js carry the Samsung app's port to this Mac, `dns-sd`
@@ -26,10 +28,13 @@ TS_NAME=samsung.contactsync-test.ts.net
 PIDS=()
 ALIAS=no
 HOSTS=no
+STARTED_EMULATOR=no
 
 cleanup() {
   adb logcat -d -t 600 > "$OUT/android-last-log-lines.txt" 2> /dev/null
   kill ${PIDS[@]+"${PIDS[@]}"} 2> /dev/null
+  wait ${PIDS[@]+"${PIDS[@]}"} 2> /dev/null
+  [ "$STARTED_EMULATOR" = yes ] && adb emu kill > /dev/null 2>&1
   [ "$ALIAS" = yes ] && sudo -n ifconfig lo0 -alias "$TS_IP" 2> /dev/null
   [ "$HOSTS" = yes ] && sudo -n sed -i '' "/$TS_NAME/d" /etc/hosts 2> /dev/null
 }
@@ -58,9 +63,26 @@ expect_applied() {
   wait_prefs lastOutcome '^success$' 20 || fail "the iPhone app does not show Success: \"$(message)\""
 }
 
+# ---- the iPhone app, in the iOS Simulator (first: the build needs the whole Mac) ---------
+pick_simulator || exit 1
+build_for_simulator || exit 1
+boot_and_install || exit 1
+
 # ---- the Samsung app, in the Android emulator ------------------------------------------
+booted() { [ "$(adb shell getprop sys.boot_completed 2> /dev/null | tr -d '\r')" = 1 ]; }
+if [ -n "${ANDROID_AVD:-}" ] && [ -z "$(adb devices | grep "device$")" ]; then
+  T=$SECONDS
+  nohup "${ANDROID_HOME:-$HOME/Library/Android/sdk}/emulator/emulator" -avd "$ANDROID_AVD" -no-window -no-audio \
+    -no-boot-anim -gpu swiftshader_indirect -no-snapshot -no-metrics -cores 2 -memory 3072 > "$OUT/emulator.log" 2>&1 &
+  STARTED_EMULATOR=yes
+  if wait_until 1500 booted; then
+    note "Android emulator: started in $((SECONDS - T)) s"
+  else
+    fail "the Android emulator did not start within 25 minutes"; tail -n 20 "$OUT/emulator.log"; exit 1
+  fi
+fi
 adb wait-for-device
-[ "$(adb shell getprop sys.boot_completed | tr -d '\r')" = 1 ] || { fail "the Android emulator has not finished starting"; exit 1; }
+booted || { fail "the Android emulator has not finished starting"; exit 1; }
 [ -f "$APK" ] || { fail "no APK at $APK"; exit 1; }
 # A freshly started emulator can refuse installs for a while ("Broken pipe"): keep trying.
 install_samsung_app() {
@@ -79,7 +101,13 @@ for attempt in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15; do
   sleep 20
 done
 [ "$INSTALLED" = yes ] || { fail "could not install the Samsung app: $(tail -n 1 "$OUT/apk-install.log" 2> /dev/null)"; exit 1; }
+android_calm
 android_wake
+# A just-started emulator is busy with itself for a while; wait until its screen can be read
+# and it has quietened down, or the taps below land on a frozen screen.
+wait_until 600 screen_readable || fail "the Android screen cannot be read (the emulator is too slow?)"
+wait_until 300 android_quiet
+echo "load before the checks: $(adb shell cat /proc/loadavg 2> /dev/null | tr -d '\r')" >> "$OUT/android-ui.log"
 adb logcat -c
 samsung_open
 adb forward tcp:18765 tcp:8765 > /dev/null
@@ -105,11 +133,6 @@ if sudo -n ifconfig lo0 alias "$TS_IP" netmask 255.255.255.255 2> /dev/null; the
   fi
 fi
 
-# ---- the iPhone app, in the iOS Simulator ----------------------------------------------
-pick_simulator || exit 1
-build_for_simulator || exit 1
-boot_and_install || exit 1
-
 # ---- 1. pair over "Wi-Fi" by tapping both apps -----------------------------------------
 rm -rf "$SHARED"; mkdir -p "$SHARED"; touch "$SHARED/wait-for-samsung"
 ui_test testPairOverWiFiThenSync "$OUT/ui-pair.log" &
@@ -119,11 +142,11 @@ SAMSUNG_NUMBER=
 listed_or_over() { [ -e "$SHARED/iphone-ready" ] || ! kill -0 "$TEST" 2> /dev/null; }
 wait_until 900 listed_or_over
 if [ -e "$SHARED/iphone-ready" ]; then
-  $TAP tap "Pair iPhone" >> "$OUT/android-ui.log" 2>&1 || fail "could not tap \"Pair iPhone\" on the Samsung"
+  tap_android tap "Pair iPhone" >> "$OUT/android-ui.log" 2>&1 || fail "could not tap \"Pair iPhone\" on the Samsung"
   touch "$SHARED/samsung-ready"
-  SAMSUNG_NUMBER=$($TAP wait '^[0-9]{3} [0-9]{3}$' 90 2>> "$OUT/android-ui.log")
+  SAMSUNG_NUMBER=$($TAP wait '^[0-9]{3} [0-9]{3}$' 120 2>> "$OUT/android-ui.log")
   samsung_shot "$OUT/samsung-1-same-number.png"
-  $TAP tap-exact "Accept" >> "$OUT/android-ui.log" 2>&1 || fail "could not tap Accept on the Samsung"
+  tap_android tap-exact "Accept" >> "$OUT/android-ui.log" 2>&1 || fail "could not tap Accept on the Samsung"
 else
   fail "the iPhone app never showed the Samsung on its pairing screen"
   touch "$SHARED/samsung-ready"
@@ -142,11 +165,20 @@ else
   fail "the iPhone tap-through reported problems:"; ui_problems "$OUT/ui-pair.log"
 fi
 $TAP tap-exact "OK" >> "$OUT/android-ui.log" 2>&1 # closes "Paired with …" on the Samsung
+if [ "$FAILED" != 0 ]; then
+  # Everything below needs the two apps to be paired.
+  samsung_shot "$OUT/samsung-1-after-failed-pairing.png"
+  $TAP texts > "$OUT/samsung-screen-after-failed-pairing.txt" 2>&1
+  adb logcat -d > "$OUT/android-log.txt" 2>&1
+  finish_simulator
+  note "RESULT: the two apps could not be paired, so the other checks were not run"
+  exit 1
+fi
 
 # ---- 2. the first sync: every iPhone contact is now in Android's contact list ----------
 IPHONE_COUNT=$(fixture count | grep -oE '[0-9]+' | head -n 1)
 IPHONE_COUNT=${IPHONE_COUNT:-0}
-if [ "$IPHONE_COUNT" -gt 0 ] && wait_until 40 synced_is "$IPHONE_COUNT"; then
+if [ "$IPHONE_COUNT" -gt 0 ] && wait_until 90 synced_is "$IPHONE_COUNT"; then
   note "2. First sync: all $IPHONE_COUNT iPhone contacts are in Android's contact list"
 else
   fail "the iPhone has $IPHONE_COUNT contacts, Android's contact list has $(synced) from it"
@@ -235,9 +267,9 @@ else
 fi
 
 # ---- 9. unpair on the Samsung: its synced contacts go, and the iPhone is told to pair again
-$TAP tap "Unpair and remove" >> "$OUT/android-ui.log" 2>&1 && $TAP wait '^Unpair\?$' 10 > /dev/null 2>&1 \
-  && $TAP tap-exact "Unpair" >> "$OUT/android-ui.log" 2>&1 || fail "could not tap through Unpair on the Samsung"
-if wait_until 60 synced_is 0; then
+tap_android tap "Unpair and remove" >> "$OUT/android-ui.log" 2>&1 && $TAP wait '^Unpair\?$' 30 > /dev/null 2>&1 \
+  && tap_android tap-exact "Unpair" >> "$OUT/android-ui.log" 2>&1 || fail "could not tap through Unpair on the Samsung"
+if wait_until 120 synced_is 0; then
   note "9. Unpaired on the Samsung -> the contacts that came from the iPhone were removed"
 else
   fail "after unpairing, Android still has $(synced) synced contacts"
@@ -252,7 +284,7 @@ shot iphone-9-samsung-unpaired 2
 
 # ---- 10. pair again by typing the Samsung's code, at its "Tailscale" address ------------
 CODE=
-$TAP tap "Pair manually" >> "$OUT/android-ui.log" 2>&1 && CODE=$($TAP wait '^[A-Z2-9]{4}(-[A-Z2-9]{4}){3}$' 15 2>> "$OUT/android-ui.log")
+tap_android tap "Pair manually" >> "$OUT/android-ui.log" 2>&1 && CODE=$($TAP wait '^[A-Z2-9]{4}(-[A-Z2-9]{4}){3}$' 30 2>> "$OUT/android-ui.log")
 samsung_shot "$OUT/samsung-10-manual-code.png"
 MANUAL_HOST=127.0.0.1
 [ "$ALIAS" = yes ] && MANUAL_HOST=$TS_IP
@@ -266,7 +298,7 @@ if [ -n "$CODE" ]; then
     fail "pairing with the typed code reported problems:"; ui_problems "$OUT/ui-code.log"
   fi
   cp "$SHARED"/*.png "$OUT/" 2> /dev/null
-  wait_until 40 synced_is "$IPHONE_COUNT" || fail "after pairing with the code, Android has $(synced) of $IPHONE_COUNT contacts"
+  wait_until 90 synced_is "$IPHONE_COUNT" || fail "after pairing with the code, Android has $(synced) of $IPHONE_COUNT contacts"
   wait_prefs lastGoodHost "^$MANUAL_HOST\$" 20 || fail "the iPhone app did not connect through $MANUAL_HOST but through \"$(prefs lastGoodHost)\""
 else
   fail "the Samsung app did not show a manual pairing code"
@@ -280,7 +312,7 @@ if [ "$HOSTS" = yes ] && [ -n "$CODE" ]; then
   else
     fail "could not sync through the name $TS_NAME: \"$(message)\""
   fi
-else
+elif [ -n "$CODE" ]; then
   note "11. (skipped the Tailscale-style name: this Mac does not allow sudo without a password)"
 fi
 
@@ -321,10 +353,10 @@ else
   fail "with background mode on, the app did not sync while in the background"
 fi
 fixture add Background Bob +972500000001 > /dev/null || fail "the contacts helper could not add a contact"
-if wait_until 40 has_phone "Background Bob" "+972500000001"; then
+if wait_until 60 has_phone "Background Bob" "+972500000001"; then
   note "   A contact added while the app was in the background reached Android without opening the app"
 else
-  fail "a contact added while the app was in the background did not reach Android within 40 s"
+  fail "a contact added while the app was in the background did not reach Android within 60 s"
 fi
 activate
 shot iphone-12-after-background 4
@@ -339,7 +371,7 @@ else
   fail "the Samsung app does not show Success at the end; it shows: $(echo "$SCREEN" | sed -n '5,10p' | tr '\n' '|')"
 fi
 adb logcat -d -s ReceiverApi ReceiverService ContactsWriter MiniHttpServer AndroidRuntime > "$OUT/android-log.txt" 2>&1
-grep -q "FATAL EXCEPTION" "$OUT/android-log.txt" && fail "the Samsung app crashed (see android-log.txt)"
+grep -q "Process: $PKG" "$OUT/android-log.txt" && fail "the Samsung app crashed (see android-log.txt)"
 finish_simulator
 
 [ "$FAILED" = 0 ] && note "RESULT: all checks with both real apps passed" || note "RESULT: some checks with both real apps failed"
