@@ -204,7 +204,8 @@ jobs:
               cat "$d/android/check-results/summary.txt" 2> /dev/null || echo "(no summary)"
               if [ -f "$d/swift-check.log" ]; then
                 echo "The iPhone app's Swift code against this Samsung app:"
-                grep -hE "testPairThenSyncLikeTheIPhone|Executed .* tests" "$d/swift-check.log" | tail -n 2 || true
+                grep -h "testPairThenSyncLikeTheIPhone' " "$d/swift-check.log" | tail -n 1 || true
+                grep -hE "Executed .* tests" "$d/swift-check.log" | tail -n 1 || true
                 # If that did not pass, show why.
                 grep -q "testPairThenSyncLikeTheIPhone' passed" "$d/swift-check.log" || tail -n 25 "$d/swift-check.log"
               fi

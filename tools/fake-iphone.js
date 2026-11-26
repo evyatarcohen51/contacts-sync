@@ -4,8 +4,10 @@
 //   node tools/fake-iphone.js pair <samsungIp>                    # same-Wi-Fi pairing (accept on the Samsung)
 //   node tools/fake-iphone.js ping <samsungIp> <code>             # what the Samsung has
 //   node tools/fake-iphone.js push <samsungIp> <code> [variant] [--stale] [--allow-empty] [--cut]
+//   node tools/fake-iphone.js fields <variant>                    # every text field of a variant, one per line
 //
 // variants: a = 3 contacts; b = edits one, deletes one, adds one; empty = no contacts;
+//           odd = contacts with awkward text (Hebrew with vowel points, emoji, quotes, a very long name…);
 //           bulk:N[:photoKB] = N generated contacts, each with a photo of about photoKB (default 0 = none).
 // --stale sends a snapshot dated in the past; --allow-empty sets X-Allow-Empty;
 // --cut drops the connection half-way through the upload, as when the iPhone loses its network.
@@ -106,8 +108,52 @@ function bulk(n, photoKb) {
   });
 }
 
+// Text that is easy to damage on the way: right-to-left scripts, emoji made of several
+// characters, quotes and symbols, a very long name, many numbers, no name at all.
+const odd = [
+  { id: 'odd-01', givenName: 'שָׁלוֹם', familyName: 'כֹּהֵן־לֵוִי', phones: [{ label: 'mobile', value: '050-123-4567' }] },
+  { id: 'odd-02', givenName: 'Mom ❤️', familyName: '👩‍👧‍👦 Family', nickname: '🌸 אמא', phones: [{ label: 'iphone', value: '+972 54-000-0001' }] },
+  { id: 'odd-03', givenName: 'דני (work)', familyName: 'Levi / לוי', emails: [{ label: 'work', value: 'dani+tag@דוגמה.co.il' }] },
+  { id: 'odd-04', givenName: 'O\'Brien "Bob" \\ <b> & ;--', familyName: 'Robert\'); DROP TABLE raw_contacts;-- %s %n {0} $(id) `id`',
+    organization: '"Quotes" & \'Sons\' <Ltd>', jobTitle: '100% | ; * ?' },
+  { id: 'odd-05', familyName: 'א'.repeat(600) },
+  { id: 'odd-06', phones: [{ label: 'main', value: '*6789' }] },
+  { id: 'odd-07', givenName: 'Many', familyName: 'Numbers',
+    phones: Array.from({ length: 40 }, (_, i) => ({ label: i % 2 ? 'חדר כושר' : 'work', value: `+972 3-555-${1000 + i}` })) },
+  { id: 'odd-08', givenName: 'Dial', familyName: 'Codes', phones: [{ label: 'work', value: '+972-50-123-4567,,123#' },
+    { label: 'other', value: '050 123 4567 ext. 9' }, { label: 'home', value: '(03) 555-1234;ext=77' }] },
+  { id: 'odd-09', givenName: 'محمد', familyName: 'عبد الله', organization: 'شركة' },
+  { id: 'odd-10', givenName: 'Иван', familyName: 'Петров-Водкин', urls: [{ label: 'homepage', value: 'https://пример.рф/путь?q=1&x=я' }] },
+  { id: 'odd-11', givenName: '美咲', familyName: '田中', phoneticGivenName: 'みさき', phoneticFamilyName: 'たなか' },
+  { id: 'odd-12', organization: 'קפה ☕ בע"מ', department: 'מכירות',
+    addresses: [{ label: 'work', street: 'דרך מנחם בגין 132', city: 'תל אביב-יפו', country: 'ישראל' }] },
+  { id: 'odd-13', namePrefix: 'ד"ר', givenName: 'רות', middleName: 'ב.', familyName: 'בן־דוד', nameSuffix: 'Ph.D.' },
+  { id: 'odd-14', givenName: 'Left\u200fRight', familyName: 'Marks\u200e inside' },
+];
+const KNOWN_PHONE_LABELS = ['mobile', 'iphone', 'cell', 'home', 'work', 'main', 'homefax', 'workfax', 'otherfax', 'pager', 'other'];
+
+// Every text field of a variant as "<id> :: <kind> :: <value>", for comparing with what
+// Android holds afterwards (tools/android-check.sh prints the same lines from the device).
+async function fields(variant) {
+  const lines = [];
+  const add = (c, kind, value) => { if (value) lines.push(`${c.id} :: ${kind} :: ${value}`); };
+  for (const c of sample(variant)) {
+    for (const kind of ['givenName', 'familyName', 'middleName', 'namePrefix', 'nameSuffix', 'phoneticGivenName',
+      'phoneticFamilyName', 'nickname', 'organization', 'jobTitle', 'department']) add(c, kind, c[kind]);
+    for (const p of c.phones || []) {
+      add(c, 'phone', p.value);
+      if (!KNOWN_PHONE_LABELS.includes(p.label)) add(c, 'phoneLabel', p.label);
+    }
+    for (const e of c.emails || []) add(c, 'email', e.value);
+    for (const u of c.urls || []) add(c, 'url', u.value);
+    for (const a of c.addresses || []) { add(c, 'street', a.street); add(c, 'city', a.city); add(c, 'country', a.country); }
+  }
+  console.log(lines.join('\n'));
+}
+
 function sample(variant) {
   if (variant === 'empty') return [];
+  if (variant === 'odd') return hashed(odd);
   if (variant.startsWith('bulk:')) {
     const [, n, kb] = variant.split(':');
     return hashed(bulk(Number(n), Number(kb || 0)));
@@ -182,7 +228,7 @@ async function ping(code, snapHash) {
   console.log('ping:', r.status, await r.text());
 }
 
-const run = { pair, ping: () => ping(rest[0]), push: () => push(rest[0], rest[1]) }[cmd];
+const run = { pair, ping: () => ping(rest[0]), push: () => push(rest[0], rest[1]), fields: () => fields(host) }[cmd];
 if (!run) { console.error(`unknown command: ${cmd}`); process.exit(1); }
 run().catch((e) => {
   console.error(e.message);

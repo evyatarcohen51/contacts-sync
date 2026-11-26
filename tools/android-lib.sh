@@ -26,6 +26,25 @@ photos() {
   adb shell "content query --uri content://com.android.contacts/data --projection _id --where \"mimetype='vnd.android.cursor.item/photo'\"" 2> /dev/null | grep -c '^Row'
 }
 
+# android_fields: every text field of the synced contacts as "<iPhone id> :: <kind> :: <value>"
+# lines; `fake-iphone.js fields <variant>` prints the same lines for what was sent.
+android_field() { # <kind> <mimetype> <column>
+  adb shell "content query --uri content://com.android.contacts/data --projection sourceid:$3 --where \"sync2='contactsync' AND mimetype='vnd.android.cursor.item/$2' AND $3 IS NOT NULL\"" 2> /dev/null \
+    | tr -d '\r' | sed -n "s/^Row: [0-9]* sourceid=\([^,]*\), $3=\(.*\)$/\1 :: $1 :: \2/p"
+}
+android_fields() {
+  android_field givenName name data2; android_field familyName name data3
+  android_field namePrefix name data4; android_field middleName name data5; android_field nameSuffix name data6
+  android_field phoneticGivenName name data7; android_field phoneticFamilyName name data9
+  android_field nickname nickname data1
+  android_field organization organization data1; android_field jobTitle organization data4
+  android_field department organization data5
+  android_field phone phone_v2 data1; android_field phoneLabel phone_v2 data3
+  android_field email email_v2 data1; android_field url website data1
+  android_field street postal-address_v2 data4; android_field city postal-address_v2 data7
+  android_field country postal-address_v2 data10
+}
+
 # Does the Samsung app answer on its port (through `adb forward tcp:18765 tcp:8765`)?
 samsung_answers() { [ "$(curl -s -m 3 "http://127.0.0.1:${1:-18765}/v1/hello" | grep -c contactsync-receiver)" != 0 ]; }
 
@@ -42,6 +61,11 @@ contacts_ready() {
 samsung_install() {
   local permission sdk
   contacts_ready || return 1
+  # A just-started Android still has start-up messages queued for a copy of the app that is
+  # already installed; replacing the app underneath them logs a crash that is not the app's.
+  if [ "$(adb shell pm list packages "$PKG" 2> /dev/null | grep -c "$PKG")" != 0 ]; then
+    while [ "$(adb shell cat /proc/uptime 2> /dev/null | cut -d. -f1)" -lt 120 ] 2> /dev/null; do sleep 5; done
+  fi
   adb uninstall "$PKG" > /dev/null 2>&1
   adb install -r "$1" > "$2" 2>&1 || return 1
   for permission in READ_CONTACTS WRITE_CONTACTS; do

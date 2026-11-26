@@ -153,7 +153,9 @@ node tools/fake-iphone.js push <samsung-ip> <code> a --stale  # an out-of-date s
 automatically on GitHub Actions for Android 8, 11, 14 and 16). `tools/android-check.sh`
 installs the APK, pairs by tapping the app while the fake iPhone plays the other side,
 and looks in Android's contact list after each step: a first sync, the same list again
-(nothing may be written), one contact edited, one deleted and one added, 1,000 contacts
+(nothing may be written), one contact edited, one deleted and one added, text that is easy
+to damage (Hebrew with vowel points, Arabic, emoji, quotes, a 600-letter name, 40 numbers on
+one contact: every field is read back and compared with what was sent), 1,000 contacts
 with photos and then one more (exactly one may be written), uploads the app must refuse,
 two uploads arriving at the same moment, an upload whose connection breaks half-way, the
 app being killed while it is saving (the next sync must complete the list without doubling

@@ -57,6 +57,13 @@ all_ids() {
   adb shell "content query --uri content://com.android.contacts/raw_contacts --projection _id" | tr -d '\r' | sed -n 's/.*_id=//p'
 }
 
+# no_crash_so_far <name>: fail if Android's log shows the app crashing. (Asked before the
+# restart too: restarting the device empties the log.)
+no_crash_so_far() {
+  adb logcat -d -b crash > "$OUT/android-crashes-$1.txt" 2>&1
+  [ "$(grep -c "Process: $PKG" "$OUT/android-crashes-$1.txt")" = 0 ] || fail "the app crashed (see android-crashes-$1.txt)"
+}
+
 # ---- install -------------------------------------------------------------------------
 [ -f "$APK" ] || { fail "no APK at $APK"; exit 1; }
 wait_until 300 device_attached || { fail "no Android device or emulator is attached (see: adb devices)"; exit 1; }
@@ -72,7 +79,7 @@ done
 adb shell "content delete --uri 'content://com.android.contacts/raw_contacts?caller_is_syncadapter=true' --where \"sync2='contactsync'\"" > /dev/null 2>&1
 android_calm
 android_wake
-adb logcat -c
+adb logcat -b all -c > /dev/null 2>&1 || adb logcat -c
 samsung_open
 adb forward tcp:18765 tcp:8765 > /dev/null
 if ! wait_until 90 samsung_answers; then
@@ -167,6 +174,19 @@ else
   fail "separate account: $IN_ACCOUNT contacts were in it (expected 3), $(in_iphone_account) are left in it (expected 0), $(synced) synced in all"
 fi
 
+# ---- text that is easy to damage: Hebrew with vowel points, emoji, quotes, a 600-letter name
+ANSWER=$(iphone push "$AT" "$CODE" odd)
+expect "contacts with awkward text" '"added":14,"updated":0,"deleted":3,"total":14,"failed":0' "$ANSWER"
+node "$ROOT/tools/fake-iphone.js" fields odd | LC_ALL=C sort > "$OUT/text-sent.txt"
+android_fields | LC_ALL=C sort > "$OUT/text-on-android.txt"
+if cmp -s "$OUT/text-sent.txt" "$OUT/text-on-android.txt"; then
+  note "   Hebrew with vowel points, Arabic, Russian, Japanese, emoji, quotes and symbols, a 600-letter name, 40 numbers on one contact: all $(grep -c . "$OUT/text-sent.txt") names, numbers and addresses are on Android exactly as sent"
+else
+  fail "text arrived changed: $(only_in_second "$OUT/text-on-android.txt" "$OUT/text-sent.txt") of $(grep -c . "$OUT/text-sent.txt") fields sent are not on Android as sent, and Android holds $(only_in_second "$OUT/text-sent.txt" "$OUT/text-on-android.txt") that were not sent (compare text-sent.txt with text-on-android.txt)"
+fi
+ANSWER=$(iphone push "$AT" "$CODE" b)
+expect "the 3 sample contacts again" '"added":3,"updated":0,"deleted":14,"total":3,"failed":0' "$ANSWER"
+
 # ---- 4. a large address book with photos, then one more contact --------------------------
 T=$SECONDS
 ANSWER=$(iphone push "$AT" "$CODE" "bulk:$BULK:8")
@@ -260,6 +280,7 @@ else
   fail "after the app was updated it did not start listening by itself"
 fi
 if [ -z "${SKIP_REBOOT:-}" ]; then
+  no_crash_so_far before-restart
   T=$SECONDS
   adb reboot
   gone() { ! device_attached; }
@@ -275,10 +296,10 @@ if [ -z "${SKIP_REBOOT:-}" ]; then
   else
     fail "after a restart of the device the app did not start listening by itself"
   fi
-  android_wake
-  samsung_open
-  wait_until 60 screen_readable
 fi
+android_wake
+samsung_open
+wait_until 60 screen_readable
 
 # ---- 8. the Samsung's own contact, and unpairing ------------------------------------------
 if [ -n "$LOCAL_ID" ]; then
@@ -306,7 +327,7 @@ samsung_top; samsung_shot "$OUT/7-unpaired.png"
 # ---- logs --------------------------------------------------------------------------------
 [ -n "$LOCAL_ID" ] && adb shell "content delete --uri 'content://com.android.contacts/raw_contacts?caller_is_syncadapter=true' --where \"_id=$LOCAL_ID\"" > /dev/null 2>&1
 adb logcat -d -s ReceiverApi ReceiverService ContactsWriter MiniHttpServer AndroidRuntime > "$OUT/android-log.txt" 2>&1
-grep -q "Process: $PKG" "$OUT/android-log.txt" && fail "the app crashed (see android-log.txt)"
+no_crash_so_far at-the-end
 
 [ "$FAILED" = 0 ] && note "RESULT: all checks of the Samsung app passed" || note "RESULT: some checks of the Samsung app failed"
 exit "$FAILED"
