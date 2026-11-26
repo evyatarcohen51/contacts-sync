@@ -59,7 +59,7 @@ all_ids() {
 
 # ---- install -------------------------------------------------------------------------
 [ -f "$APK" ] || { fail "no APK at $APK"; exit 1; }
-adb wait-for-device
+wait_until 300 device_attached || { fail "no Android device or emulator is attached (see: adb devices)"; exit 1; }
 wait_until 600 booted || { fail "the Android device has not finished starting"; exit 1; }
 SDK=$(adb shell getprop ro.build.version.sdk | tr -d '\r')
 install_app() {
@@ -219,8 +219,9 @@ expect "after the app was stopped and opened" "\"count\":$((BULK + 1))" "$ANSWER
 if [ -z "${SKIP_REBOOT:-}" ]; then
   T=$SECONDS
   adb reboot
-  sleep 5
-  adb wait-for-device
+  gone() { ! device_attached; }
+  wait_until 60 gone
+  wait_until 300 device_attached
   wait_until 600 booted || fail "the device did not come back after a restart"
   adb forward tcp:18765 tcp:8765 > /dev/null
   # The app is not opened here: it has to start listening by itself.

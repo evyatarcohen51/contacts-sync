@@ -1,9 +1,9 @@
 Samsung: Unknown Android SDK built for x86_64
-Confirm this number on the Samsung: 512623
+Confirm this number on the Samsung: 557689
 Paired: {
-  code: 'P8KX-ALAA-AZBC-JGAE',
+  code: 'ZASL-SSFN-TV4D-K5H2',
   device: 'Unknown Android SDK built for x86_64',
   port: 8765,
   tailscale: null,
-  lan: null
+  lan: '10.0.2.16'
 }

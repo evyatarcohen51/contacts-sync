@@ -200,6 +200,10 @@ jobs:
           SDK="$ANDROID_HOME/cmdline-tools/latest/bin"
           IMAGE="system-images;android-${{ matrix.api }};default;x86_64"
           yes | "$SDK/sdkmanager" --install emulator platform-tools "$IMAGE" > /dev/null || true
+          # On this runner avdmanager and the emulator look for devices in different folders
+          # unless they are told where.
+          export ANDROID_AVD_HOME="$HOME/.android/avd"
+          mkdir -p "$ANDROID_AVD_HOME"
           echo no | "$SDK/avdmanager" create avd -n contactsync -k "$IMAGE" -d pixel_6 --force
           nohup "$ANDROID_HOME/emulator/emulator" -avd contactsync -no-window -no-audio -no-boot-anim \
             -gpu swiftshader_indirect -no-snapshot -no-metrics > emulator.log 2>&1 &

@@ -29,6 +29,9 @@ photos() {
 # Does the Samsung app answer on its port (through `adb forward tcp:18765 tcp:8765`)?
 samsung_answers() { [ "$(curl -s -m 3 "http://127.0.0.1:${1:-18765}/v1/hello" | grep -c contactsync-receiver)" != 0 ]; }
 
+# Is a device or emulator attached at all? (`adb wait-for-device` would wait for ever.)
+device_attached() { [ "$(adb get-state 2> /dev/null | tr -d '\r')" = device ]; }
+
 # Android's contact storage only answers once the emulator has fully started.
 contacts_ready() {
   local out

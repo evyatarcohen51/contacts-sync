@@ -93,7 +93,7 @@ if [ -n "${ANDROID_AVD:-}" ] && [ -z "$(adb devices | grep "device$")" ]; then
     fail "the Android emulator did not start within 25 minutes"; tail -n 20 "$OUT/emulator.log"; exit 1
   fi
 fi
-adb wait-for-device
+wait_until 120 device_attached || { fail "no Android emulator is running (start one, or set ANDROID_AVD)"; exit 1; }
 booted || { fail "the Android emulator has not finished starting"; exit 1; }
 [ -f "$APK" ] || { fail "no APK at $APK"; exit 1; }
 # A freshly started emulator can refuse installs for a while ("Broken pipe"): keep trying.

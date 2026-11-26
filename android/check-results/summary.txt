@@ -1,13 +1,13 @@
-Samsung app: installed on Android 8.0.0 (API 26, Android SDK built for x86_64) and listening
-1. Paired by tapping; both sides showed the same number (512623)
+Samsung app: installed on Android 16 (API 36, Android SDK built for x86_64) and listening
+1. Paired by tapping; both sides showed the same number (557689)
 2. First sync: the 3 contacts are in Android's contact list, with their numbers
    The same list sent again: nothing written, no duplicates
 3. One edited, one deleted, one added: exactly those changed; the unchanged contact was not touched
    Saving to a separate "iPhone" account and back to phone storage: the 3 contacts moved each time, no leftovers
-4. 1000 contacts with photos: all saved (1000 contacts, 8147 KB, 2903 ms)
-   One contact added to those 1000: Android wrote 1 contact and left the other 1000 untouched (245 ms)
+4. 1000 contacts with photos: all saved (1000 contacts, 8147 KB, 2477 ms)
+   One contact added to those 1000: Android wrote 1 contact and left the other 1000 untouched (211 ms)
 5. Refused an out-of-date list, an empty list and a wrong pairing code; contacts unchanged
 6. App stopped and opened again: still paired, still knows its 1001 contacts
-   Device restarted: the app was listening again by itself after 14 s, and the next sync went through
+   Device restarted: the app was listening again by itself after 22 s, and the next sync went through
 7. Unpaired: the synced contacts were removed; the contact made on the Samsung itself is still there
 RESULT: all checks of the Samsung app passed
