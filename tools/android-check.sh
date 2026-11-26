@@ -48,10 +48,13 @@ expect() {
 # raises a contact's version whenever it is written, so equal lines mean "not touched".
 rows() {
   adb shell "content query --uri content://com.android.contacts/raw_contacts --projection _id:sourceid:version --where \"deleted=0 AND sync2='contactsync'\"" \
-    | tr -d '\r' | sed -n 's/^Row: [0-9]* //p' | sort
+    | tr -d '\r' | sed -n 's/^Row: [0-9]* //p' | LC_ALL=C sort
 }
+# only_in_second <file> <file>: how many lines of the second file are not in the first.
+only_in_second() { grep -Fxvc -f "$1" "$2"; }
+in_both() { grep -Fxc -f "$1" "$2"; }
 all_ids() {
-  adb shell "content query --uri content://com.android.contacts/raw_contacts --projection _id" | tr -d '\r' | sed -n 's/.*_id=//p' | sort -n
+  adb shell "content query --uri content://com.android.contacts/raw_contacts --projection _id" | tr -d '\r' | sed -n 's/.*_id=//p'
 }
 
 # ---- install -------------------------------------------------------------------------
@@ -92,8 +95,8 @@ note "Samsung app: installed on Android $(adb shell getprop ro.build.version.rel
 
 # A contact made on the Samsung itself. No sync and no unpairing may ever touch it.
 BEFORE_IDS=$(all_ids)
-adb shell "content insert --uri content://com.android.contacts/raw_contacts --bind account_name:n: --bind account_type:n:" > /dev/null 2>&1
-LOCAL_ID=$(comm -13 <(echo "$BEFORE_IDS") <(all_ids) | tail -n 1)
+adb shell "content insert --uri content://com.android.contacts/raw_contacts --bind starred:i:0" > /dev/null 2>&1
+LOCAL_ID=$(all_ids | grep -Fxv -f <(echo "${BEFORE_IDS:-none}") | tail -n 1)
 if [ -n "$LOCAL_ID" ]; then
   adb shell "content insert --uri content://com.android.contacts/data --bind raw_contact_id:i:$LOCAL_ID --bind mimetype:s:vnd.android.cursor.item/name --bind data1:s:'Samsung Only'" > /dev/null 2>&1
   adb shell "content insert --uri content://com.android.contacts/data --bind raw_contact_id:i:$LOCAL_ID --bind mimetype:s:vnd.android.cursor.item/phone_v2 --bind data1:s:0501234567" > /dev/null 2>&1
@@ -168,8 +171,8 @@ fi
 ANSWER=$(iphone push "$AT" "$CODE" "bulk:$((BULK + 1)):8")
 expect "one more contact" '"added":1,"updated":0,"deleted":0' "$ANSWER"
 rows > "$OUT/rows-5.txt"
-NEW=$(comm -13 "$OUT/rows-4.txt" "$OUT/rows-5.txt" | wc -l | tr -d ' ')
-KEPT=$(comm -12 "$OUT/rows-4.txt" "$OUT/rows-5.txt" | wc -l | tr -d ' ')
+NEW=$(only_in_second "$OUT/rows-4.txt" "$OUT/rows-5.txt")
+KEPT=$(in_both "$OUT/rows-4.txt" "$OUT/rows-5.txt")
 if [ "$NEW" = 1 ] && [ "$KEPT" = "$BULK" ]; then
   note "   One contact added to those $BULK: Android wrote 1 contact and left the other $KEPT untouched ($(echo "$ANSWER" | sed 's/.*, \([0-9]* ms\))/\1/'))"
 else
